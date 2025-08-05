@@ -1,6 +1,7 @@
 #include "line.h"
 #include <QLineF>
 #include <cmath>
+#include <cairo.h>
 
 Line::Line(const QPointF &start, const QPointF &end)
     : Shape()
@@ -16,13 +17,25 @@ Line::Line(const QPointF &start, const QPointF &end)
     setSize(QSizeF(maxPoint.x() - minPoint.x(), maxPoint.y() - minPoint.y()));
 }
 
-void Line::draw(void *cr)
+void Line::draw(cairo_t *cr)
 {
-    if (!isVisible()) return;
+    if (!isVisible() || !cr) return;
     
-    // Temporarily disable Cairo drawing
-    // TODO: Implement Qt-based drawing instead of Cairo
-    Q_UNUSED(cr)
+    QPen pen = getPen();
+    
+    if (pen.style() != Qt::NoPen) {
+        cairo_save(cr);
+        
+        cairo_move_to(cr, m_startPoint.x(), m_startPoint.y());
+        cairo_line_to(cr, m_endPoint.x(), m_endPoint.y());
+        
+        QColor strokeColor = pen.color();
+        cairo_set_source_rgba(cr, strokeColor.redF(), strokeColor.greenF(), strokeColor.blueF(), strokeColor.alphaF());
+        cairo_set_line_width(cr, pen.widthF());
+        cairo_stroke(cr);
+        
+        cairo_restore(cr);
+    }
 }
 
 bool Line::contains(const QPointF &point) const

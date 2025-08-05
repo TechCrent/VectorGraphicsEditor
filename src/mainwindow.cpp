@@ -39,10 +39,17 @@ MainWindow::MainWindow(QWidget *parent)
         setCentralWidget(m_canvas);
     }
     
+    // Get UI components
+    m_layersList = ui->layersList;
+    m_fillColorButton = ui->fillColorBtn;
+    m_strokeColorButton = ui->strokeColorBtn;
+    m_strokeWidthSpinBox = ui->strokeWidthSpinBox;
+    m_layersDock = ui->layersDock;
+    m_propertiesDock = ui->propertiesDock;
+    
     setupUI();
-    setupToolbars();
-    setupDockWidgets();
-    setupMenus();
+    setupActions();
+    setupMenusAndToolbars();
     setupStatusBar();
     connectSignals();
     
@@ -50,8 +57,13 @@ MainWindow::MainWindow(QWidget *parent)
     Layer *defaultLayer = new Layer("Layer 1");
     m_document->addLayer(defaultLayer);
     m_canvas->setDocument(m_document);
+    updateLayersList();
     
-    setWindowTitle("Vector Graphics Editor");
+    // Initialize color buttons
+    updateFillColorButton(QColor(255, 255, 255, 0)); // Transparent
+    updateStrokeColorButton(QColor(0, 0, 0)); // Black
+    
+    setWindowTitle("Vector Graphics Editor - Professional");
     resize(1200, 800);
 }
 
@@ -66,10 +78,26 @@ void MainWindow::setupUI()
     // Set application style
     QApplication::setStyle(QStyleFactory::create("Fusion"));
     
-    // Set up central widget
-    if (!m_canvas) {
-        m_canvas = new Canvas(this);
-        setCentralWidget(m_canvas);
+    // Apply additional dark theme to the application
+    QPalette darkPalette;
+    darkPalette.setColor(QPalette::Window, QColor(43, 43, 43));
+    darkPalette.setColor(QPalette::WindowText, Qt::white);
+    darkPalette.setColor(QPalette::Base, QColor(74, 74, 74));
+    darkPalette.setColor(QPalette::AlternateBase, QColor(90, 90, 90));
+    darkPalette.setColor(QPalette::ToolTipBase, Qt::white);
+    darkPalette.setColor(QPalette::ToolTipText, Qt::white);
+    darkPalette.setColor(QPalette::Text, Qt::white);
+    darkPalette.setColor(QPalette::Button, QColor(74, 74, 74));
+    darkPalette.setColor(QPalette::ButtonText, Qt::white);
+    darkPalette.setColor(QPalette::BrightText, Qt::red);
+    darkPalette.setColor(QPalette::Link, QColor(74, 144, 226));
+    darkPalette.setColor(QPalette::Highlight, QColor(74, 144, 226));
+    darkPalette.setColor(QPalette::HighlightedText, Qt::black);
+    qApp->setPalette(darkPalette);
+    
+    // Ensure canvas is properly set up
+    if (m_canvas) {
+        m_canvas->createCairoSurface();
     }
 }
 
@@ -289,43 +317,21 @@ void MainWindow::setupStatusBar()
 
 void MainWindow::connectSignals()
 {
-    // File actions
-    connect(m_newAction, &QAction::triggered, this, &MainWindow::newDocument);
-    connect(m_openAction, &QAction::triggered, this, &MainWindow::openDocument);
-    connect(m_saveAction, &QAction::triggered, this, &MainWindow::saveDocument);
-    connect(m_exportAction, &QAction::triggered, this, &MainWindow::exportSVG);
-    connect(m_importAction, &QAction::triggered, this, &MainWindow::importSVG);
-    
-    // Edit actions
-    connect(m_undoAction, &QAction::triggered, this, &MainWindow::undo);
-    connect(m_redoAction, &QAction::triggered, this, &MainWindow::redo);
-    connect(m_cutAction, &QAction::triggered, this, &MainWindow::cut);
-    connect(m_copyAction, &QAction::triggered, this, &MainWindow::copy);
-    connect(m_pasteAction, &QAction::triggered, this, &MainWindow::paste);
-    
-    // Tool actions
-    connect(m_selectAction, &QAction::triggered, this, &MainWindow::selectTool);
-    connect(m_rectangleAction, &QAction::triggered, this, &MainWindow::rectangleTool);
-    connect(m_ellipseAction, &QAction::triggered, this, &MainWindow::ellipseTool);
-    connect(m_lineAction, &QAction::triggered, this, &MainWindow::lineTool);
-    connect(m_bezierAction, &QAction::triggered, this, &MainWindow::bezierTool);
-    
-    // View actions
-    connect(m_zoomInAction, &QAction::triggered, this, &MainWindow::zoomIn);
-    connect(m_zoomOutAction, &QAction::triggered, this, &MainWindow::zoomOut);
-    connect(m_fitToViewAction, &QAction::triggered, this, &MainWindow::fitToView);
-    connect(m_showGridAction, &QAction::triggered, this, &MainWindow::showGrid);
-    connect(m_snapToGridAction, &QAction::triggered, this, &MainWindow::snapToGrid);
-    
-    // Color buttons
+    // Color buttons from UI
     connect(m_fillColorButton, &QPushButton::clicked, this, &MainWindow::chooseFillColor);
     connect(m_strokeColorButton, &QPushButton::clicked, this, &MainWindow::chooseStrokeColor);
     connect(m_strokeWidthSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, &MainWindow::strokeWidthChanged);
     
+    // Layer buttons from UI
+    connect(ui->addLayerBtn, &QPushButton::clicked, this, &MainWindow::addLayer);
+    connect(ui->removeLayerBtn, &QPushButton::clicked, this, &MainWindow::removeLayer);
+    
     // Canvas signals
-    connect(m_canvas, &Canvas::shapeSelected, this, &MainWindow::shapeSelected);
-    connect(m_canvas, &Canvas::shapeCreated, this, &MainWindow::shapeCreated);
-    connect(m_canvas, &Canvas::canvasChanged, this, &MainWindow::canvasChanged);
+    if (m_canvas) {
+        connect(m_canvas, &Canvas::shapeSelected, this, &MainWindow::shapeSelected);
+        connect(m_canvas, &Canvas::shapeCreated, this, &MainWindow::shapeCreated);
+        connect(m_canvas, &Canvas::canvasChanged, this, &MainWindow::canvasChanged);
+    }
 }
 
 // File operations
@@ -511,9 +517,9 @@ void MainWindow::updateLayersList()
 // Property operations
 void MainWindow::chooseFillColor()
 {
-    QColor color = QColorDialog::getColor(Qt::white, this, "Choose Fill Color");
+    QColor color = QColorDialog::getColor(Qt::white, this, "Choose Fill Color", QColorDialog::ShowAlphaChannel);
     if (color.isValid()) {
-        m_fillColorButton->setStyleSheet(QString("background-color: %1; border: 1px solid black;").arg(color.name()));
+        updateFillColorButton(color);
         // TODO: Apply fill color to selected shape
         statusBar()->showMessage("Fill color changed", 1000);
     }
@@ -523,7 +529,7 @@ void MainWindow::chooseStrokeColor()
 {
     QColor color = QColorDialog::getColor(Qt::black, this, "Choose Stroke Color");
     if (color.isValid()) {
-        m_strokeColorButton->setStyleSheet(QString("background-color: %1; border: 1px solid black;").arg(color.name()));
+        updateStrokeColorButton(color);
         // TODO: Apply stroke color to selected shape
         statusBar()->showMessage("Stroke color changed", 1000);
     }
@@ -557,7 +563,109 @@ void MainWindow::canvasChanged()
 void MainWindow::showAbout()
 {
     QMessageBox::about(this, "About Vector Graphics Editor",
-                      "Vector Graphics Editor\n\n"
-                      "A simple vector graphics editor built with Qt and Cairo.\n\n"
-                      "Version 1.0");
+                      "Vector Graphics Editor - Professional\n\n"
+                      "A modern vector graphics editor built with Qt6 and Cairo.\n\n"
+                      "Features:\n"
+                      "• Modern dark theme interface\n"
+                      "• Professional tool layout\n"
+                      "• Layer management\n"
+                      "• Vector shape tools\n"
+                      "• SVG import/export\n\n"
+                      "Version 2.0");
+}
+
+void MainWindow::setupActions()
+{
+    // Actions are already defined in the UI file
+    // Connect them to the appropriate slots
+    connect(ui->actionNew, &QAction::triggered, this, &MainWindow::newDocument);
+    connect(ui->actionOpen, &QAction::triggered, this, &MainWindow::openDocument);
+    connect(ui->actionSave, &QAction::triggered, this, &MainWindow::saveDocument);
+    connect(ui->actionExit, &QAction::triggered, this, &QWidget::close);
+    
+    connect(ui->actionUndo, &QAction::triggered, this, &MainWindow::undo);
+    connect(ui->actionRedo, &QAction::triggered, this, &MainWindow::redo);
+    connect(ui->actionCut, &QAction::triggered, this, &MainWindow::cut);
+    connect(ui->actionCopy, &QAction::triggered, this, &MainWindow::copy);
+    connect(ui->actionPaste, &QAction::triggered, this, &MainWindow::paste);
+    
+    connect(ui->actionZoom_In, &QAction::triggered, this, &MainWindow::zoomIn);
+    connect(ui->actionZoom_Out, &QAction::triggered, this, &MainWindow::zoomOut);
+    connect(ui->actionFit_to_View, &QAction::triggered, this, &MainWindow::fitToView);
+    
+    connect(ui->actionShow_Grid, &QAction::triggered, this, &MainWindow::showGrid);
+    connect(ui->actionSnap_to_Grid, &QAction::triggered, this, &MainWindow::snapToGrid);
+    
+    // Tool actions
+    connect(ui->actionSelect, &QAction::triggered, this, &MainWindow::selectTool);
+    connect(ui->actionRectangle, &QAction::triggered, this, &MainWindow::rectangleTool);
+    connect(ui->actionEllipse, &QAction::triggered, this, &MainWindow::ellipseTool);
+    connect(ui->actionLine, &QAction::triggered, this, &MainWindow::lineTool);
+    connect(ui->actionBezier, &QAction::triggered, this, &MainWindow::bezierTool);
+    
+    // Layer actions
+    connect(ui->actionNew_Layer, &QAction::triggered, this, &MainWindow::addLayer);
+    connect(ui->actionDelete_Layer, &QAction::triggered, this, &MainWindow::removeLayer);
+    
+    connect(ui->actionAbout, &QAction::triggered, this, &MainWindow::showAbout);
+    
+    // Set up action groups for exclusive tools
+    QActionGroup *toolGroup = new QActionGroup(this);
+    toolGroup->addAction(ui->actionSelect);
+    toolGroup->addAction(ui->actionRectangle);
+    toolGroup->addAction(ui->actionEllipse);
+    toolGroup->addAction(ui->actionLine);
+    toolGroup->addAction(ui->actionBezier);
+    toolGroup->setExclusive(true);
+}
+
+void MainWindow::setupMenusAndToolbars()
+{
+    // Menus and toolbars are already set up in the UI file
+    // Just customize them if needed
+    ui->mainToolBar->setIconSize(QSize(24, 24));
+    ui->toolsToolBar->setIconSize(QSize(32, 32));
+}
+
+void MainWindow::updateFillColorButton(const QColor &color)
+{
+    if (m_fillColorButton) {
+        QString styleSheet = QString(
+            "QPushButton {"
+            "    background-color: %1;"
+            "    color: %2;"
+            "    border: 2px solid #cccccc;"
+            "    border-radius: 4px;"
+            "    padding: 8px;"
+            "    font-weight: normal;"
+            "}"
+            "QPushButton:hover {"
+            "    border-color: #4a90e2;"
+            "}"
+        ).arg(color.name()).arg(color.lightness() > 128 ? "#000000" : "#ffffff");
+        
+        m_fillColorButton->setStyleSheet(styleSheet);
+        m_fillColorButton->setText(color.alpha() == 0 ? "No Fill" : "Fill Color");
+    }
+}
+
+void MainWindow::updateStrokeColorButton(const QColor &color)
+{
+    if (m_strokeColorButton) {
+        QString styleSheet = QString(
+            "QPushButton {"
+            "    background-color: %1;"
+            "    color: %2;"
+            "    border: 2px solid #cccccc;"
+            "    border-radius: 4px;"
+            "    padding: 8px;"
+            "    font-weight: normal;"
+            "}"
+            "QPushButton:hover {"
+            "    border-color: #4a90e2;"
+            "}"
+        ).arg(color.name()).arg(color.lightness() > 128 ? "#000000" : "#ffffff");
+        
+        m_strokeColorButton->setStyleSheet(styleSheet);
+    }
 } 

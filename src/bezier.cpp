@@ -1,6 +1,7 @@
 #include "bezier.h"
 #include <QPainterPath>
 #include <cmath>
+#include <cairo.h>
 
 Bezier::Bezier()
     : Shape()
@@ -8,13 +9,62 @@ Bezier::Bezier()
 {
 }
 
-void Bezier::draw(void *cr)
+void Bezier::draw(cairo_t *cr)
 {
-    if (!isVisible() || m_points.isEmpty()) return;
+    if (!isVisible() || m_points.isEmpty() || !cr) return;
     
-    // Temporarily disable Cairo drawing
-    // TODO: Implement Qt-based drawing instead of Cairo
-    Q_UNUSED(cr)
+    QPen pen = getPen();
+    QBrush brush = getBrush();
+    
+    cairo_save(cr);
+    
+    // Move to first point
+    cairo_move_to(cr, m_points[0].x(), m_points[0].y());
+    
+    // Draw bezier curve based on number of control points
+    for (int i = 1; i < m_points.size(); i += 3) {
+        if (i + 2 < m_points.size()) {
+            // Cubic bezier
+            cairo_curve_to(cr,
+                          m_points[i].x(), m_points[i].y(),
+                          m_points[i + 1].x(), m_points[i + 1].y(),
+                          m_points[i + 2].x(), m_points[i + 2].y());
+        } else if (i + 1 < m_points.size()) {
+            // Quadratic bezier (convert to cubic)
+            QPointF current = m_points[i - 1];
+            QPointF control = m_points[i];
+            QPointF end = m_points[i + 1];
+            
+            QPointF cp1 = current + (control - current) * (2.0/3.0);
+            QPointF cp2 = end + (control - end) * (2.0/3.0);
+            
+            cairo_curve_to(cr, cp1.x(), cp1.y(), cp2.x(), cp2.y(), end.x(), end.y());
+        } else {
+            // Just a line
+            cairo_line_to(cr, m_points[i].x(), m_points[i].y());
+        }
+    }
+    
+    if (m_closed) {
+        cairo_close_path(cr);
+    }
+    
+    // Fill if brush is set and path is closed
+    if (brush.style() != Qt::NoBrush && m_closed) {
+        QColor fillColor = brush.color();
+        cairo_set_source_rgba(cr, fillColor.redF(), fillColor.greenF(), fillColor.blueF(), fillColor.alphaF());
+        cairo_fill_preserve(cr);
+    }
+    
+    // Stroke if pen is set
+    if (pen.style() != Qt::NoPen) {
+        QColor strokeColor = pen.color();
+        cairo_set_source_rgba(cr, strokeColor.redF(), strokeColor.greenF(), strokeColor.blueF(), strokeColor.alphaF());
+        cairo_set_line_width(cr, pen.widthF());
+        cairo_stroke(cr);
+    }
+    
+    cairo_restore(cr);
 }
 
 bool Bezier::contains(const QPointF &point) const

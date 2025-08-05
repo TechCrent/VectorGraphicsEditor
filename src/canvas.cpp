@@ -335,10 +335,64 @@ void Canvas::updateSelectionRect(const QPointF &point)
 
 cairo_surface_t* Canvas::createCairoSurface()
 {
-    return cairo_image_surface_create(CAIRO_FORMAT_ARGB32, width(), height());
+    // Clean up existing surface and context
+    if (m_cairoContext) {
+        cairo_destroy(m_cairoContext);
+        m_cairoContext = nullptr;
+    }
+    if (m_cairoSurface) {
+        cairo_surface_destroy(m_cairoSurface);
+        m_cairoSurface = nullptr;
+    }
+    
+    // Create new surface and context
+    m_cairoSurface = cairo_image_surface_create(CAIRO_FORMAT_ARGB32, width(), height());
+    if (m_cairoSurface) {
+        m_cairoContext = cairo_create(m_cairoSurface);
+    }
+    
+    return m_cairoSurface;
 }
 
-void Canvas::drawWithCairo(QPainter &painter) { Q_UNUSED(painter) }
+void Canvas::drawWithCairo(QPainter &painter)
+{
+    if (!m_cairoSurface || !m_cairoContext) {
+        return;
+    }
+    
+    // Clear the Cairo surface
+    cairo_save(m_cairoContext);
+    cairo_set_operator(m_cairoContext, CAIRO_OPERATOR_CLEAR);
+    cairo_paint(m_cairoContext);
+    cairo_restore(m_cairoContext);
+    
+    // Set up transformation matrix
+    cairo_scale(m_cairoContext, m_zoom, m_zoom);
+    cairo_translate(m_cairoContext, m_panOffset.x(), m_panOffset.y());
+    
+    // Draw all shapes with Cairo
+    if (m_document) {
+        for (Layer* layer : m_document->getLayers()) {
+            if (layer && layer->isVisible()) {
+                for (Shape* shape : layer->getShapes()) {
+                    if (shape && shape->isVisible()) {
+                        shape->draw(m_cairoContext);
+                    }
+                }
+            }
+        }
+    }
+    
+    // Convert Cairo surface to QImage and draw it
+    cairo_surface_flush(m_cairoSurface);
+    unsigned char* data = cairo_image_surface_get_data(m_cairoSurface);
+    int width = cairo_image_surface_get_width(m_cairoSurface);
+    int height = cairo_image_surface_get_height(m_cairoSurface);
+    int stride = cairo_image_surface_get_stride(m_cairoSurface);
+    
+    QImage image(data, width, height, stride, QImage::Format_ARGB32_Premultiplied);
+    painter.drawImage(0, 0, image);
+}
 
 QPointF Canvas::snapToGrid(const QPointF &point) const
 {
@@ -352,10 +406,8 @@ void Canvas::resizeEvent(QResizeEvent *event)
 {
     QWidget::resizeEvent(event);
 
-    // Recreate Cairo surface with new size if needed
-    if (m_cairoSurface) {
-        createCairoSurface();
-    }
+    // Recreate Cairo surface with new size
+    createCairoSurface();
 
     update();
 }

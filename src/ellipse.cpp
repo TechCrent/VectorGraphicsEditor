@@ -1,6 +1,7 @@
 #include "ellipse.h"
 #include <QRectF>
 #include <cmath>
+#include <cairo.h>
 
 Ellipse::Ellipse(const QPointF &pos, const QSizeF &size)
     : Shape()
@@ -11,13 +12,77 @@ Ellipse::Ellipse(const QPointF &pos, const QSizeF &size)
     setSize(size);
 }
 
-void Ellipse::draw(void *cr)
+void Ellipse::draw(cairo_t *cr)
 {
-    if (!isVisible()) return;
+    if (!isVisible() || !cr) return;
     
-    // Temporarily disable Cairo drawing
-    // TODO: Implement Qt-based drawing instead of Cairo
-    Q_UNUSED(cr)
+    QPointF pos = getPosition();
+    QSizeF size = getSize();
+    QPen pen = getPen();
+    QBrush brush = getBrush();
+    
+    // Calculate center and radii
+    double centerX = pos.x() + size.width() / 2;
+    double centerY = pos.y() + size.height() / 2;
+    double radiusX = size.width() / 2;
+    double radiusY = size.height() / 2;
+    
+    cairo_save(cr);
+    
+    // Scale for ellipse
+    cairo_translate(cr, centerX, centerY);
+    cairo_scale(cr, radiusX, radiusY);
+    
+    // Create circular arc (will be scaled to ellipse)
+    double startAngleRad = m_startAngle * M_PI / 180.0;
+    double endAngleRad = m_endAngle * M_PI / 180.0;
+    
+    if (fabs(m_endAngle - m_startAngle) >= 360.0) {
+        // Full ellipse
+        cairo_arc(cr, 0, 0, 1, 0, 2 * M_PI);
+    } else {
+        // Arc
+        cairo_arc(cr, 0, 0, 1, startAngleRad, endAngleRad);
+    }
+    
+    cairo_restore(cr);
+    
+    // Draw filled ellipse if brush is not transparent
+    if (brush.style() != Qt::NoBrush) {
+        cairo_save(cr);
+        cairo_translate(cr, centerX, centerY);
+        cairo_scale(cr, radiusX, radiusY);
+        
+        if (fabs(m_endAngle - m_startAngle) >= 360.0) {
+            cairo_arc(cr, 0, 0, 1, 0, 2 * M_PI);
+        } else {
+            cairo_arc(cr, 0, 0, 1, startAngleRad, endAngleRad);
+        }
+        
+        QColor fillColor = brush.color();
+        cairo_set_source_rgba(cr, fillColor.redF(), fillColor.greenF(), fillColor.blueF(), fillColor.alphaF());
+        cairo_fill_preserve(cr);
+        cairo_restore(cr);
+    }
+    
+    // Draw stroke if pen is not transparent
+    if (pen.style() != Qt::NoPen) {
+        cairo_save(cr);
+        cairo_translate(cr, centerX, centerY);
+        cairo_scale(cr, radiusX, radiusY);
+        
+        if (fabs(m_endAngle - m_startAngle) >= 360.0) {
+            cairo_arc(cr, 0, 0, 1, 0, 2 * M_PI);
+        } else {
+            cairo_arc(cr, 0, 0, 1, startAngleRad, endAngleRad);
+        }
+        
+        QColor strokeColor = pen.color();
+        cairo_set_source_rgba(cr, strokeColor.redF(), strokeColor.greenF(), strokeColor.blueF(), strokeColor.alphaF());
+        cairo_set_line_width(cr, pen.widthF() / ((radiusX + radiusY) / 2)); // Adjust line width for scaling
+        cairo_stroke(cr);
+        cairo_restore(cr);
+    }
 }
 
 bool Ellipse::contains(const QPointF &point) const
