@@ -1,0 +1,75 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 21,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "mingw-vcpkg",
+      "displayName": "MinGW 64-bit with vcpkg (Debug)",
+      "description": "Configure with MinGW and vcpkg integration for Debug",
+      "generator": "MinGW Makefiles",
+      "binaryDir": "${sourceDir}/build/debug",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "C:/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_TARGET_TRIPLET": "x64-mingw-dynamic",
+        "CMAKE_PREFIX_PATH": "C:/Qt/6.9.1/mingw_64"
+      },
+      "environment": {
+        "VCPKG_ROOT": "C:/vcpkg"
+      },
+      "vendor": {
+        "qtCreator": {
+          "autoActivate": true
+        }
+      }
+    },
+    {
+      "name": "mingw-vcpkg-release",
+      "displayName": "MinGW 64-bit with vcpkg (Release)",
+      "description": "Configure with MinGW and vcpkg integration for Release",
+      "generator": "MinGW Makefiles",
+      "binaryDir": "${sourceDir}/build/release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TOOLCHAIN_FILE": "C:/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_TARGET_TRIPLET": "x64-mingw-dynamic",
+        "CMAKE_PREFIX_PATH": "C:/Qt/6.9.1/mingw_64"
+      },
+      "environment": {
+        "VCPKG_ROOT": "C:/vcpkg"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "mingw-vcpkg-build",
+      "displayName": "Build (MinGW + vcpkg, Debug)",
+      "description": "Build using MinGW with vcpkg integration (Debug)",
+      "configurePreset": "mingw-vcpkg",
+      "configuration": "Debug",
+      "targets": ["all"]
+    },
+    {
+      "name": "mingw-vcpkg-build-release",
+      "displayName": "Build (MinGW + vcpkg, Release)",
+      "description": "Build using MinGW with vcpkg integration (Release)",
+      "configurePreset": "mingw-vcpkg-release",
+      "configuration": "Release",
+      "targets": ["all"]
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "mingw-vcpkg-test",
+      "displayName": "Test (MinGW + vcpkg, Debug)",
+      "configurePreset": "mingw-vcpkg",
+      "execution": {
+        "noTestsAction": "ignore"
+      }
+    }
+  ]
+}

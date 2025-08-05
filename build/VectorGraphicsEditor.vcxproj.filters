@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\canvas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\document.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\svg_parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\shape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\rectangle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\ellipse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\line.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\bezier.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\include\mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\include\canvas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\include\document.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\include\svg_parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\include\shape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\include\rectangle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\include\ellipse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\include\line.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\include\bezier.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{BCFF5D0F-B6C3-350F-8524-0C3DFF9EEEAB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{557EC170-3100-33BC-A928-7E3CAE8AE5B7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

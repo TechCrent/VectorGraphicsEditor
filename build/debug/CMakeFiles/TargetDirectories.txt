@@ -1,0 +1,9 @@
+C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug/CMakeFiles/VectorGraphicsEditor.dir
+C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug/CMakeFiles/edit_cache.dir
+C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug/CMakeFiles/rebuild_cache.dir
+C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug/CMakeFiles/list_install_components.dir
+C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug/CMakeFiles/install.dir
+C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug/CMakeFiles/install/local.dir
+C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug/CMakeFiles/install/strip.dir
+C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug/CMakeFiles/VectorGraphicsEditor_autogen_timestamp_deps.dir
+C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug/CMakeFiles/VectorGraphicsEditor_autogen.dir

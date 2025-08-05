@@ -1,0 +1,4 @@
+C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/CMakeFiles/VectorGraphicsEditor.dir
+C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/CMakeFiles/INSTALL.dir
+C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/CMakeFiles/ZERO_CHECK.dir

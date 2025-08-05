@@ -1,0 +1,10 @@
+^C:\USERS\CIICI\ONEDRIVE\DESKTOP\PRJ.A.I.E\PROJECTS\PROGRAMMING_PROJECTS\SOFTWARE\VECTORGRAPHICSEDITOR\BUILD\CMAKEFILES\E67ADC681700DD76E1D3809F31E104EF\GENERATE.STAMP.RULE
+setlocal
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor -BC:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/VectorGraphicsEditor.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
