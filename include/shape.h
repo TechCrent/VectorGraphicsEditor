@@ -6,7 +6,7 @@
 #include <QColor>
 #include <QPen>
 #include <QBrush>
-// #include <cairo.h>
+#include <cairo.h>
 
 class Shape
 {
@@ -22,7 +22,7 @@ public:
     virtual ~Shape() = default;
 
     // Pure virtual methods
-    virtual void draw(void *cr) = 0;  // Temporarily use void* instead of cairo_t*
+    virtual void draw(cairo_t *cr) = 0;
     virtual bool contains(const QPointF &point) const = 0;
     virtual Type getType() const = 0;
     virtual Shape* clone() const = 0;

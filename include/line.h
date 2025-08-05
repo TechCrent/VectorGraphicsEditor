@@ -9,7 +9,7 @@ public:
     Line(const QPointF &start = QPointF(), const QPointF &end = QPointF(100, 100));
     ~Line() override = default;
 
-    void draw(void *cr) override;
+    void draw(cairo_t *cr) override;
     bool contains(const QPointF &point) const override;
     Type getType() const override { return Shape::Line; }
     Line* clone() const override;

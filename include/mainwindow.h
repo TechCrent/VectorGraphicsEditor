@@ -84,57 +84,31 @@ private slots:
 
 private:
     void setupUI();
-    void setupToolbars();
-    void setupDockWidgets();
-    void setupMenus();
+    void setupActions();
+    void setupMenusAndToolbars();
     void setupStatusBar();
     void connectSignals();
+    void updateFillColorButton(const QColor &color);
+    void updateStrokeColorButton(const QColor &color);
 
 private:
     Ui::MainWindow *ui;
     Canvas *m_canvas;
     Document *m_document;
     
-    // Toolbars
-    QToolBar *m_fileToolBar;
-    QToolBar *m_editToolBar;
-    QToolBar *m_toolsToolBar;
-    QToolBar *m_viewToolBar;
-    
-    // Dock widgets
+    // Dock widgets (from UI file)
     QDockWidget *m_layersDock;
     QDockWidget *m_propertiesDock;
     
-    // Layer panel
+    // Layer panel (from UI file)
     QListWidget *m_layersList;
     
-    // Property panel
-    QWidget *m_propertiesWidget;
+    // Property panel (from UI file)
     QPushButton *m_fillColorButton;
     QPushButton *m_strokeColorButton;
     QSpinBox *m_strokeWidthSpinBox;
     
-    // Actions
-    QAction *m_newAction;
-    QAction *m_openAction;
-    QAction *m_saveAction;
-    QAction *m_exportAction;
-    QAction *m_importAction;
-    QAction *m_undoAction;
-    QAction *m_redoAction;
-    QAction *m_cutAction;
-    QAction *m_copyAction;
-    QAction *m_pasteAction;
-    QAction *m_selectAction;
-    QAction *m_rectangleAction;
-    QAction *m_ellipseAction;
-    QAction *m_lineAction;
-    QAction *m_bezierAction;
-    QAction *m_zoomInAction;
-    QAction *m_zoomOutAction;
-    QAction *m_fitToViewAction;
-    QAction *m_showGridAction;
-    QAction *m_snapToGridAction;
+    // Actions are now defined in the UI file
 };
 
 #endif // MAINWINDOW_H 
