@@ -1,7 +1,7 @@
 CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.obj: \
- C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\mocs_compilation.cpp \
- C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\6YEA5652QU/moc_canvas.cpp \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/canvas.h \
+ C:\Projects\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\mocs_compilation.cpp \
+ C:\Projects\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\6YEA5652QU/moc_canvas.cpp \
+ C:/Projects/VectorGraphicsEditor/include/canvas.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QWidget \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qwidget.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -422,33 +422,33 @@ CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilatio
  C:/Qt/6.9.1/mingw_64/include/QtGui/qpainter.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qtextoption.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qpen.h \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/cairo/cairo.h \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/cairo/cairo-version.h \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/cairo/cairo-features.h \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/cairo/cairo-deprecated.h \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/document.h \
- C:/Qt/6.9.1/mingw_64/include/QtCore/QObject \
- C:/Qt/6.9.1/mingw_64/include/QtCore/QList \
- C:/Qt/6.9.1/mingw_64/include/QtCore/QString \
- C:/Qt/6.9.1/mingw_64/include/QtCore/qstring.h \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/shape.h \
- C:/Qt/6.9.1/mingw_64/include/QtCore/QPointF \
- C:/Qt/6.9.1/mingw_64/include/QtCore/qpoint.h \
- C:/Qt/6.9.1/mingw_64/include/QtCore/QSizeF \
- C:/Qt/6.9.1/mingw_64/include/QtGui/QColor \
- C:/Qt/6.9.1/mingw_64/include/QtGui/qcolor.h \
- C:/Qt/6.9.1/mingw_64/include/QtGui/QPen \
- C:/Qt/6.9.1/mingw_64/include/QtGui/qpen.h \
- C:/Qt/6.9.1/mingw_64/include/QtGui/QBrush \
- C:/Qt/6.9.1/mingw_64/include/QtGui/qbrush.h \
+ C:/msys64/mingw64/include/cairo/cairo.h \
+ C:/msys64/mingw64/include/cairo/cairo-version.h \
+ C:/msys64/mingw64/include/cairo/cairo-features.h \
+ C:/msys64/mingw64/include/cairo/cairo-deprecated.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/qtmochelpers.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/qtmocconstants.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/q20algorithm.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/q23type_traits.h \
- C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\6YEA5652QU/moc_document.cpp \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/document.h \
- C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\6YEA5652QU/moc_mainwindow.cpp \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/mainwindow.h \
+ C:\Projects\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\6YEA5652QU/moc_document.cpp \
+ C:/Projects/VectorGraphicsEditor/include/document.h \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QObject \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QList \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QString \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/qstring.h \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QSizeF \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/QColor \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/qcolor.h \
+ C:/Projects/VectorGraphicsEditor/include/shape.h \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QPointF \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/qpoint.h \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/QPen \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/qpen.h \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/QBrush \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/qbrush.h \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QRectF \
+ C:\Projects\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\6YEA5652QU/moc_mainwindow.cpp \
+ C:/Projects/VectorGraphicsEditor/include/mainwindow.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QMainWindow \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qmainwindow.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qwidget.h \
@@ -547,6 +547,7 @@ CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilatio
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qmenu.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QStatusBar \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qstatusbar.h \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/canvas.h \
+ C:/Projects/VectorGraphicsEditor/include/canvas.h \
+ C:/Projects/VectorGraphicsEditor/include/document.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qtextcursor.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qtextformat.h

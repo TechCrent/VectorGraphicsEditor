@@ -2,6 +2,9 @@
 #define ELLIPSE_H
 
 #include "shape.h"
+#include <QPointF>
+#include <QSizeF>
+#include <cairo.h>
 
 class Ellipse : public Shape
 {
@@ -9,7 +12,11 @@ public:
     Ellipse(const QPointF &pos = QPointF(), const QSizeF &size = QSizeF(100, 100));
     ~Ellipse() override = default;
 
-    void draw(cairo_t *cr) override;
+    // Drawing
+    void draw(QPainter &painter) override;   // Qt drawing
+    void draw(cairo_t *cr) override;        // Cairo drawing
+
+    // Logic
     bool contains(const QPointF &point) const override;
     Type getType() const override { return Shape::Ellipse; }
     Ellipse* clone() const override;
@@ -21,8 +28,8 @@ public:
     double getEndAngle() const;
 
 private:
-    double m_startAngle;
-    double m_endAngle;
+    double m_startAngle;  // Degrees
+    double m_endAngle;    // Degrees
 };
 
-#endif // ELLIPSE_H 
+#endif // ELLIPSE_H

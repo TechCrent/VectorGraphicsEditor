@@ -1,5 +1,6 @@
 #include "rectangle.h"
 #include <QRectF>
+#include <QPainter>
 #include <cmath>
 #include <cairo.h>
 
@@ -11,25 +12,52 @@ Rectangle::Rectangle(const QPointF &pos, const QSizeF &size)
     setSize(size);
 }
 
+// =========================
+// Qt Drawing
+// =========================
+void Rectangle::draw(QPainter &painter)
+{
+    if (!isVisible()) return;
+
+    QPointF pos = getPosition();
+    QSizeF size = getSize();
+
+    painter.save();
+    painter.setPen(getPen());
+    painter.setBrush(getBrush());
+
+    QRectF rect(pos, size);
+
+    if (m_cornerRadius > 0.0) {
+        painter.drawRoundedRect(rect, m_cornerRadius, m_cornerRadius);
+    } else {
+        painter.drawRect(rect);
+    }
+
+    painter.restore();
+}
+
+// =========================
+// Cairo Drawing
+// =========================
 void Rectangle::draw(cairo_t *cr)
 {
     if (!isVisible() || !cr) return;
-    
+
     QPointF pos = getPosition();
     QSizeF size = getSize();
     QPen pen = getPen();
     QBrush brush = getBrush();
-    
-    // Draw filled rectangle if brush is not transparent
+
+    // Fill
     if (brush.style() != Qt::NoBrush) {
         cairo_save(cr);
-        
-        if (m_cornerRadius > 0) {
-            // Rounded rectangle path
+
+        if (m_cornerRadius > 0.0) {
             double x = pos.x(), y = pos.y();
             double w = size.width(), h = size.height();
             double r = m_cornerRadius;
-            
+
             cairo_new_sub_path(cr);
             cairo_arc(cr, x + r, y + r, r, M_PI, 3 * M_PI / 2);
             cairo_arc(cr, x + w - r, y + r, r, 3 * M_PI / 2, 0);
@@ -39,23 +67,22 @@ void Rectangle::draw(cairo_t *cr)
         } else {
             cairo_rectangle(cr, pos.x(), pos.y(), size.width(), size.height());
         }
-        
+
         QColor fillColor = brush.color();
         cairo_set_source_rgba(cr, fillColor.redF(), fillColor.greenF(), fillColor.blueF(), fillColor.alphaF());
         cairo_fill_preserve(cr);
         cairo_restore(cr);
     }
-    
-    // Draw stroke if pen is not transparent
+
+    // Stroke
     if (pen.style() != Qt::NoPen) {
         cairo_save(cr);
-        
-        if (m_cornerRadius > 0) {
-            // Rounded rectangle path
+
+        if (m_cornerRadius > 0.0) {
             double x = pos.x(), y = pos.y();
             double w = size.width(), h = size.height();
             double r = m_cornerRadius;
-            
+
             cairo_new_sub_path(cr);
             cairo_arc(cr, x + r, y + r, r, M_PI, 3 * M_PI / 2);
             cairo_arc(cr, x + w - r, y + r, r, 3 * M_PI / 2, 0);
@@ -65,7 +92,7 @@ void Rectangle::draw(cairo_t *cr)
         } else {
             cairo_rectangle(cr, pos.x(), pos.y(), size.width(), size.height());
         }
-        
+
         QColor strokeColor = pen.color();
         cairo_set_source_rgba(cr, strokeColor.redF(), strokeColor.greenF(), strokeColor.blueF(), strokeColor.alphaF());
         cairo_set_line_width(cr, pen.widthF());
@@ -74,14 +101,16 @@ void Rectangle::draw(cairo_t *cr)
     }
 }
 
+// =========================
+// Other Methods
+// =========================
 bool Rectangle::contains(const QPointF &point) const
 {
     QPointF pos = getPosition();
     QSizeF size = getSize();
     QRectF rect(pos, size);
-    
-    // Simple rectangle containment for now
-    // TODO: Implement proper rounded rectangle containment
+
+    // NOTE: Rounded corner hit-testing can be added later if needed
     return rect.contains(point);
 }
 
@@ -103,4 +132,4 @@ void Rectangle::setCornerRadius(double radius)
 double Rectangle::getCornerRadius() const
 {
     return m_cornerRadius;
-} 
+}

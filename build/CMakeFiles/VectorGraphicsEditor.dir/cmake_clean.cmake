@@ -24,12 +24,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.obj.d"
   "CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.obj"
   "CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.obj.d"
-  "VECTOR GRAPHICS EDITOR.exe"
-  "VECTOR GRAPHICS EDITOR.exe.manifest"
-  "VECTOR GRAPHICS EDITOR.pdb"
+  "VectorGraphicsEditor.exe"
+  "VectorGraphicsEditor.exe.manifest"
+  "VectorGraphicsEditor.pdb"
   "VectorGraphicsEditor_autogen/mocs_compilation.cpp"
   "VectorGraphicsEditor_autogen/timestamp"
-  "libVECTOR GRAPHICS EDITOR.dll.a"
+  "libVectorGraphicsEditor.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

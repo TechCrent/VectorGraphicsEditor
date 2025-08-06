@@ -66,7 +66,6 @@
 #define __BFLT16_MAX_10_EXP__ 38
 #define __BFLT16_MAX_EXP__ 128
 #define __LDBL_IS_IEC_60559__ 1
-#define QT_NO_DEBUG 1
 #define __FLT64X_HAS_QUIET_NAN__ 1
 #define __UINT_LEAST8_MAX__ 0xff
 #define __GCC_ATOMIC_BOOL_LOCK_FREE 2
@@ -89,6 +88,7 @@
 #define __SCHAR_MAX__ 0x7f
 #define __FLT128_MANT_DIG__ 113
 #define __WCHAR_MIN__ 0
+#define QT_SVG_LIB 1
 #define __INT64_C(c) c ## LL
 #define __GCC_ATOMIC_POINTER_LOCK_FREE 2
 #define __ATOMIC_SEQ_CST 5
@@ -220,6 +220,7 @@
 #define __UINT8_TYPE__ unsigned char
 #define __FLT_DIG__ 6
 #define __NO_INLINE__ 1
+#define QT_DEBUG 1
 #define __DEC_EVAL_METHOD__ 2
 #define __FLT_MANT_DIG__ 24
 #define __LDBL_DECIMAL_DIG__ 21

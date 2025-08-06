@@ -52,10 +52,10 @@ RM = C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor
+CMAKE_SOURCE_DIR = C:\Projects\VectorGraphicsEditor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build
+CMAKE_BINARY_DIR = C:\Projects\VectorGraphicsEditor\build
 
 # Utility rule file for VectorGraphicsEditor_autogen_timestamp_deps.
 
@@ -77,6 +77,6 @@ CMakeFiles/VectorGraphicsEditor_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/VectorGraphicsEditor_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/VectorGraphicsEditor_autogen_timestamp_deps.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\CMakeFiles\VectorGraphicsEditor_autogen_timestamp_deps.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Projects\VectorGraphicsEditor C:\Projects\VectorGraphicsEditor C:\Projects\VectorGraphicsEditor\build C:\Projects\VectorGraphicsEditor\build C:\Projects\VectorGraphicsEditor\build\CMakeFiles\VectorGraphicsEditor_autogen_timestamp_deps.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/VectorGraphicsEditor_autogen_timestamp_deps.dir/depend
 

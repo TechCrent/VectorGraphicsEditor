@@ -1,4 +1,5 @@
 #include "bezier.h"
+#include <QPainter>
 #include <QPainterPath>
 #include <cmath>
 #include <cairo.h>
@@ -9,30 +10,75 @@ Bezier::Bezier()
 {
 }
 
+// ====================
+// QPainter Drawing
+// ====================
+void Bezier::draw(QPainter &painter)
+{
+    if (!isVisible() || m_points.isEmpty()) return;
+
+    QPen pen = getPen();
+    QBrush brush = getBrush();
+
+    QPainterPath path;
+    path.moveTo(m_points[0]);
+
+    for (int i = 1; i < m_points.size(); i += 3) {
+        if (i + 2 < m_points.size()) {
+            path.cubicTo(m_points[i], m_points[i + 1], m_points[i + 2]);
+        } else if (i + 1 < m_points.size()) {
+            path.quadTo(m_points[i], m_points[i + 1]);
+        } else {
+            path.lineTo(m_points[i]);
+        }
+    }
+
+    if (m_closed) {
+        path.closeSubpath();
+    }
+
+    painter.save();
+
+    if (brush.style() != Qt::NoBrush && m_closed) {
+        painter.setBrush(brush);
+        painter.fillPath(path, brush);
+    }
+
+    if (pen.style() != Qt::NoPen) {
+        painter.setPen(pen);
+        painter.drawPath(path);
+    }
+
+    painter.restore();
+}
+
+// ====================
+// Cairo Drawing
+// ====================
 void Bezier::draw(cairo_t *cr)
 {
     if (!isVisible() || m_points.isEmpty() || !cr) return;
-    
+
     QPen pen = getPen();
     QBrush brush = getBrush();
-    
+
     cairo_save(cr);
-    
+
     cairo_move_to(cr, m_points[0].x(), m_points[0].y());
 
     for (int i = 1; i < m_points.size(); i += 3) {
         if (i + 2 < m_points.size()) {
             cairo_curve_to(cr,
-                          m_points[i].x(), m_points[i].y(),
-                          m_points[i + 1].x(), m_points[i + 1].y(),
-                          m_points[i + 2].x(), m_points[i + 2].y());
+                           m_points[i].x(), m_points[i].y(),
+                           m_points[i + 1].x(), m_points[i + 1].y(),
+                           m_points[i + 2].x(), m_points[i + 2].y());
         } else if (i + 1 < m_points.size()) {
             QPointF current = m_points[i - 1];
             QPointF control = m_points[i];
             QPointF end = m_points[i + 1];
 
-            QPointF cp1 = current + (control - current) * (2.0/3.0);
-            QPointF cp2 = end + (control - end) * (2.0/3.0);
+            QPointF cp1 = current + (control - current) * (2.0 / 3.0);
+            QPointF cp2 = end + (control - end) * (2.0 / 3.0);
 
             cairo_curve_to(cr, cp1.x(), cp1.y(), cp2.x(), cp2.y(), end.x(), end.y());
         } else {
@@ -60,33 +106,36 @@ void Bezier::draw(cairo_t *cr)
     cairo_restore(cr);
 }
 
+// ====================
+// Hit Testing
+// ====================
 bool Bezier::contains(const QPointF &point) const
 {
     if (m_points.isEmpty()) return false;
 
     QPainterPath path;
+    path.moveTo(m_points[0]);
 
-    if (m_points.size() >= 2) {
-        path.moveTo(m_points[0]);
-
-        for (int i = 1; i < m_points.size(); i += 3) {
-            if (i + 2 < m_points.size()) {
-                path.cubicTo(m_points[i], m_points[i + 1], m_points[i + 2]);
-            } else if (i + 1 < m_points.size()) {
-                path.quadTo(m_points[i], m_points[i + 1]);
-            } else {
-                path.lineTo(m_points[i]);
-            }
+    for (int i = 1; i < m_points.size(); i += 3) {
+        if (i + 2 < m_points.size()) {
+            path.cubicTo(m_points[i], m_points[i + 1], m_points[i + 2]);
+        } else if (i + 1 < m_points.size()) {
+            path.quadTo(m_points[i], m_points[i + 1]);
+        } else {
+            path.lineTo(m_points[i]);
         }
+    }
 
-        if (m_closed) {
-            path.closeSubpath();
-        }
+    if (m_closed) {
+        path.closeSubpath();
     }
 
     return path.contains(point);
 }
 
+// ====================
+// Clone
+// ====================
 Bezier* Bezier::clone() const
 {
     Bezier *clone = new Bezier();
@@ -98,6 +147,9 @@ Bezier* Bezier::clone() const
     return clone;
 }
 
+// ====================
+// Point Management
+// ====================
 void Bezier::addPoint(const QPointF &point)
 {
     m_points.append(point);
@@ -126,20 +178,18 @@ void Bezier::setPoint(int index, const QPointF &point)
     if (index >= 0 && index < m_points.size()) {
         m_points[index] = point;
 
-        if (!m_points.isEmpty()) {
-            QPointF minPoint = m_points[0];
-            QPointF maxPoint = m_points[0];
+        QPointF minPoint = m_points[0];
+        QPointF maxPoint = m_points[0];
 
-            for (const QPointF &p : m_points) {
-                minPoint.setX(qMin(minPoint.x(), p.x()));
-                minPoint.setY(qMin(minPoint.y(), p.y()));
-                maxPoint.setX(qMax(maxPoint.x(), p.x()));
-                maxPoint.setY(qMax(maxPoint.y(), p.y()));
-            }
-
-            setPosition(minPoint);
-            setSize(QSizeF(maxPoint.x() - minPoint.x(), maxPoint.y() - minPoint.y()));
+        for (const QPointF &p : m_points) {
+            minPoint.setX(qMin(minPoint.x(), p.x()));
+            minPoint.setY(qMin(minPoint.y(), p.y()));
+            maxPoint.setX(qMax(maxPoint.x(), p.x()));
+            maxPoint.setY(qMax(maxPoint.y(), p.y()));
         }
+
+        setPosition(minPoint);
+        setSize(QSizeF(maxPoint.x() - minPoint.x(), maxPoint.y() - minPoint.y()));
     }
 }
 
@@ -151,15 +201,8 @@ QPointF Bezier::getPoint(int index) const
     return QPointF();
 }
 
-QList<QPointF> Bezier::getPoints() const
-{
-    return m_points.toList();
-}
-
-int Bezier::getPointCount() const
-{
-    return m_points.size();
-}
+QList<QPointF> Bezier::getPoints() const { return m_points.toList(); }
+int Bezier::getPointCount() const { return m_points.size(); }
 
 void Bezier::clearPoints()
 {
@@ -168,12 +211,5 @@ void Bezier::clearPoints()
     setSize(QSizeF());
 }
 
-void Bezier::setClosed(bool closed)
-{
-    m_closed = closed;
-}
-
-bool Bezier::isClosed() const
-{
-    return m_closed;
-}
+void Bezier::setClosed(bool closed) { m_closed = closed; }
+bool Bezier::isClosed() const { return m_closed; }

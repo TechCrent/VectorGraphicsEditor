@@ -1,3 +1,0 @@
-C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\VectorGraphicsEditor.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\VectorGraphicsEditor.dir/objects.a @CMakeFiles\VectorGraphicsEditor.dir\objects1.rsp
-C:\msys64\mingw64\bin\c++.exe -g  -static-libgcc -static-libstdc++ -mwindows -Wl,--whole-archive CMakeFiles\VectorGraphicsEditor.dir/objects.a -Wl,--no-whole-archive -o "VECTOR GRAPHICS EDITOR.exe" -Wl,--out-implib,"libVECTOR GRAPHICS EDITOR.dll.a" -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\VectorGraphicsEditor.dir\linkLibs.rsp

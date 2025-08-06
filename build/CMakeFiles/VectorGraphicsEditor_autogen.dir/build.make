@@ -52,10 +52,10 @@ RM = C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor
+CMAKE_SOURCE_DIR = C:\Projects\VectorGraphicsEditor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build
+CMAKE_BINARY_DIR = C:\Projects\VectorGraphicsEditor\build
 
 # Utility rule file for VectorGraphicsEditor_autogen.
 
@@ -70,9 +70,9 @@ CMakeFiles/VectorGraphicsEditor_autogen: VectorGraphicsEditor_autogen/timestamp
 VectorGraphicsEditor_autogen/timestamp: C:/Qt/6.9.1/mingw_64/bin/moc.exe
 VectorGraphicsEditor_autogen/timestamp: C:/Qt/6.9.1/mingw_64/bin/uic.exe
 VectorGraphicsEditor_autogen/timestamp: CMakeFiles/VectorGraphicsEditor_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target VectorGraphicsEditor"
-	C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/CMakeFiles/VectorGraphicsEditor_autogen.dir/AutogenInfo.json ""
-	C:\Qt\Tools\CMake_64\bin\cmake.exe -E touch C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Projects\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target VectorGraphicsEditor"
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen C:/Projects/VectorGraphicsEditor/build/CMakeFiles/VectorGraphicsEditor_autogen.dir/AutogenInfo.json Debug
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E touch C:/Projects/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/timestamp
 
 VectorGraphicsEditor_autogen: CMakeFiles/VectorGraphicsEditor_autogen
 VectorGraphicsEditor_autogen: VectorGraphicsEditor_autogen/timestamp
@@ -88,6 +88,6 @@ CMakeFiles/VectorGraphicsEditor_autogen.dir/clean:
 .PHONY : CMakeFiles/VectorGraphicsEditor_autogen.dir/clean
 
 CMakeFiles/VectorGraphicsEditor_autogen.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\CMakeFiles\VectorGraphicsEditor_autogen.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Projects\VectorGraphicsEditor C:\Projects\VectorGraphicsEditor C:\Projects\VectorGraphicsEditor\build C:\Projects\VectorGraphicsEditor\build C:\Projects\VectorGraphicsEditor\build\CMakeFiles\VectorGraphicsEditor_autogen.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/VectorGraphicsEditor_autogen.dir/depend
 

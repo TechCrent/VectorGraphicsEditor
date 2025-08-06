@@ -1,5 +1,0 @@
-# Hashes of file build rules.
-485ffddbdd767f43850b279ad4eb66d0 CMakeFiles/VectorGraphicsEditorTests_autogen
-485ffddbdd767f43850b279ad4eb66d0 CMakeFiles/VectorGraphicsEditor_autogen
-2d21bda517e35e41ba30b1fe3e704482 VectorGraphicsEditorTests_autogen/timestamp
-9148a36b826a4c65e3d830ecf8ef4a16 VectorGraphicsEditor_autogen/timestamp

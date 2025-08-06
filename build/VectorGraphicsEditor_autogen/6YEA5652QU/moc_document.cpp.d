@@ -1,8 +1,10 @@
-C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/6YEA5652QU/moc_document.cpp: C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/document.h \
-  C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/moc_predefs.h \
+C:/Projects/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/6YEA5652QU/moc_document.cpp: C:/Projects/VectorGraphicsEditor/include/document.h \
+  C:/Projects/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/moc_predefs.h \
+  C:/Projects/VectorGraphicsEditor/include/shape.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/QList \
   C:/Qt/6.9.1/mingw_64/include/QtCore/QObject \
   C:/Qt/6.9.1/mingw_64/include/QtCore/QPointF \
+  C:/Qt/6.9.1/mingw_64/include/QtCore/QRectF \
   C:/Qt/6.9.1/mingw_64/include/QtCore/QSizeF \
   C:/Qt/6.9.1/mingw_64/include/QtCore/QString \
   C:/Qt/6.9.1/mingw_64/include/QtCore/q17memory.h \
@@ -38,6 +40,7 @@ C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software
   C:/Qt/6.9.1/mingw_64/include/QtCore/qcontainertools_impl.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qdatastream.h \
+  C:/Qt/6.9.1/mingw_64/include/QtCore/qendian.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qexceptionhandling.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qflags.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qfloat16.h \
@@ -120,11 +123,17 @@ C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software
   C:/Qt/6.9.1/mingw_64/include/QtCore/qyieldcpu.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/QBrush \
   C:/Qt/6.9.1/mingw_64/include/QtGui/QColor \
+  C:/Qt/6.9.1/mingw_64/include/QtGui/QPainter \
   C:/Qt/6.9.1/mingw_64/include/QtGui/QPen \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qbrush.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qcolor.h \
+  C:/Qt/6.9.1/mingw_64/include/QtGui/qfont.h \
+  C:/Qt/6.9.1/mingw_64/include/QtGui/qfontinfo.h \
+  C:/Qt/6.9.1/mingw_64/include/QtGui/qfontmetrics.h \
+  C:/Qt/6.9.1/mingw_64/include/QtGui/qfontvariableaxis.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qimage.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qpaintdevice.h \
+  C:/Qt/6.9.1/mingw_64/include/QtGui/qpainter.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qpen.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qpixmap.h \
@@ -132,17 +141,13 @@ C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software
   C:/Qt/6.9.1/mingw_64/include/QtGui/qregion.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qrgb.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qrgba64.h \
+  C:/Qt/6.9.1/mingw_64/include/QtGui/qtextoption.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qtguiglobal.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qwindowdefs_win.h \
-  C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/cairo/cairo-deprecated.h \
-  C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/cairo/cairo-features.h \
-  C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/cairo/cairo-version.h \
-  C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/cairo/cairo.h \
-  C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/shape.h \
   C:/msys64/mingw64/include/_mingw.h \
   C:/msys64/mingw64/include/_mingw_mac.h \
   C:/msys64/mingw64/include/_mingw_off_t.h \
@@ -314,6 +319,10 @@ C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software
   C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/msys64/mingw64/include/cairo/cairo-deprecated.h \
+  C:/msys64/mingw64/include/cairo/cairo-features.h \
+  C:/msys64/mingw64/include/cairo/cairo-version.h \
+  C:/msys64/mingw64/include/cairo/cairo.h \
   C:/msys64/mingw64/include/corecrt.h \
   C:/msys64/mingw64/include/corecrt_startup.h \
   C:/msys64/mingw64/include/corecrt_stdio_config.h \

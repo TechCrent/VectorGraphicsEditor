@@ -1,6 +1,6 @@
 CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj: \
- C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\canvas.cpp \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/canvas.h \
+ C:\Projects\VectorGraphicsEditor\src\canvas.cpp \
+ C:/Projects/VectorGraphicsEditor/include/canvas.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QWidget \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qwidget.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -421,32 +421,44 @@ CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj: \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qpainter.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qtextoption.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qpen.h \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/cairo/cairo.h \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/cairo/cairo-version.h \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/cairo/cairo-features.h \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/cairo/cairo-deprecated.h \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/document.h \
+ C:/msys64/mingw64/include/cairo/cairo.h \
+ C:/msys64/mingw64/include/cairo/cairo-version.h \
+ C:/msys64/mingw64/include/cairo/cairo-features.h \
+ C:/msys64/mingw64/include/cairo/cairo-deprecated.h \
+ C:/Projects/VectorGraphicsEditor/include/document.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/QObject \
  C:/Qt/6.9.1/mingw_64/include/QtCore/QList \
  C:/Qt/6.9.1/mingw_64/include/QtCore/QString \
  C:/Qt/6.9.1/mingw_64/include/QtCore/qstring.h \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/shape.h \
- C:/Qt/6.9.1/mingw_64/include/QtCore/QPointF \
- C:/Qt/6.9.1/mingw_64/include/QtCore/qpoint.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/QSizeF \
  C:/Qt/6.9.1/mingw_64/include/QtGui/QColor \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qcolor.h \
+ C:/Projects/VectorGraphicsEditor/include/shape.h \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QPointF \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/qpoint.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/QPen \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qpen.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/QBrush \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qbrush.h \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/rectangle.h \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/ellipse.h \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/line.h \
- C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/bezier.h \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QRectF \
+ C:/Projects/VectorGraphicsEditor/include/shape.h \
+ C:/Projects/VectorGraphicsEditor/include/rectangle.h \
+ C:/Projects/VectorGraphicsEditor/include/ellipse.h \
+ C:/Projects/VectorGraphicsEditor/include/line.h \
+ C:/Projects/VectorGraphicsEditor/include/bezier.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/QVector \
  C:/Qt/6.9.1/mingw_64/include/QtCore/qvector.h \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/QPainterPath \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/qpainterpath.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/QWheelEvent \
  C:/Qt/6.9.1/mingw_64/include/QtGui/QResizeEvent \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/QClipboard \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/qclipboard.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/QApplication \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qapplication.h \
+ C:/Qt/6.9.1/mingw_64/include/QtSvg/QSvgGenerator \
+ C:/Qt/6.9.1/mingw_64/include/QtSvg/qsvggenerator.h \
+ C:/Qt/6.9.1/mingw_64/include/QtSvg/qtsvgglobal.h \
+ C:/Qt/6.9.1/mingw_64/include/QtSvg/qtsvgexports.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/QDebug \
  C:/Qt/6.9.1/mingw_64/include/QtCore/qdebug.h

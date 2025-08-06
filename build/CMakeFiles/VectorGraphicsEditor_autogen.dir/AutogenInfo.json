@@ -1,16 +1,16 @@
 {
 	"AUTOGEN_COMMAND_LINE_LENGTH_MAX" : 32000,
-	"BUILD_DIR" : "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen",
-	"CMAKE_BINARY_DIR" : "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build",
-	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build",
-	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor",
+	"BUILD_DIR" : "C:/Projects/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Projects/VectorGraphicsEditor/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Projects/VectorGraphicsEditor/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Projects/VectorGraphicsEditor",
 	"CMAKE_EXECUTABLE" : "C:/Qt/Tools/CMake_64/bin/cmake.exe",
 	"CMAKE_LIST_FILES" : 
 	[
-		"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/CMakeLists.txt",
+		"C:/Projects/VectorGraphicsEditor/CMakeLists.txt",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystem.cmake.in",
-		"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/CMakeFiles/3.30.5/CMakeSystem.cmake",
+		"C:/Projects/VectorGraphicsEditor/build/CMakeFiles/3.30.5/CMakeSystem.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeMinGWFindMake.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake",
@@ -66,7 +66,7 @@
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCCompiler.cmake.in",
-		"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/CMakeFiles/3.30.5/CMakeCCompiler.cmake",
+		"C:/Projects/VectorGraphicsEditor/build/CMakeFiles/3.30.5/CMakeCCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Determine-CXX.cmake",
@@ -117,7 +117,7 @@
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in",
-		"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+		"C:/Projects/VectorGraphicsEditor/build/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake",
@@ -132,7 +132,7 @@
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineRCCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCCompiler.cmake.in",
-		"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/CMakeFiles/3.30.5/CMakeRCCompiler.cmake",
+		"C:/Projects/VectorGraphicsEditor/build/CMakeFiles/3.30.5/CMakeRCCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestRCCompiler.cmake",
@@ -149,7 +149,7 @@
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCCompiler.cmake.in",
-		"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/CMakeFiles/3.30.5/CMakeCCompiler.cmake",
+		"C:/Projects/VectorGraphicsEditor/build/CMakeFiles/3.30.5/CMakeCCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake",
@@ -170,7 +170,7 @@
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in",
-		"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
+		"C:/Projects/VectorGraphicsEditor/build/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake",
 		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6/Qt6ConfigVersion.cmake",
 		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
@@ -424,6 +424,23 @@
 		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginTargets-relwithdebinfo.cmake",
 		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Widgets/Qt6QModernWindowsStylePluginAdditionalTargetInfo.cmake",
 		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessAliasTargets.cmake",
+		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Svg/Qt6SvgConfigVersion.cmake",
+		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Svg/Qt6SvgConfigVersionImpl.cmake",
+		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Svg/Qt6SvgConfig.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Svg/Qt6SvgDependencies.cmake",
+		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Svg/Qt6SvgTargets.cmake",
+		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Svg/Qt6SvgTargets-relwithdebinfo.cmake",
+		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Svg/Qt6SvgAdditionalTargetInfo.cmake",
+		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6SvgPrivate/Qt6SvgPrivateConfigVersion.cmake",
+		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6SvgPrivate/Qt6SvgPrivateConfigVersionImpl.cmake",
+		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6SvgPrivate/Qt6SvgPrivateConfig.cmake",
+		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake",
+		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6SvgPrivate/Qt6SvgPrivateDependencies.cmake",
+		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6SvgPrivate/Qt6SvgPrivateTargets.cmake",
+		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6SvgPrivate/Qt6SvgPrivateAdditionalTargetInfo.cmake",
+		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6SvgPrivate/Qt6SvgPrivateVersionlessAliasTargets.cmake",
+		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Svg/Qt6SvgVersionlessAliasTargets.cmake",
 		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Test/Qt6TestConfigVersion.cmake",
 		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Test/Qt6TestConfigVersionImpl.cmake",
 		"C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Test/Qt6TestConfig.cmake",
@@ -450,77 +467,78 @@
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor",
+	"CMAKE_SOURCE_DIR" : "C:/Projects/VectorGraphicsEditor",
 	"CROSS_CONFIG" : false,
-	"DEP_FILE" : "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/deps",
+	"DEP_FILE" : "C:/Projects/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "VectorGraphicsEditor_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/bezier.h",
+			"C:/Projects/VectorGraphicsEditor/include/bezier.h",
 			"MU",
 			"6YEA5652QU/moc_bezier.cpp",
 			null
 		],
 		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/canvas.h",
+			"C:/Projects/VectorGraphicsEditor/include/canvas.h",
 			"MU",
 			"6YEA5652QU/moc_canvas.cpp",
 			null
 		],
 		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/document.h",
+			"C:/Projects/VectorGraphicsEditor/include/document.h",
 			"MU",
 			"6YEA5652QU/moc_document.cpp",
 			null
 		],
 		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/ellipse.h",
+			"C:/Projects/VectorGraphicsEditor/include/ellipse.h",
 			"MU",
 			"6YEA5652QU/moc_ellipse.cpp",
 			null
 		],
 		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/line.h",
+			"C:/Projects/VectorGraphicsEditor/include/line.h",
 			"MU",
 			"6YEA5652QU/moc_line.cpp",
 			null
 		],
 		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/mainwindow.h",
+			"C:/Projects/VectorGraphicsEditor/include/mainwindow.h",
 			"MU",
 			"6YEA5652QU/moc_mainwindow.cpp",
 			null
 		],
 		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/rectangle.h",
+			"C:/Projects/VectorGraphicsEditor/include/rectangle.h",
 			"MU",
 			"6YEA5652QU/moc_rectangle.cpp",
 			null
 		],
 		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/shape.h",
+			"C:/Projects/VectorGraphicsEditor/include/shape.h",
 			"MU",
 			"6YEA5652QU/moc_shape.cpp",
 			null
 		],
 		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/svg_parser.h",
+			"C:/Projects/VectorGraphicsEditor/include/svg_parser.h",
 			"MU",
 			"6YEA5652QU/moc_svg_parser.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/include",
-	"MOC_COMPILATION_FILE" : "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "C:/Projects/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/include",
+	"MOC_COMPILATION_FILE" : "C:/Projects/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"MINGW_HAS_SECURE_API=1",
 		"QT_CORE_LIB",
+		"QT_DEBUG",
 		"QT_GUI_LIB",
 		"QT_NEEDS_QMAIN",
-		"QT_NO_DEBUG",
+		"QT_SVG_LIB",
 		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"WIN32",
@@ -539,14 +557,15 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include",
-		"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/cairo",
-		"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/include/libxml2",
+		"C:/Projects/VectorGraphicsEditor/include",
+		"C:/msys64/mingw64/include/cairo",
+		"C:/msys64/mingw64/include/libxml2",
 		"C:/Qt/6.9.1/mingw_64/include/QtCore",
 		"C:/Qt/6.9.1/mingw_64/include",
 		"C:/Qt/6.9.1/mingw_64/mkspecs/win32-g++",
 		"C:/Qt/6.9.1/mingw_64/include/QtWidgets",
 		"C:/Qt/6.9.1/mingw_64/include/QtGui",
+		"C:/Qt/6.9.1/mingw_64/include/QtSvg",
 		"C:/msys64/mingw64/include/c++/15.1.0",
 		"C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32",
 		"C:/msys64/mingw64/include/c++/15.1.0/backward",
@@ -574,75 +593,32 @@
 		"-c",
 		"C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "C:/Projects/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 4,
-	"PARSE_CACHE_FILE" : "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/CMakeFiles/VectorGraphicsEditor_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "C:/Projects/VectorGraphicsEditor/build/CMakeFiles/VectorGraphicsEditor_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "C:/Qt/6.9.1/mingw_64/bin/moc.exe",
 	"QT_UIC_EXECUTABLE" : "C:/Qt/6.9.1/mingw_64/bin/uic.exe",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 9,
-	"SETTINGS_FILE" : "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/CMakeFiles/VectorGraphicsEditor_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "C:/Projects/VectorGraphicsEditor/build/CMakeFiles/VectorGraphicsEditor_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/bezier.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/canvas.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/document.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/ellipse.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/line.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/main.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/mainwindow.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/rectangle.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/shape.cpp",
-			"MU",
-			null
-		],
-		[
-			"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/svg_parser.cpp",
-			"MU",
-			null
-		]
+		[ "C:/Projects/VectorGraphicsEditor/src/bezier.cpp", "MU", null ],
+		[ "C:/Projects/VectorGraphicsEditor/src/canvas.cpp", "MU", null ],
+		[ "C:/Projects/VectorGraphicsEditor/src/document.cpp", "MU", null ],
+		[ "C:/Projects/VectorGraphicsEditor/src/ellipse.cpp", "MU", null ],
+		[ "C:/Projects/VectorGraphicsEditor/src/line.cpp", "MU", null ],
+		[ "C:/Projects/VectorGraphicsEditor/src/main.cpp", "MU", null ],
+		[ "C:/Projects/VectorGraphicsEditor/src/mainwindow.cpp", "MU", null ],
+		[ "C:/Projects/VectorGraphicsEditor/src/rectangle.cpp", "MU", null ],
+		[ "C:/Projects/VectorGraphicsEditor/src/shape.cpp", "MU", null ],
+		[ "C:/Projects/VectorGraphicsEditor/src/svg_parser.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
-	"UIC_SEARCH_PATHS" : 
-	[
-		"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/ui"
-	],
+	"UIC_SEARCH_PATHS" : [ "C:/Projects/VectorGraphicsEditor/ui" ],
 	"UIC_SKIP" : [],
 	"UIC_UI_FILES" : [],
 	"USE_BETTER_GRAPH" : true,

@@ -52,10 +52,10 @@ RM = C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor
+CMAKE_SOURCE_DIR = C:\Projects\VectorGraphicsEditor
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build
+CMAKE_BINARY_DIR = C:\Projects\VectorGraphicsEditor\build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/VectorGraphicsEditor.dir/depend.make
@@ -71,174 +71,174 @@ include CMakeFiles/VectorGraphicsEditor.dir/flags.make
 VectorGraphicsEditor_autogen/timestamp: C:/Qt/6.9.1/mingw_64/bin/moc.exe
 VectorGraphicsEditor_autogen/timestamp: C:/Qt/6.9.1/mingw_64/bin/uic.exe
 VectorGraphicsEditor_autogen/timestamp: CMakeFiles/VectorGraphicsEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target VectorGraphicsEditor"
-	C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/CMakeFiles/VectorGraphicsEditor_autogen.dir/AutogenInfo.json ""
-	C:\Qt\Tools\CMake_64\bin\cmake.exe -E touch C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=C:\Projects\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target VectorGraphicsEditor"
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E cmake_autogen C:/Projects/VectorGraphicsEditor/build/CMakeFiles/VectorGraphicsEditor_autogen.dir/AutogenInfo.json Debug
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E touch C:/Projects/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/timestamp
 
 CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/flags.make
 CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp
 CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.obj: VectorGraphicsEditor_autogen/mocs_compilation.cpp
 CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\VectorGraphicsEditor_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\VectorGraphicsEditor_autogen\mocs_compilation.cpp.obj -c C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Projects\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\VectorGraphicsEditor_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\VectorGraphicsEditor_autogen\mocs_compilation.cpp.obj -c C:\Projects\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\mocs_compilation.cpp
 
 CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\mocs_compilation.cpp > CMakeFiles\VectorGraphicsEditor.dir\VectorGraphicsEditor_autogen\mocs_compilation.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\mocs_compilation.cpp > CMakeFiles\VectorGraphicsEditor.dir\VectorGraphicsEditor_autogen\mocs_compilation.cpp.i
 
 CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\mocs_compilation.cpp -o CMakeFiles\VectorGraphicsEditor.dir\VectorGraphicsEditor_autogen\mocs_compilation.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Projects\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\mocs_compilation.cpp -o CMakeFiles\VectorGraphicsEditor.dir\VectorGraphicsEditor_autogen\mocs_compilation.cpp.s
 
 CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/flags.make
 CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp
-CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.obj: C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/main.cpp
+CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.obj: C:/Projects/VectorGraphicsEditor/src/main.cpp
 CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\main.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\main.cpp.obj -c C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Projects\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\main.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\main.cpp.obj -c C:\Projects\VectorGraphicsEditor\src\main.cpp
 
 CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\main.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\main.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\VectorGraphicsEditor\src\main.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\main.cpp.i
 
 CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\main.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\main.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Projects\VectorGraphicsEditor\src\main.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\main.cpp.s
 
 CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/flags.make
 CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp
-CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.obj: C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/mainwindow.cpp
+CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.obj: C:/Projects/VectorGraphicsEditor/src/mainwindow.cpp
 CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\mainwindow.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\mainwindow.cpp.obj -c C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\mainwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Projects\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\mainwindow.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\mainwindow.cpp.obj -c C:\Projects\VectorGraphicsEditor\src\mainwindow.cpp
 
 CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\mainwindow.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\mainwindow.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\VectorGraphicsEditor\src\mainwindow.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\mainwindow.cpp.i
 
 CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\mainwindow.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\mainwindow.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Projects\VectorGraphicsEditor\src\mainwindow.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\mainwindow.cpp.s
 
 CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/flags.make
 CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp
-CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj: C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/canvas.cpp
+CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj: C:/Projects/VectorGraphicsEditor/src/canvas.cpp
 CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\canvas.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\canvas.cpp.obj -c C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\canvas.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Projects\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\canvas.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\canvas.cpp.obj -c C:\Projects\VectorGraphicsEditor\src\canvas.cpp
 
 CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\canvas.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\canvas.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\VectorGraphicsEditor\src\canvas.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\canvas.cpp.i
 
 CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\canvas.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\canvas.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Projects\VectorGraphicsEditor\src\canvas.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\canvas.cpp.s
 
 CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/flags.make
 CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp
-CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.obj: C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/document.cpp
+CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.obj: C:/Projects/VectorGraphicsEditor/src/document.cpp
 CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\document.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\document.cpp.obj -c C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\document.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Projects\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\document.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\document.cpp.obj -c C:\Projects\VectorGraphicsEditor\src\document.cpp
 
 CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\document.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\document.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\VectorGraphicsEditor\src\document.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\document.cpp.i
 
 CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\document.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\document.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Projects\VectorGraphicsEditor\src\document.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\document.cpp.s
 
 CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/flags.make
 CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp
-CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.obj: C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/svg_parser.cpp
+CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.obj: C:/Projects/VectorGraphicsEditor/src/svg_parser.cpp
 CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\svg_parser.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\svg_parser.cpp.obj -c C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\svg_parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Projects\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\svg_parser.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\svg_parser.cpp.obj -c C:\Projects\VectorGraphicsEditor\src\svg_parser.cpp
 
 CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\svg_parser.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\svg_parser.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\VectorGraphicsEditor\src\svg_parser.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\svg_parser.cpp.i
 
 CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\svg_parser.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\svg_parser.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Projects\VectorGraphicsEditor\src\svg_parser.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\svg_parser.cpp.s
 
 CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/flags.make
 CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp
-CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.obj: C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/shape.cpp
+CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.obj: C:/Projects/VectorGraphicsEditor/src/shape.cpp
 CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\shape.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\shape.cpp.obj -c C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\shape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Projects\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\shape.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\shape.cpp.obj -c C:\Projects\VectorGraphicsEditor\src\shape.cpp
 
 CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\shape.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\shape.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\VectorGraphicsEditor\src\shape.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\shape.cpp.i
 
 CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\shape.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\shape.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Projects\VectorGraphicsEditor\src\shape.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\shape.cpp.s
 
 CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/flags.make
 CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp
-CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.obj: C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/rectangle.cpp
+CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.obj: C:/Projects/VectorGraphicsEditor/src/rectangle.cpp
 CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\rectangle.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\rectangle.cpp.obj -c C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\rectangle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Projects\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\rectangle.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\rectangle.cpp.obj -c C:\Projects\VectorGraphicsEditor\src\rectangle.cpp
 
 CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\rectangle.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\rectangle.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\VectorGraphicsEditor\src\rectangle.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\rectangle.cpp.i
 
 CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\rectangle.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\rectangle.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Projects\VectorGraphicsEditor\src\rectangle.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\rectangle.cpp.s
 
 CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/flags.make
 CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp
-CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.obj: C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/ellipse.cpp
+CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.obj: C:/Projects/VectorGraphicsEditor/src/ellipse.cpp
 CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\ellipse.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\ellipse.cpp.obj -c C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\ellipse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Projects\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\ellipse.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\ellipse.cpp.obj -c C:\Projects\VectorGraphicsEditor\src\ellipse.cpp
 
 CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\ellipse.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\ellipse.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\VectorGraphicsEditor\src\ellipse.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\ellipse.cpp.i
 
 CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\ellipse.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\ellipse.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Projects\VectorGraphicsEditor\src\ellipse.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\ellipse.cpp.s
 
 CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/flags.make
 CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp
-CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.obj: C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/line.cpp
+CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.obj: C:/Projects/VectorGraphicsEditor/src/line.cpp
 CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\line.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\line.cpp.obj -c C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\line.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Projects\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\line.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\line.cpp.obj -c C:\Projects\VectorGraphicsEditor\src\line.cpp
 
 CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\line.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\line.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\VectorGraphicsEditor\src\line.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\line.cpp.i
 
 CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\line.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\line.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Projects\VectorGraphicsEditor\src\line.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\line.cpp.s
 
 CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/flags.make
 CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp
-CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.obj: C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/bezier.cpp
+CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.obj: C:/Projects/VectorGraphicsEditor/src/bezier.cpp
 CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.obj: CMakeFiles/VectorGraphicsEditor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\bezier.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\bezier.cpp.obj -c C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\bezier.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Projects\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.obj -MF CMakeFiles\VectorGraphicsEditor.dir\src\bezier.cpp.obj.d -o CMakeFiles\VectorGraphicsEditor.dir\src\bezier.cpp.obj -c C:\Projects\VectorGraphicsEditor\src\bezier.cpp
 
 CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\bezier.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\bezier.cpp.i
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Projects\VectorGraphicsEditor\src\bezier.cpp > CMakeFiles\VectorGraphicsEditor.dir\src\bezier.cpp.i
 
 CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\src\bezier.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\bezier.cpp.s
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Projects\VectorGraphicsEditor\src\bezier.cpp -o CMakeFiles\VectorGraphicsEditor.dir\src\bezier.cpp.s
 
 # Object files for target VectorGraphicsEditor
 VectorGraphicsEditor_OBJECTS = \
@@ -257,32 +257,35 @@ VectorGraphicsEditor_OBJECTS = \
 # External object files for target VectorGraphicsEditor
 VectorGraphicsEditor_EXTERNAL_OBJECTS =
 
-VECTOR\ GRAPHICS\ EDITOR.exe: CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.obj
-VECTOR\ GRAPHICS\ EDITOR.exe: CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.obj
-VECTOR\ GRAPHICS\ EDITOR.exe: CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.obj
-VECTOR\ GRAPHICS\ EDITOR.exe: CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj
-VECTOR\ GRAPHICS\ EDITOR.exe: CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.obj
-VECTOR\ GRAPHICS\ EDITOR.exe: CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.obj
-VECTOR\ GRAPHICS\ EDITOR.exe: CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.obj
-VECTOR\ GRAPHICS\ EDITOR.exe: CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.obj
-VECTOR\ GRAPHICS\ EDITOR.exe: CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.obj
-VECTOR\ GRAPHICS\ EDITOR.exe: CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.obj
-VECTOR\ GRAPHICS\ EDITOR.exe: CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.obj
-VECTOR\ GRAPHICS\ EDITOR.exe: CMakeFiles/VectorGraphicsEditor.dir/build.make
-VECTOR\ GRAPHICS\ EDITOR.exe: C:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a
-VECTOR\ GRAPHICS\ EDITOR.exe: C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/lib/cairo/libcairo.dll.a
-VECTOR\ GRAPHICS\ EDITOR.exe: C:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a
-VECTOR\ GRAPHICS\ EDITOR.exe: C:/Qt/6.9.1/mingw_64/lib/libQt6Core.a
-VECTOR\ GRAPHICS\ EDITOR.exe: C:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a
-VECTOR\ GRAPHICS\ EDITOR.exe: CMakeFiles/VectorGraphicsEditor.dir/linkLibs.rsp
-VECTOR\ GRAPHICS\ EDITOR.exe: CMakeFiles/VectorGraphicsEditor.dir/objects1.rsp
-VECTOR\ GRAPHICS\ EDITOR.exe: CMakeFiles/VectorGraphicsEditor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable \"VECTOR GRAPHICS EDITOR.exe\""
+VectorGraphicsEditor.exe: CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.obj
+VectorGraphicsEditor.exe: CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.obj
+VectorGraphicsEditor.exe: CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.obj
+VectorGraphicsEditor.exe: CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj
+VectorGraphicsEditor.exe: CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.obj
+VectorGraphicsEditor.exe: CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.obj
+VectorGraphicsEditor.exe: CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.obj
+VectorGraphicsEditor.exe: CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.obj
+VectorGraphicsEditor.exe: CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.obj
+VectorGraphicsEditor.exe: CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.obj
+VectorGraphicsEditor.exe: CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.obj
+VectorGraphicsEditor.exe: CMakeFiles/VectorGraphicsEditor.dir/build.make
+VectorGraphicsEditor.exe: C:/Qt/6.9.1/mingw_64/lib/libQt6Widgets.a
+VectorGraphicsEditor.exe: C:/Qt/6.9.1/mingw_64/lib/libQt6Svg.a
+VectorGraphicsEditor.exe: C:/msys64/mingw64/lib/libcairo.dll.a
+VectorGraphicsEditor.exe: C:/msys64/mingw64/lib/libxml2.dll.a
+VectorGraphicsEditor.exe: C:/Qt/6.9.1/mingw_64/lib/libQt6Gui.a
+VectorGraphicsEditor.exe: C:/Qt/6.9.1/mingw_64/lib/libQt6Core.a
+VectorGraphicsEditor.exe: C:/Qt/6.9.1/mingw_64/lib/libQt6EntryPoint.a
+VectorGraphicsEditor.exe: CMakeFiles/VectorGraphicsEditor.dir/linkLibs.rsp
+VectorGraphicsEditor.exe: CMakeFiles/VectorGraphicsEditor.dir/objects1.rsp
+VectorGraphicsEditor.exe: CMakeFiles/VectorGraphicsEditor.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Projects\VectorGraphicsEditor\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable VectorGraphicsEditor.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\VectorGraphicsEditor.dir\link.txt --verbose=$(VERBOSE)
-	C:\Qt\Tools\CMake_64\bin\cmake.exe -E copy_directory C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/bin C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build
+	C:\Qt\Tools\CMake_64\bin\cmake.exe -E echo "Deploying Qt runtime..."
+	C:\Qt\6.9.1\mingw_64\bin\windeployqt.exe --no-opengl-sw C:/Projects/VectorGraphicsEditor/build/VectorGraphicsEditor.exe
 
 # Rule to build all files generated by this target.
-CMakeFiles/VectorGraphicsEditor.dir/build: VECTOR\ GRAPHICS\ EDITOR.exe
+CMakeFiles/VectorGraphicsEditor.dir/build: VectorGraphicsEditor.exe
 .PHONY : CMakeFiles/VectorGraphicsEditor.dir/build
 
 CMakeFiles/VectorGraphicsEditor.dir/clean:
@@ -290,6 +293,6 @@ CMakeFiles/VectorGraphicsEditor.dir/clean:
 .PHONY : CMakeFiles/VectorGraphicsEditor.dir/clean
 
 CMakeFiles/VectorGraphicsEditor.dir/depend: VectorGraphicsEditor_autogen/timestamp
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build C:\Users\ciici\OneDrive\Desktop\PRJ.A.I.E\Projects\Programming_Projects\Software\VectorGraphicsEditor\build\CMakeFiles\VectorGraphicsEditor.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Projects\VectorGraphicsEditor C:\Projects\VectorGraphicsEditor C:\Projects\VectorGraphicsEditor\build C:\Projects\VectorGraphicsEditor\build C:\Projects\VectorGraphicsEditor\build\CMakeFiles\VectorGraphicsEditor.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/VectorGraphicsEditor.dir/depend
 

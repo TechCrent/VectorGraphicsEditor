@@ -1,5 +1,4 @@
 #include "shape.h"
-#include <QSizeF>
 #include <cmath>
 
 Shape::Shape()
@@ -13,6 +12,9 @@ Shape::Shape()
 {
 }
 
+// ========================
+// Property Setters/Getters
+// ========================
 void Shape::setPosition(const QPointF &pos)
 {
     m_position = pos;
@@ -73,6 +75,9 @@ bool Shape::isSelected() const
     return m_selected;
 }
 
+// ========================
+// Transformations
+// ========================
 void Shape::move(const QPointF &offset)
 {
     m_position += offset;
@@ -86,7 +91,16 @@ void Shape::scale(double factor)
 void Shape::rotate(double angle)
 {
     m_rotation += angle;
-    if (m_rotation >= 360.0) {
+    if (m_rotation >= 360.0)
         m_rotation -= 360.0;
-    }
-} 
+    else if (m_rotation < 0.0)
+        m_rotation += 360.0;
+}
+
+// ========================
+// Utility
+// ========================
+QRectF Shape::getBoundingRect() const
+{
+    return QRectF(m_position, m_size);
+}

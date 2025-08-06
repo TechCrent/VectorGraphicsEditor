@@ -20,6 +20,8 @@
 #include "canvas.h"
 #include "document.h"
 
+class Shape; // Forward declaration for shape pointer usage
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -30,41 +32,59 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
 private slots:
+    // Document Management
     void newDocument();
     void openDocument();
     void saveDocument();
     void exportSVG();
     void importSVG();
+
+    // Edit
     void undo();
     void redo();
     void cut();
     void copy();
     void paste();
+
+    // Tools
     void selectTool();
     void rectangleTool();
     void ellipseTool();
     void lineTool();
     void bezierTool();
     void updateToolActions();
+
+    // View
     void zoomIn();
     void zoomOut();
     void fitToView();
     void showGrid();
     void snapToGrid();
+
+    // Layers
     void addLayer();
     void removeLayer();
     void updateLayersList();
+
+    // Properties
     void chooseFillColor();
     void chooseStrokeColor();
     void strokeWidthChanged(int width);
+
+    // Canvas Interaction
     void shapeSelected(Shape* shape);
     void shapeCreated(Shape* shape);
     void canvasChanged();
+
+    // Help
     void showAbout();
+
 private:
+    // Initialization helpers
     void setupUI();
     void setupActions();
     void setupMenusAndToolbars();
@@ -72,24 +92,19 @@ private:
     void connectSignals();
     void updateFillColorButton(const QColor &color);
     void updateStrokeColorButton(const QColor &color);
-    void setupToolbars();
-    void setupDockWidgets();
-    void setupMenus();
+
 private:
     Ui::MainWindow *ui;
     Canvas *m_canvas;
     Document *m_document;
+
+    // UI Components
     QDockWidget *m_layersDock;
     QDockWidget *m_propertiesDock;
     QListWidget *m_layersList;
     QPushButton *m_fillColorButton;
     QPushButton *m_strokeColorButton;
     QSpinBox *m_strokeWidthSpinBox;
-    QToolBar *m_fileToolBar;
-    QToolBar *m_editToolBar;
-    QToolBar *m_toolsToolBar;
-    QToolBar *m_viewToolBar;
-    QWidget *m_propertiesWidget;
 };
 
 #endif // MAINWINDOW_H

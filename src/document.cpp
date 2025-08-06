@@ -1,6 +1,7 @@
 #include "document.h"
 
-Layer::Layer(const QString &name) : QObject(), m_name(name), m_visible(true), m_locked(false) {}
+Layer::Layer(const QString &name)
+    : QObject(), m_name(name), m_visible(true), m_locked(false) {}
 
 Layer::~Layer() {
     clear();
@@ -51,7 +52,12 @@ void Layer::setLocked(bool locked) {
     m_locked = locked;
 }
 
-Document::Document() : QObject(), m_size(800, 600), m_backgroundColor(Qt::white) {
+// =============================
+// Document Implementation
+// =============================
+
+Document::Document()
+    : QObject(), m_size(800, 600), m_backgroundColor(Qt::white) {
     m_activeLayer = new Layer("Default Layer");
     m_layers.append(m_activeLayer);
 }
@@ -139,6 +145,13 @@ Shape* Document::getShapeAt(const QPointF &point) const {
     return nullptr;
 }
 
+QList<Shape*> Document::getShapes() const {
+    // ✅ Return shapes only from the active layer
+    return (m_activeLayer && m_activeLayer->isVisible())
+        ? m_activeLayer->getShapes()
+        : QList<Shape*>();
+}
+
 QList<Shape*> Document::getAllShapes() const {
     QList<Shape*> allShapes;
     for (auto layer : m_layers) {
@@ -168,12 +181,12 @@ QColor Document::getBackgroundColor() const {
 }
 
 bool Document::save(const QString &filename) {
-    // Placeholder implementation
+    // Placeholder for file saving logic
     return false;
 }
 
 bool Document::load(const QString &filename) {
-    // Placeholder implementation
+    // Placeholder for file loading logic
     return false;
 }
 

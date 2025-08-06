@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0dc93e86-e0b1-41e7-8ae3-eb01c0da4016" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/VectorGraphicsEditor.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/.qt/QtDeploySupport.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/.qt/QtDeployTargets.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/3.30.5/CMakeRCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/3.30.5/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/3.30.5/CompilerIdC/a.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/3.30.5/CompilerIdCXX/a.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/Progress/14" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/Progress/2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/Progress/3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/Progress/4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/Progress/5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/Progress/count.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.obj.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/compiler_depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/compiler_depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/compiler_depend.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/linkLibs.rsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/objects1.rsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.obj.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.obj.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor_autogen.dir/AutogenInfo.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor_autogen.dir/AutogenUsed.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor_autogen.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor_autogen.dir/ParseCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor_autogen.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor_autogen.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor_autogen.dir/compiler_depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor_autogen.dir/compiler_depend.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor_autogen.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor_autogen_timestamp_deps.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor_autogen_timestamp_deps.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor_autogen_timestamp_deps.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor_autogen_timestamp_deps.dir/compiler_depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor_autogen_timestamp_deps.dir/compiler_depend.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/VectorGraphicsEditor_autogen_timestamp_deps.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/CTestTestfile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/VectorGraphicsEditor_autogen/6YEA5652QU/moc_canvas.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/VectorGraphicsEditor_autogen/6YEA5652QU/moc_canvas.cpp.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/VectorGraphicsEditor_autogen/6YEA5652QU/moc_document.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/VectorGraphicsEditor_autogen/6YEA5652QU/moc_document.cpp.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/VectorGraphicsEditor_autogen/6YEA5652QU/moc_mainwindow.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/VectorGraphicsEditor_autogen/6YEA5652QU/moc_mainwindow.cpp.d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/VectorGraphicsEditor_autogen/deps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/VectorGraphicsEditor_autogen/include/ui_mainwindow.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/VectorGraphicsEditor_autogen/moc_predefs.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/VectorGraphicsEditor_autogen/mocs_compilation.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/VectorGraphicsEditor_autogen/timestamp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../build/compile_commands.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/document.cpp.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tests/test_document.cpp.bak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tests/test_shapes.cpp.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.31.6/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/3.30.5/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.31.6/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.31.6/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.31.6/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.31.6/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.31.6/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/3.30.5/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.31.6/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/3.30.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/3.31.6/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../build/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bezier.h" beforeDir="false" afterPath="$PROJECT_DIR$/bezier.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canvas.h" beforeDir="false" afterPath="$PROJECT_DIR$/canvas.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/document.h" beforeDir="false" afterPath="$PROJECT_DIR$/document.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/mainwindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/bezier.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/bezier.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/canvas.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/canvas.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/document.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/document.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/line.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/line.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/mainwindow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/test-qt-integration.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/test-qt-integration.cpp.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/test-qt.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/test-qt.cpp.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/test_document.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/test_document.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/test_main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/test_main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tests/test_shapes.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../tests/test_shapes.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2025" />
+    <option name="minorVersion" value="1.1" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="30tJRL8wrPUTCaPZXsaIwatsfY8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0dc93e86-e0b1-41e7-8ae3-eb01c0da4016" name="Changes" comment="" />
+      <created>1754440928900</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1754440928900</updated>
+      <workItem from="1754440931142" duration="30000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
