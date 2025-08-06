@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QAction>
+#include <QActionGroup>
 #include <QToolBar>
 #include <QDockWidget>
 #include <QListWidget>
@@ -29,59 +29,41 @@ QT_END_NAMESPACE
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
 private slots:
-    // File operations
     void newDocument();
     void openDocument();
     void saveDocument();
     void exportSVG();
     void importSVG();
-    
-    // Edit operations
     void undo();
     void redo();
     void cut();
     void copy();
     void paste();
-    
-    // Tool operations
     void selectTool();
     void rectangleTool();
     void ellipseTool();
     void lineTool();
     void bezierTool();
     void updateToolActions();
-    
-    // View operations
     void zoomIn();
     void zoomOut();
     void fitToView();
     void showGrid();
     void snapToGrid();
-    
-    // Layer operations
     void addLayer();
     void removeLayer();
     void updateLayersList();
-    
-    // Property operations
     void chooseFillColor();
     void chooseStrokeColor();
     void strokeWidthChanged(int width);
-    
-    // Canvas signals
     void shapeSelected(Shape* shape);
     void shapeCreated(Shape* shape);
     void canvasChanged();
-    
-    // Help
     void showAbout();
-
 private:
     void setupUI();
     void setupActions();
@@ -90,25 +72,24 @@ private:
     void connectSignals();
     void updateFillColorButton(const QColor &color);
     void updateStrokeColorButton(const QColor &color);
-
+    void setupToolbars();
+    void setupDockWidgets();
+    void setupMenus();
 private:
     Ui::MainWindow *ui;
     Canvas *m_canvas;
     Document *m_document;
-    
-    // Dock widgets (from UI file)
     QDockWidget *m_layersDock;
     QDockWidget *m_propertiesDock;
-    
-    // Layer panel (from UI file)
     QListWidget *m_layersList;
-    
-    // Property panel (from UI file)
     QPushButton *m_fillColorButton;
     QPushButton *m_strokeColorButton;
     QSpinBox *m_strokeWidthSpinBox;
-    
-    // Actions are now defined in the UI file
+    QToolBar *m_fileToolBar;
+    QToolBar *m_editToolBar;
+    QToolBar *m_toolsToolBar;
+    QToolBar *m_viewToolBar;
+    QWidget *m_propertiesWidget;
 };
 
-#endif // MAINWINDOW_H 
+#endif // MAINWINDOW_H

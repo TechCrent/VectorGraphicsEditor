@@ -38,28 +38,24 @@ void Line::draw(cairo_t *cr)
     }
 }
 
-bool Line::contains(const QPointF &point) const
-{
+bool Line::contains(const QPointF &point) const {
+    const double tolerance = 5.0; // Increased tolerance for hit-testing
     QLineF line(m_startPoint, m_endPoint);
-    
-    // Calculate distance from point to line manually
+
+    // Calculate distance from point to line using Euclidean distance
     QPointF lineVector = m_endPoint - m_startPoint;
     QPointF pointVector = point - m_startPoint;
-    
     double lineLengthSquared = lineVector.x() * lineVector.x() + lineVector.y() * lineVector.y();
     if (lineLengthSquared == 0) {
-        // Line is actually a point
-        return (point - m_startPoint).manhattanLength() <= m_lineWidth / 2;
+        // Line is a point
+        return QLineF(point, m_startPoint).length() <= tolerance;
     }
-    
+
     double t = (pointVector.x() * lineVector.x() + pointVector.y() * lineVector.y()) / lineLengthSquared;
     t = qBound(0.0, t, 1.0);
-    
     QPointF closestPoint = m_startPoint + t * lineVector;
-    double distance = (point - closestPoint).manhattanLength();
-    
-    // Consider the line width for hit testing
-    return distance <= m_lineWidth / 2;
+    double distance = QLineF(point, closestPoint).length(); // Use Euclidean distance
+    return distance <= tolerance;
 }
 
 Line* Line::clone() const

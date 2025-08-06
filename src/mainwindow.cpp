@@ -22,6 +22,7 @@
 #include <QKeySequence>
 #include <QIcon>
 #include <QStyle>
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -30,15 +31,15 @@ MainWindow::MainWindow(QWidget *parent)
     , m_document(new Document())
 {
     ui->setupUi(this);
-    
+
     // Set up the canvas from the UI file
     m_canvas = ui->canvasWidget;
     if (!m_canvas) {
-        // Fallback: create canvas manually if not found in UI
+        qDebug() << "Canvas widget not found in UI, creating manually";
         m_canvas = new Canvas(this);
         setCentralWidget(m_canvas);
     }
-    
+
     // Get UI components
     m_layersList = ui->layersList;
     m_fillColorButton = ui->fillColorBtn;
@@ -46,23 +47,23 @@ MainWindow::MainWindow(QWidget *parent)
     m_strokeWidthSpinBox = ui->strokeWidthSpinBox;
     m_layersDock = ui->layersDock;
     m_propertiesDock = ui->propertiesDock;
-    
+
     setupUI();
     setupActions();
     setupMenusAndToolbars();
     setupStatusBar();
     connectSignals();
-    
+
     // Set up the document
     Layer *defaultLayer = new Layer("Layer 1");
     m_document->addLayer(defaultLayer);
     m_canvas->setDocument(m_document);
     updateLayersList();
-    
+
     // Initialize color buttons
     updateFillColorButton(QColor(255, 255, 255, 0)); // Transparent
     updateStrokeColorButton(QColor(0, 0, 0)); // Black
-    
+
     setWindowTitle("Vector Graphics Editor - Professional");
     resize(1200, 800);
 }
@@ -77,7 +78,7 @@ void MainWindow::setupUI()
 {
     // Set application style
     QApplication::setStyle(QStyleFactory::create("Fusion"));
-    
+
     // Apply additional dark theme to the application
     QPalette darkPalette;
     darkPalette.setColor(QPalette::Window, QColor(43, 43, 43));
@@ -94,10 +95,12 @@ void MainWindow::setupUI()
     darkPalette.setColor(QPalette::Highlight, QColor(74, 144, 226));
     darkPalette.setColor(QPalette::HighlightedText, Qt::black);
     qApp->setPalette(darkPalette);
-    
+
     // Ensure canvas is properly set up
     if (m_canvas) {
         m_canvas->createCairoSurface();
+    } else {
+        qDebug() << "Failed to initialize canvas";
     }
 }
 
@@ -106,102 +109,41 @@ void MainWindow::setupToolbars()
     // File toolbar
     m_fileToolBar = addToolBar("File");
     m_fileToolBar->setObjectName("fileToolBar");
-    
-    m_newAction = new QAction("New", this);
-    m_newAction->setShortcut(QKeySequence::New);
-    m_fileToolBar->addAction(m_newAction);
-    
-    m_openAction = new QAction("Open", this);
-    m_openAction->setShortcut(QKeySequence::Open);
-    m_fileToolBar->addAction(m_openAction);
-    
-    m_saveAction = new QAction("Save", this);
-    m_saveAction->setShortcut(QKeySequence::Save);
-    m_fileToolBar->addAction(m_saveAction);
-    
+    m_fileToolBar->addAction(ui->actionNew);
+    m_fileToolBar->addAction(ui->actionOpen);
+    m_fileToolBar->addAction(ui->actionSave);
     m_fileToolBar->addSeparator();
-    
-    m_exportAction = new QAction("Export SVG", this);
-    m_fileToolBar->addAction(m_exportAction);
-    
-    m_importAction = new QAction("Import SVG", this);
-    m_fileToolBar->addAction(m_importAction);
-    
+    m_fileToolBar->addAction(ui->actionExport_SVG);
+    m_fileToolBar->addAction(ui->actionImport_SVG);
+
     // Edit toolbar
     m_editToolBar = addToolBar("Edit");
     m_editToolBar->setObjectName("editToolBar");
-    
-    m_undoAction = new QAction("Undo", this);
-    m_undoAction->setShortcut(QKeySequence::Undo);
-    m_editToolBar->addAction(m_undoAction);
-    
-    m_redoAction = new QAction("Redo", this);
-    m_redoAction->setShortcut(QKeySequence::Redo);
-    m_editToolBar->addAction(m_redoAction);
-    
+    m_editToolBar->addAction(ui->actionUndo);
+    m_editToolBar->addAction(ui->actionRedo);
     m_editToolBar->addSeparator();
-    
-    m_cutAction = new QAction("Cut", this);
-    m_cutAction->setShortcut(QKeySequence::Cut);
-    m_editToolBar->addAction(m_cutAction);
-    
-    m_copyAction = new QAction("Copy", this);
-    m_copyAction->setShortcut(QKeySequence::Copy);
-    m_editToolBar->addAction(m_copyAction);
-    
-    m_pasteAction = new QAction("Paste", this);
-    m_pasteAction->setShortcut(QKeySequence::Paste);
-    m_editToolBar->addAction(m_pasteAction);
-    
+    m_editToolBar->addAction(ui->actionCut);
+    m_editToolBar->addAction(ui->actionCopy);
+    m_editToolBar->addAction(ui->actionPaste);
+
     // Tools toolbar
     m_toolsToolBar = addToolBar("Tools");
     m_toolsToolBar->setObjectName("toolsToolBar");
-    
-    m_selectAction = new QAction("Select", this);
-    m_selectAction->setCheckable(true);
-    m_selectAction->setChecked(true);
-    m_toolsToolBar->addAction(m_selectAction);
-    
-    m_rectangleAction = new QAction("Rectangle", this);
-    m_rectangleAction->setCheckable(true);
-    m_toolsToolBar->addAction(m_rectangleAction);
-    
-    m_ellipseAction = new QAction("Ellipse", this);
-    m_ellipseAction->setCheckable(true);
-    m_toolsToolBar->addAction(m_ellipseAction);
-    
-    m_lineAction = new QAction("Line", this);
-    m_lineAction->setCheckable(true);
-    m_toolsToolBar->addAction(m_lineAction);
-    
-    m_bezierAction = new QAction("Bezier", this);
-    m_bezierAction->setCheckable(true);
-    m_toolsToolBar->addAction(m_bezierAction);
-    
+    m_toolsToolBar->addAction(ui->actionSelect);
+    m_toolsToolBar->addAction(ui->actionRectangle);
+    m_toolsToolBar->addAction(ui->actionEllipse);
+    m_toolsToolBar->addAction(ui->actionLine);
+    m_toolsToolBar->addAction(ui->actionBezier);
+
     // View toolbar
     m_viewToolBar = addToolBar("View");
     m_viewToolBar->setObjectName("viewToolBar");
-    
-    m_zoomInAction = new QAction("Zoom In", this);
-    m_zoomInAction->setShortcut(QKeySequence::ZoomIn);
-    m_viewToolBar->addAction(m_zoomInAction);
-    
-    m_zoomOutAction = new QAction("Zoom Out", this);
-    m_zoomOutAction->setShortcut(QKeySequence::ZoomOut);
-    m_viewToolBar->addAction(m_zoomOutAction);
-    
-    m_fitToViewAction = new QAction("Fit to View", this);
-    m_viewToolBar->addAction(m_fitToViewAction);
-    
+    m_viewToolBar->addAction(ui->actionZoom_In);
+    m_viewToolBar->addAction(ui->actionZoom_Out);
+    m_viewToolBar->addAction(ui->actionFit_to_View);
     m_viewToolBar->addSeparator();
-    
-    m_showGridAction = new QAction("Show Grid", this);
-    m_showGridAction->setCheckable(true);
-    m_viewToolBar->addAction(m_showGridAction);
-    
-    m_snapToGridAction = new QAction("Snap to Grid", this);
-    m_snapToGridAction->setCheckable(true);
-    m_viewToolBar->addAction(m_snapToGridAction);
+    m_viewToolBar->addAction(ui->actionShow_Grid);
+    m_viewToolBar->addAction(ui->actionSnap_to_Grid);
 }
 
 void MainWindow::setupDockWidgets()
@@ -210,25 +152,25 @@ void MainWindow::setupDockWidgets()
     m_layersDock = new QDockWidget("Layers", this);
     m_layersDock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
     addDockWidget(Qt::LeftDockWidgetArea, m_layersDock);
-    
+
     m_layersList = new QListWidget();
     m_layersDock->setWidget(m_layersList);
-    
+
     // Properties dock widget
     m_propertiesDock = new QDockWidget("Properties", this);
     m_propertiesDock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
     addDockWidget(Qt::RightDockWidgetArea, m_propertiesDock);
-    
+
     m_propertiesWidget = new QWidget();
     m_propertiesDock->setWidget(m_propertiesWidget);
-    
+
     // Set up properties widget
     QVBoxLayout *propertiesLayout = new QVBoxLayout(m_propertiesWidget);
-    
+
     // Shape properties group
     QGroupBox *shapeGroup = new QGroupBox("Shape Properties");
     QVBoxLayout *shapeLayout = new QVBoxLayout(shapeGroup);
-    
+
     // Fill color
     QHBoxLayout *fillLayout = new QHBoxLayout();
     fillLayout->addWidget(new QLabel("Fill:"));
@@ -236,7 +178,7 @@ void MainWindow::setupDockWidgets()
     m_fillColorButton->setFixedSize(24, 24);
     fillLayout->addWidget(m_fillColorButton);
     shapeLayout->addLayout(fillLayout);
-    
+
     // Stroke color
     QHBoxLayout *strokeLayout = new QHBoxLayout();
     strokeLayout->addWidget(new QLabel("Stroke:"));
@@ -244,7 +186,7 @@ void MainWindow::setupDockWidgets()
     m_strokeColorButton->setFixedSize(24, 24);
     strokeLayout->addWidget(m_strokeColorButton);
     shapeLayout->addLayout(strokeLayout);
-    
+
     // Stroke width
     QHBoxLayout *widthLayout = new QHBoxLayout();
     widthLayout->addWidget(new QLabel("Width:"));
@@ -253,7 +195,7 @@ void MainWindow::setupDockWidgets()
     m_strokeWidthSpinBox->setValue(2);
     widthLayout->addWidget(m_strokeWidthSpinBox);
     shapeLayout->addLayout(widthLayout);
-    
+
     propertiesLayout->addWidget(shapeGroup);
     propertiesLayout->addStretch();
 }
@@ -262,52 +204,53 @@ void MainWindow::setupMenus()
 {
     // File menu
     QMenu *fileMenu = menuBar()->addMenu("&File");
-    fileMenu->addAction(m_newAction);
-    fileMenu->addAction(m_openAction);
-    fileMenu->addAction(m_saveAction);
+    fileMenu->addAction(ui->actionNew);
+    fileMenu->addAction(ui->actionOpen);
+    fileMenu->addAction(ui->actionSave);
+    fileMenu->addAction(ui->actionSave_As);
     fileMenu->addSeparator();
-    fileMenu->addAction(m_exportAction);
-    fileMenu->addAction(m_importAction);
+    fileMenu->addAction(ui->actionExport_SVG);
+    fileMenu->addAction(ui->actionImport_SVG);
     fileMenu->addSeparator();
-    fileMenu->addAction("E&xit", QKeySequence::Quit, this, &QWidget::close);
-    
+    fileMenu->addAction(ui->actionExit);
+
     // Edit menu
     QMenu *editMenu = menuBar()->addMenu("&Edit");
-    editMenu->addAction("&Undo", QKeySequence::Undo, this, nullptr);
-    editMenu->addAction("&Redo", QKeySequence::Redo, this, nullptr);
+    editMenu->addAction(ui->actionUndo);
+    editMenu->addAction(ui->actionRedo);
     editMenu->addSeparator();
-    editMenu->addAction("Cu&t", QKeySequence::Cut, this, nullptr);
-    editMenu->addAction("&Copy", QKeySequence::Copy, this, nullptr);
-    editMenu->addAction("&Paste", QKeySequence::Paste, this, nullptr);
-    editMenu->addAction("&Delete", QKeySequence::Delete, this, nullptr);
+    editMenu->addAction(ui->actionCut);
+    editMenu->addAction(ui->actionCopy);
+    editMenu->addAction(ui->actionPaste);
+    editMenu->addAction(ui->actionDelete);
     editMenu->addSeparator();
-    editMenu->addAction("Select &All", QKeySequence::SelectAll, this, nullptr);
-    
+    editMenu->addAction(ui->actionSelect_All);
+
     // View menu
     QMenu *viewMenu = menuBar()->addMenu("&View");
-    viewMenu->addAction(m_zoomInAction);
-    viewMenu->addAction(m_zoomOutAction);
-    viewMenu->addAction(m_fitToViewAction);
+    viewMenu->addAction(ui->actionZoom_In);
+    viewMenu->addAction(ui->actionZoom_Out);
+    viewMenu->addAction(ui->actionFit_to_View);
     viewMenu->addSeparator();
-    viewMenu->addAction(m_showGridAction);
-    viewMenu->addAction(m_snapToGridAction);
-    
+    viewMenu->addAction(ui->actionShow_Grid);
+    viewMenu->addAction(ui->actionSnap_to_Grid);
+
     // Tools menu
     QMenu *toolsMenu = menuBar()->addMenu("&Tools");
-    toolsMenu->addAction(m_selectAction);
-    toolsMenu->addAction(m_rectangleAction);
-    toolsMenu->addAction(m_ellipseAction);
-    toolsMenu->addAction(m_lineAction);
-    toolsMenu->addAction(m_bezierAction);
-    
+    toolsMenu->addAction(ui->actionSelect);
+    toolsMenu->addAction(ui->actionRectangle);
+    toolsMenu->addAction(ui->actionEllipse);
+    toolsMenu->addAction(ui->actionLine);
+    toolsMenu->addAction(ui->actionBezier);
+
     // Layer menu
     QMenu *layerMenu = menuBar()->addMenu("&Layer");
-    layerMenu->addAction("Add Layer", this, &MainWindow::addLayer);
-    layerMenu->addAction("Remove Layer", this, &MainWindow::removeLayer);
-    
+    layerMenu->addAction(ui->actionNew_Layer);
+    layerMenu->addAction(ui->actionDelete_Layer);
+
     // Help menu
     QMenu *helpMenu = menuBar()->addMenu("&Help");
-    helpMenu->addAction("&About", this, &MainWindow::showAbout);
+    helpMenu->addAction(ui->actionAbout);
 }
 
 void MainWindow::setupStatusBar()
@@ -321,16 +264,18 @@ void MainWindow::connectSignals()
     connect(m_fillColorButton, &QPushButton::clicked, this, &MainWindow::chooseFillColor);
     connect(m_strokeColorButton, &QPushButton::clicked, this, &MainWindow::chooseStrokeColor);
     connect(m_strokeWidthSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, &MainWindow::strokeWidthChanged);
-    
+
     // Layer buttons from UI
     connect(ui->addLayerBtn, &QPushButton::clicked, this, &MainWindow::addLayer);
     connect(ui->removeLayerBtn, &QPushButton::clicked, this, &MainWindow::removeLayer);
-    
+
     // Canvas signals
     if (m_canvas) {
         connect(m_canvas, &Canvas::shapeSelected, this, &MainWindow::shapeSelected);
         connect(m_canvas, &Canvas::shapeCreated, this, &MainWindow::shapeCreated);
         connect(m_canvas, &Canvas::canvasChanged, this, &MainWindow::canvasChanged);
+    } else {
+        qDebug() << "Canvas is null, cannot connect signals";
     }
 }
 
@@ -415,65 +360,127 @@ void MainWindow::paste()
 // Tool operations
 void MainWindow::selectTool()
 {
-    m_canvas->setTool(Canvas::Select);
-    updateToolActions();
-    statusBar()->showMessage("Select tool", 1000);
+    if (m_canvas) {
+        m_canvas->setTool(Canvas::Select);
+        updateToolActions();
+        statusBar()->showMessage("Select tool", 1000);
+    } else {
+        qDebug() << "Cannot select tool: canvas is null";
+    }
 }
 
 void MainWindow::rectangleTool()
 {
-    m_canvas->setTool(Canvas::Rectangle);
-    updateToolActions();
-    statusBar()->showMessage("Rectangle tool", 1000);
+    if (m_canvas) {
+        m_canvas->setTool(Canvas::Rectangle);
+        updateToolActions();
+        statusBar()->showMessage("Rectangle tool", 1000);
+    } else {
+        qDebug() << "Cannot select rectangle tool: canvas is null";
+    }
 }
 
 void MainWindow::ellipseTool()
 {
-    m_canvas->setTool(Canvas::Ellipse);
-    updateToolActions();
-    statusBar()->showMessage("Ellipse tool", 1000);
+    if (m_canvas) {
+        m_canvas->setTool(Canvas::Ellipse);
+        updateToolActions();
+        statusBar()->showMessage("Ellipse tool", 1000);
+    } else {
+        qDebug() << "Cannot select ellipse tool: canvas is null";
+    }
 }
 
 void MainWindow::lineTool()
 {
-    m_canvas->setTool(Canvas::Line);
-    updateToolActions();
-    statusBar()->showMessage("Line tool", 1000);
+    if (m_canvas) {
+        m_canvas->setTool(Canvas::Line);
+        updateToolActions();
+        statusBar()->showMessage("Line tool", 1000);
+    } else {
+        qDebug() << "Cannot select line tool: canvas is null";
+    }
 }
 
 void MainWindow::bezierTool()
 {
-    m_canvas->setTool(Canvas::Bezier);
-    updateToolActions();
-    statusBar()->showMessage("Bezier tool", 1000);
+    if (m_canvas) {
+        m_canvas->setTool(Canvas::Bezier);
+        updateToolActions();
+        statusBar()->showMessage("Bezier tool", 1000);
+    } else {
+        qDebug() << "Cannot select bezier tool: canvas is null";
+    }
 }
 
 void MainWindow::updateToolActions()
 {
-    m_selectAction->setChecked(m_canvas->getTool() == Canvas::Select);
-    m_rectangleAction->setChecked(m_canvas->getTool() == Canvas::Rectangle);
-    m_ellipseAction->setChecked(m_canvas->getTool() == Canvas::Ellipse);
-    m_lineAction->setChecked(m_canvas->getTool() == Canvas::Line);
-    m_bezierAction->setChecked(m_canvas->getTool() == Canvas::Bezier);
+    qDebug() << "Updating tool actions";
+    if (!m_canvas) {
+        qDebug() << "Canvas is null, cannot update tool actions";
+        return;
+    }
+    if (ui->actionSelect) {
+        ui->actionSelect->setChecked(m_canvas->getTool() == Canvas::Select);
+        qDebug() << "Select action checked:" << ui->actionSelect->isChecked();
+    } else {
+        qDebug() << "actionSelect is null";
+    }
+    if (ui->actionRectangle) {
+        ui->actionRectangle->setChecked(m_canvas->getTool() == Canvas::Rectangle);
+        qDebug() << "Rectangle action checked:" << ui->actionRectangle->isChecked();
+    } else {
+        qDebug() << "actionRectangle is null";
+    }
+    if (ui->actionEllipse) {
+        ui->actionEllipse->setChecked(m_canvas->getTool() == Canvas::Ellipse);
+        qDebug() << "Ellipse action checked:" << ui->actionEllipse->isChecked();
+    } else {
+        qDebug() << "actionEllipse is null";
+    }
+    if (ui->actionLine) {
+        ui->actionLine->setChecked(m_canvas->getTool() == Canvas::Line);
+        qDebug() << "Line action checked:" << ui->actionLine->isChecked();
+    } else {
+        qDebug() << "actionLine is null";
+    }
+    if (ui->actionBezier) {
+        ui->actionBezier->setChecked(m_canvas->getTool() == Canvas::Bezier);
+        qDebug() << "Bezier action checked:" << ui->actionBezier->isChecked();
+    } else {
+        qDebug() << "actionBezier is null";
+    }
 }
 
 // View operations
 void MainWindow::zoomIn()
 {
-    m_canvas->zoomIn();
-    statusBar()->showMessage(QString("Zoom: %1%").arg(m_canvas->getZoom() * 100), 1000);
+    if (m_canvas) {
+        m_canvas->zoomIn();
+        statusBar()->showMessage(QString("Zoom: %1%").arg(m_canvas->getZoom() * 100), 1000);
+    } else {
+        qDebug() << "Cannot zoom in: canvas is null";
+    }
 }
 
 void MainWindow::zoomOut()
 {
-    m_canvas->zoomOut();
-    statusBar()->showMessage(QString("Zoom: %1%").arg(m_canvas->getZoom() * 100), 1000);
+    if (m_canvas) {
+        m_canvas->zoomOut();
+        statusBar()->showMessage(QString("Zoom: %1%").arg(m_canvas->getZoom() * 100), 1000);
+    } else {
+        qDebug() << "Cannot zoom out: canvas is null";
+    }
 }
 
 void MainWindow::fitToView()
 {
-    m_canvas->fitToView();
-    statusBar()->showMessage("Fit to view", 1000);
+    if (m_canvas) {
+        m_canvas->fitToView();
+        statusBar()->showMessage("Fit to view", 1000);
+    } else {
+        qDebug() << "Cannot fit to view: canvas is null";
+    }
 }
 
 void MainWindow::showGrid()
@@ -582,34 +589,34 @@ void MainWindow::setupActions()
     connect(ui->actionOpen, &QAction::triggered, this, &MainWindow::openDocument);
     connect(ui->actionSave, &QAction::triggered, this, &MainWindow::saveDocument);
     connect(ui->actionExit, &QAction::triggered, this, &QWidget::close);
-    
+
     connect(ui->actionUndo, &QAction::triggered, this, &MainWindow::undo);
     connect(ui->actionRedo, &QAction::triggered, this, &MainWindow::redo);
     connect(ui->actionCut, &QAction::triggered, this, &MainWindow::cut);
     connect(ui->actionCopy, &QAction::triggered, this, &MainWindow::copy);
     connect(ui->actionPaste, &QAction::triggered, this, &MainWindow::paste);
-    
+
     connect(ui->actionZoom_In, &QAction::triggered, this, &MainWindow::zoomIn);
     connect(ui->actionZoom_Out, &QAction::triggered, this, &MainWindow::zoomOut);
     connect(ui->actionFit_to_View, &QAction::triggered, this, &MainWindow::fitToView);
-    
+
     connect(ui->actionShow_Grid, &QAction::triggered, this, &MainWindow::showGrid);
     connect(ui->actionSnap_to_Grid, &QAction::triggered, this, &MainWindow::snapToGrid);
-    
+
     // Tool actions
     connect(ui->actionSelect, &QAction::triggered, this, &MainWindow::selectTool);
     connect(ui->actionRectangle, &QAction::triggered, this, &MainWindow::rectangleTool);
     connect(ui->actionEllipse, &QAction::triggered, this, &MainWindow::ellipseTool);
     connect(ui->actionLine, &QAction::triggered, this, &MainWindow::lineTool);
     connect(ui->actionBezier, &QAction::triggered, this, &MainWindow::bezierTool);
-    
+
     // Layer actions
     connect(ui->actionNew_Layer, &QAction::triggered, this, &MainWindow::addLayer);
     connect(ui->actionDelete_Layer, &QAction::triggered, this, &MainWindow::removeLayer);
-    
+
     connect(ui->actionAbout, &QAction::triggered, this, &MainWindow::showAbout);
-    
-    // Set up action groups for exclusive tools
+
+    // Set up action group for exclusive tools
     QActionGroup *toolGroup = new QActionGroup(this);
     toolGroup->addAction(ui->actionSelect);
     toolGroup->addAction(ui->actionRectangle);
@@ -643,7 +650,7 @@ void MainWindow::updateFillColorButton(const QColor &color)
             "    border-color: #4a90e2;"
             "}"
         ).arg(color.name()).arg(color.lightness() > 128 ? "#000000" : "#ffffff");
-        
+
         m_fillColorButton->setStyleSheet(styleSheet);
         m_fillColorButton->setText(color.alpha() == 0 ? "No Fill" : "Fill Color");
     }
@@ -665,7 +672,7 @@ void MainWindow::updateStrokeColorButton(const QColor &color)
             "    border-color: #4a90e2;"
             "}"
         ).arg(color.name()).arg(color.lightness() > 128 ? "#000000" : "#ffffff");
-        
+
         m_strokeColorButton->setStyleSheet(styleSheet);
     }
-} 
+}

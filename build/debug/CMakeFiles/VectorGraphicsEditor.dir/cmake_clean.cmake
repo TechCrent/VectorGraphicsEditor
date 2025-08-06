@@ -1,0 +1,38 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/VectorGraphicsEditor_autogen.dir/AutogenUsed.txt"
+  "CMakeFiles/VectorGraphicsEditor_autogen.dir/ParseCache.txt"
+  "VectorGraphicsEditor_autogen"
+  "CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.obj"
+  "CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.obj.d"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.obj"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.obj.d"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj.d"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.obj"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.obj.d"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.obj"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.obj.d"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.obj"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.obj.d"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.obj"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.obj.d"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.obj"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.obj.d"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.obj"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.obj.d"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.obj"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.obj.d"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.obj"
+  "CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.obj.d"
+  "VECTOR GRAPHICS EDITOR.exe"
+  "VECTOR GRAPHICS EDITOR.exe.manifest"
+  "VECTOR GRAPHICS EDITOR.pdb"
+  "VectorGraphicsEditor_autogen/mocs_compilation.cpp"
+  "VectorGraphicsEditor_autogen/timestamp"
+  "libVECTOR GRAPHICS EDITOR.dll.a"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/VectorGraphicsEditor.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

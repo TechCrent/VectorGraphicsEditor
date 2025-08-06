@@ -1,0 +1,134 @@
+[
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\VectorGraphicsEditor_autogen\\mocs_compilation.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\build\\debug\\VectorGraphicsEditor_autogen\\mocs_compilation.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug/VectorGraphicsEditor_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\main.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\src\\main.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/main.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\mainwindow.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\src\\mainwindow.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/mainwindow.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\canvas.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\src\\canvas.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/canvas.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\document.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\src\\document.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/document.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\svg_parser.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\src\\svg_parser.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/svg_parser.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\shape.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\src\\shape.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/shape.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\rectangle.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\src\\rectangle.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/rectangle.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\ellipse.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\src\\ellipse.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/ellipse.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\line.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\src\\line.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/line.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\bezier.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\src\\bezier.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/bezier.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditorTests.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditorTests.dir\\VectorGraphicsEditorTests_autogen\\mocs_compilation.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\build\\debug\\VectorGraphicsEditorTests_autogen\\mocs_compilation.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug/VectorGraphicsEditorTests_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditorTests.dir/VectorGraphicsEditorTests_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditorTests.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditorTests.dir\\tests\\test_main.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\tests\\test_main.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/tests/test_main.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditorTests.dir/tests/test_main.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditorTests.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditorTests.dir\\tests\\test_shapes.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\tests\\test_shapes.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/tests/test_shapes.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditorTests.dir/tests/test_shapes.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditorTests.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditorTests.dir\\tests\\test_document.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\tests\\test_document.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/tests/test_document.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditorTests.dir/tests/test_document.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditorTests.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditorTests.dir\\src\\shape.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\src\\shape.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/shape.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditorTests.dir/src/shape.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditorTests.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditorTests.dir\\src\\rectangle.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\src\\rectangle.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/rectangle.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditorTests.dir/src/rectangle.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditorTests.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditorTests.dir\\src\\ellipse.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\src\\ellipse.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/ellipse.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditorTests.dir/src/ellipse.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditorTests.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditorTests.dir\\src\\line.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\src\\line.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/line.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditorTests.dir/src/line.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditorTests.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditorTests.dir\\src\\bezier.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\src\\bezier.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/bezier.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditorTests.dir/src/bezier.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditorTests.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditorTests.dir\\src\\document.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\src\\document.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/document.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditorTests.dir/src/document.cpp.obj"
+},
+{
+  "directory": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_TESTCASE_BUILDDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug\\\" -DQT_TESTCASE_SOURCEDIR=\\\"C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor\\\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditorTests.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditorTests.dir\\src\\svg_parser.cpp.obj -c C:\\Users\\ciici\\OneDrive\\Desktop\\PRJ.A.I.E\\Projects\\Programming_Projects\\Software\\VectorGraphicsEditor\\src\\svg_parser.cpp",
+  "file": "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/src/svg_parser.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditorTests.dir/src/svg_parser.cpp.obj"
+}
+]

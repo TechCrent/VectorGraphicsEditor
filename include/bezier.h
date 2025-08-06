@@ -19,6 +19,7 @@ public:
     void addPoint(const QPointF &point);
     void setPoint(int index, const QPointF &point);
     QPointF getPoint(int index) const;
+    QList<QPointF> getPoints() const; // Added for completeness
     int getPointCount() const;
     void clearPoints();
 
@@ -30,4 +31,4 @@ private:
     bool m_closed;
 };
 
-#endif // BEZIER_H 
+#endif // BEZIER_H

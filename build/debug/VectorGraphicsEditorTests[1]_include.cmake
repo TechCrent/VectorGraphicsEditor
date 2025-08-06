@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug/VectorGraphicsEditorTests[1]_tests.cmake")
+  include("C:/Users/ciici/OneDrive/Desktop/PRJ.A.I.E/Projects/Programming_Projects/Software/VectorGraphicsEditor/build/debug/VectorGraphicsEditorTests[1]_tests.cmake")
+else()
+  add_test(VectorGraphicsEditorTests_NOT_BUILT VectorGraphicsEditorTests_NOT_BUILT)
+endif()
