@@ -422,26 +422,61 @@ CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilatio
  C:/Qt/6.9.1/mingw_64/include/QtGui/qpainter.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qtextoption.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qpen.h \
- C:/msys64/mingw64/include/cairo/cairo.h \
- C:/msys64/mingw64/include/cairo/cairo-version.h \
- C:/msys64/mingw64/include/cairo/cairo-features.h \
- C:/msys64/mingw64/include/cairo/cairo-deprecated.h \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/QColor \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/qcolor.h \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QString \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/qstring.h \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QList \
  C:/Qt/6.9.1/mingw_64/include/QtCore/qtmochelpers.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/qtmocconstants.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/q20algorithm.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/q23type_traits.h \
+ C:\Projects\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\6YEA5652QU/moc_colorpicker.cpp \
+ C:/Projects/VectorGraphicsEditor/include/colorpicker.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/QVBoxLayout \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qboxlayout.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qlayout.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qlayoutitem.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qboxlayout.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qgridlayout.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/QHBoxLayout \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/QSlider \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qslider.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qabstractslider.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qwidget.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/QSpinBox \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qspinbox.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qabstractspinbox.h \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/qvalidator.h \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/qregularexpression.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/QLabel \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qlabel.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qframe.h \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/qpicture.h \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/qtextdocument.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/QPushButton \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qpushbutton.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qabstractbutton.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/QLineEdit \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qlineedit.h \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/qtextcursor.h \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/qtextformat.h \
+ C:/Projects/VectorGraphicsEditor/include/colorwheel.h \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/QPixmap \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/qpixmap.h \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QPoint \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/qpoint.h \
+ C:/Projects/VectorGraphicsEditor/include/colorstrip.h \
+ C:\Projects\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\6YEA5652QU/moc_colorstrip.cpp \
+ C:/Projects/VectorGraphicsEditor/include/colorstrip.h \
+ C:\Projects\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\6YEA5652QU/moc_colorwheel.cpp \
+ C:/Projects/VectorGraphicsEditor/include/colorwheel.h \
  C:\Projects\VectorGraphicsEditor\build\VectorGraphicsEditor_autogen\6YEA5652QU/moc_document.cpp \
  C:/Projects/VectorGraphicsEditor/include/document.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/QObject \
- C:/Qt/6.9.1/mingw_64/include/QtCore/QList \
- C:/Qt/6.9.1/mingw_64/include/QtCore/QString \
- C:/Qt/6.9.1/mingw_64/include/QtCore/qstring.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/QSizeF \
- C:/Qt/6.9.1/mingw_64/include/QtGui/QColor \
- C:/Qt/6.9.1/mingw_64/include/QtGui/qcolor.h \
  C:/Projects/VectorGraphicsEditor/include/shape.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/QPointF \
- C:/Qt/6.9.1/mingw_64/include/QtCore/qpoint.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/QPen \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qpen.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/QBrush \
@@ -451,7 +486,6 @@ CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilatio
  C:/Projects/VectorGraphicsEditor/include/mainwindow.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QMainWindow \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qmainwindow.h \
- C:/Qt/6.9.1/mingw_64/include/QtWidgets/qwidget.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qtabwidget.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/QActionGroup \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qactiongroup.h \
@@ -464,40 +498,19 @@ CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilatio
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qlistview.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qabstractitemview.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
- C:/Qt/6.9.1/mingw_64/include/QtWidgets/qframe.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/qabstractitemmodel.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/qitemselectionmodel.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qstyleoption.h \
- C:/Qt/6.9.1/mingw_64/include/QtWidgets/qabstractspinbox.h \
- C:/Qt/6.9.1/mingw_64/include/QtGui/qvalidator.h \
- C:/Qt/6.9.1/mingw_64/include/QtCore/qregularexpression.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qslider.h \
- C:/Qt/6.9.1/mingw_64/include/QtWidgets/qabstractslider.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qstyle.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qtabbar.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qrubberband.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QGroupBox \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qgroupbox.h \
- C:/Qt/6.9.1/mingw_64/include/QtWidgets/QVBoxLayout \
- C:/Qt/6.9.1/mingw_64/include/QtWidgets/qboxlayout.h \
- C:/Qt/6.9.1/mingw_64/include/QtWidgets/qlayout.h \
- C:/Qt/6.9.1/mingw_64/include/QtWidgets/qlayoutitem.h \
- C:/Qt/6.9.1/mingw_64/include/QtWidgets/qboxlayout.h \
- C:/Qt/6.9.1/mingw_64/include/QtWidgets/qgridlayout.h \
- C:/Qt/6.9.1/mingw_64/include/QtWidgets/QHBoxLayout \
- C:/Qt/6.9.1/mingw_64/include/QtWidgets/QLabel \
- C:/Qt/6.9.1/mingw_64/include/QtWidgets/qlabel.h \
- C:/Qt/6.9.1/mingw_64/include/QtGui/qpicture.h \
- C:/Qt/6.9.1/mingw_64/include/QtGui/qtextdocument.h \
- C:/Qt/6.9.1/mingw_64/include/QtWidgets/QPushButton \
- C:/Qt/6.9.1/mingw_64/include/QtWidgets/qpushbutton.h \
- C:/Qt/6.9.1/mingw_64/include/QtWidgets/qabstractbutton.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QColorDialog \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qcolordialog.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qdialog.h \
- C:/Qt/6.9.1/mingw_64/include/QtWidgets/QSpinBox \
- C:/Qt/6.9.1/mingw_64/include/QtWidgets/qspinbox.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QMessageBox \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qmessagebox.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
@@ -548,6 +561,4 @@ CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilatio
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QStatusBar \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qstatusbar.h \
  C:/Projects/VectorGraphicsEditor/include/canvas.h \
- C:/Projects/VectorGraphicsEditor/include/document.h \
- C:/Qt/6.9.1/mingw_64/include/QtGui/qtextcursor.h \
- C:/Qt/6.9.1/mingw_64/include/QtGui/qtextformat.h
+ C:/Projects/VectorGraphicsEditor/include/document.h

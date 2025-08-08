@@ -5,7 +5,11 @@
 #include <QPointF>
 #include <QSizeF>
 #include <QPainter>
+
+#ifdef ENABLE_CAIRO
 #include <cairo.h>
+#endif
+
 
 class Rectangle : public Shape
 {
@@ -15,7 +19,9 @@ public:
 
     // Drawing
     void draw(QPainter &painter) override;      // Qt-based drawing (for UI rendering)
+	#ifdef ENABLE_CAIRO
     void draw(cairo_t *cr) override;           // Cairo-based drawing (for export)
+	#endif
 
     bool contains(const QPointF &point) const override;
     Type getType() const override { return Shape::Rectangle; }

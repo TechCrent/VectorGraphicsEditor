@@ -2,7 +2,11 @@
 #include <QRectF>
 #include <QPainter>
 #include <cmath>
+
+#ifdef ENABLE_CAIRO
 #include <cairo.h>
+#endif
+
 
 Ellipse::Ellipse(const QPointF &pos, const QSizeF &size)
     : Shape()
@@ -46,6 +50,7 @@ void Ellipse::draw(QPainter &painter)
 // =========================
 // Cairo Drawing
 // =========================
+#ifdef ENABLE_CAIRO
 void Ellipse::draw(cairo_t *cr)
 {
     if (!isVisible() || !cr) return;
@@ -104,6 +109,7 @@ void Ellipse::draw(cairo_t *cr)
         cairo_restore(cr);
     }
 }
+#endif
 
 // =========================
 // Hit-Testing

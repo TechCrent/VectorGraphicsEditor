@@ -57,6 +57,7 @@ MainWindow::MainWindow(QWidget *parent)
     // Set up the document
     Layer *defaultLayer = new Layer("Layer 1");
     m_document->addLayer(defaultLayer);
+    m_document->setActiveLayer(defaultLayer);
 
     if (m_canvas) {
         m_canvas->setDocument(m_document);
@@ -100,11 +101,13 @@ void MainWindow::setupUI()
     darkPalette.setColor(QPalette::HighlightedText, Qt::black);
     qApp->setPalette(darkPalette);
 
+#ifdef ENABLE_CAIRO
     if (m_canvas) {
         m_canvas->createCairoSurface();
     } else {
         qDebug() << "Failed to initialize canvas";
     }
+#endif
 }
 
 void MainWindow::setupStatusBar()
@@ -149,16 +152,16 @@ void MainWindow::setupActions()
     connect(ui->actionEllipse, &QAction::triggered, this, &MainWindow::ellipseTool);
     connect(ui->actionLine, &QAction::triggered, this, &MainWindow::lineTool);
     connect(ui->actionBezier, &QAction::triggered, this, &MainWindow::bezierTool);
+    connect(ui->actionPen, &QAction::triggered, this, &MainWindow::penTool);
+    connect(ui->actionText, &QAction::triggered, this, &MainWindow::textTool);
 
     // Help
     connect(ui->actionAbout, &QAction::triggered, this, &MainWindow::showAbout);
 
+    // Layers
     connect(ui->actionNew_Layer, &QAction::triggered, this, &MainWindow::addLayer);
     connect(ui->actionDelete_Layer, &QAction::triggered, this, &MainWindow::removeLayer);
-    // Optionally connect Duplicate, Move Up, Move Down if implemented
-
 }
-
 
 void MainWindow::setupMenusAndToolbars()
 {
@@ -237,6 +240,8 @@ void MainWindow::connectSignals()
     connect(ui->actionEllipse, &QAction::triggered, this, &MainWindow::ellipseTool);
     connect(ui->actionLine, &QAction::triggered, this, &MainWindow::lineTool);
     connect(ui->actionBezier, &QAction::triggered, this, &MainWindow::bezierTool);
+    connect(ui->actionPen, &QAction::triggered, this, &MainWindow::penTool);
+    connect(ui->actionText, &QAction::triggered, this, &MainWindow::textTool);
 
     // View
     connect(ui->actionZoom_In, &QAction::triggered, this, &MainWindow::zoomIn);
@@ -255,13 +260,12 @@ void MainWindow::connectSignals()
     }
 }
 
-
 void MainWindow::newDocument()
 {
     m_document->clear();
     Layer *defaultLayer = new Layer("Layer 1");
     m_document->addLayer(defaultLayer);
-    m_document->setActiveLayer(defaultLayer); // ✅ Ensure the layer is active
+    m_document->setActiveLayer(defaultLayer);
     updateLayersList();
 
     if (m_canvas) {
@@ -306,7 +310,6 @@ void MainWindow::importSVG()
     }
 }
 
-// Undo / Redo
 void MainWindow::undo()
 {
     if (m_document->canUndo()) {
@@ -325,7 +328,6 @@ void MainWindow::redo()
     }
 }
 
-// Clipboard
 void MainWindow::cut()
 {
     if (m_canvas) {
@@ -350,7 +352,6 @@ void MainWindow::paste()
     }
 }
 
-// Tools
 void MainWindow::selectTool()
 {
     if (m_canvas) {
@@ -396,6 +397,24 @@ void MainWindow::bezierTool()
     }
 }
 
+void MainWindow::penTool()
+{
+    if (m_canvas) {
+        m_canvas->setTool(Canvas::Tool_Pen);
+        updateToolActions();
+        statusBar()->showMessage("Pen tool", 1000);
+    }
+}
+
+void MainWindow::textTool()
+{
+    if (m_canvas) {
+        m_canvas->setTool(Canvas::Tool_Text);
+        updateToolActions();
+        statusBar()->showMessage("Text tool", 1000);
+    }
+}
+
 void MainWindow::updateToolActions()
 {
     if (!m_canvas) return;
@@ -404,9 +423,10 @@ void MainWindow::updateToolActions()
     ui->actionEllipse->setChecked(m_canvas->getTool() == Canvas::Tool_Ellipse);
     ui->actionLine->setChecked(m_canvas->getTool() == Canvas::Tool_Line);
     ui->actionBezier->setChecked(m_canvas->getTool() == Canvas::Tool_Bezier);
+    ui->actionPen->setChecked(m_canvas->getTool() == Canvas::Tool_Pen);
+    ui->actionText->setChecked(m_canvas->getTool() == Canvas::Tool_Text);
 }
 
-// View
 void MainWindow::zoomIn()
 {
     if (m_canvas) {
@@ -447,7 +467,6 @@ void MainWindow::snapToGrid()
     }
 }
 
-// Layers
 void MainWindow::addLayer()
 {
     QString layerName = QString("Layer %1").arg(m_document->getLayers().size() + 1);
@@ -480,7 +499,6 @@ void MainWindow::updateLayersList()
     }
 }
 
-// Colors
 void MainWindow::chooseFillColor()
 {
     QColor color = QColorDialog::getColor(Qt::white, this, "Choose Fill Color", QColorDialog::ShowAlphaChannel);
@@ -507,7 +525,6 @@ void MainWindow::strokeWidthChanged(int width)
     statusBar()->showMessage(QString("Stroke width: %1").arg(width), 1000);
 }
 
-// Shape Events
 void MainWindow::shapeSelected(Shape *shape)
 {
     Q_UNUSED(shape);
@@ -525,7 +542,6 @@ void MainWindow::canvasChanged()
     statusBar()->showMessage("Canvas changed", 1000);
 }
 
-// About Dialog
 void MainWindow::showAbout()
 {
     QMessageBox::about(this, "About Vector Graphics Editor",

@@ -4,7 +4,11 @@
 #include "shape.h"
 #include <QVector>
 #include <QPointF>
+
+#ifdef ENABLE_CAIRO
 #include <cairo.h>
+#endif
+
 
 class Bezier : public Shape
 {
@@ -14,7 +18,9 @@ public:
 
     // Hybrid draw methods
     void draw(QPainter &painter) override;
+	#ifdef ENABLE_CAIRO
     void draw(cairo_t *cr) override;
+	#endif
 
     bool contains(const QPointF &point) const override;
     Type getType() const override { return Shape::Bezier; }

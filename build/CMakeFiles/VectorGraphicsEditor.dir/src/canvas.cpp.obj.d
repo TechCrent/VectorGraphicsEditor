@@ -421,18 +421,14 @@ CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj: \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qpainter.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qtextoption.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qpen.h \
- C:/msys64/mingw64/include/cairo/cairo.h \
- C:/msys64/mingw64/include/cairo/cairo-version.h \
- C:/msys64/mingw64/include/cairo/cairo-features.h \
- C:/msys64/mingw64/include/cairo/cairo-deprecated.h \
- C:/Projects/VectorGraphicsEditor/include/document.h \
- C:/Qt/6.9.1/mingw_64/include/QtCore/QObject \
- C:/Qt/6.9.1/mingw_64/include/QtCore/QList \
- C:/Qt/6.9.1/mingw_64/include/QtCore/QString \
- C:/Qt/6.9.1/mingw_64/include/QtCore/qstring.h \
- C:/Qt/6.9.1/mingw_64/include/QtCore/QSizeF \
  C:/Qt/6.9.1/mingw_64/include/QtGui/QColor \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qcolor.h \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QString \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/qstring.h \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QList \
+ C:/Projects/VectorGraphicsEditor/include/document.h \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QObject \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QSizeF \
  C:/Projects/VectorGraphicsEditor/include/shape.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/QPointF \
  C:/Qt/6.9.1/mingw_64/include/QtCore/qpoint.h \
@@ -448,9 +444,26 @@ CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj: \
  C:/Projects/VectorGraphicsEditor/include/bezier.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/QVector \
  C:/Qt/6.9.1/mingw_64/include/QtCore/qvector.h \
+ C:/Projects/VectorGraphicsEditor/include/svg_parser.h \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QTextStream \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/qtextstream.h \
+ C:/Projects/VectorGraphicsEditor/include/rectangle.h \
+ C:/Projects/VectorGraphicsEditor/include/ellipse.h \
+ C:/Projects/VectorGraphicsEditor/include/line.h \
+ C:/Projects/VectorGraphicsEditor/include/bezier.h \
+ C:/Projects/VectorGraphicsEditor/include/text.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/QPainterPath \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qpainterpath.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/QWheelEvent \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/QInputDialog \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qinputdialog.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qlineedit.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qframe.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qwidget.h \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/qtextcursor.h \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/qtextdocument.h \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/qtextformat.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qdialog.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/QResizeEvent \
  C:/Qt/6.9.1/mingw_64/include/QtGui/QClipboard \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qclipboard.h \

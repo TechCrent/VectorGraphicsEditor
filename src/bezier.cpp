@@ -2,7 +2,11 @@
 #include <QPainter>
 #include <QPainterPath>
 #include <cmath>
+
+#ifdef ENABLE_CAIRO
 #include <cairo.h>
+#endif
+
 
 Bezier::Bezier()
     : Shape()
@@ -55,6 +59,7 @@ void Bezier::draw(QPainter &painter)
 // ====================
 // Cairo Drawing
 // ====================
+#ifdef ENABLE_CAIRO
 void Bezier::draw(cairo_t *cr)
 {
     if (!isVisible() || m_points.isEmpty() || !cr) return;
@@ -105,6 +110,7 @@ void Bezier::draw(cairo_t *cr)
 
     cairo_restore(cr);
 }
+#endif
 
 // ====================
 // Hit Testing

@@ -271,6 +271,78 @@ src/canvas.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VectorGraphicsEditor.dir\build.make CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.s
 .PHONY : src/canvas.cpp.s
 
+src/colorpicker.obj: src/colorpicker.cpp.obj
+.PHONY : src/colorpicker.obj
+
+# target to build an object file
+src/colorpicker.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VectorGraphicsEditor.dir\build.make CMakeFiles/VectorGraphicsEditor.dir/src/colorpicker.cpp.obj
+.PHONY : src/colorpicker.cpp.obj
+
+src/colorpicker.i: src/colorpicker.cpp.i
+.PHONY : src/colorpicker.i
+
+# target to preprocess a source file
+src/colorpicker.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VectorGraphicsEditor.dir\build.make CMakeFiles/VectorGraphicsEditor.dir/src/colorpicker.cpp.i
+.PHONY : src/colorpicker.cpp.i
+
+src/colorpicker.s: src/colorpicker.cpp.s
+.PHONY : src/colorpicker.s
+
+# target to generate assembly for a file
+src/colorpicker.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VectorGraphicsEditor.dir\build.make CMakeFiles/VectorGraphicsEditor.dir/src/colorpicker.cpp.s
+.PHONY : src/colorpicker.cpp.s
+
+src/colorstrip.obj: src/colorstrip.cpp.obj
+.PHONY : src/colorstrip.obj
+
+# target to build an object file
+src/colorstrip.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VectorGraphicsEditor.dir\build.make CMakeFiles/VectorGraphicsEditor.dir/src/colorstrip.cpp.obj
+.PHONY : src/colorstrip.cpp.obj
+
+src/colorstrip.i: src/colorstrip.cpp.i
+.PHONY : src/colorstrip.i
+
+# target to preprocess a source file
+src/colorstrip.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VectorGraphicsEditor.dir\build.make CMakeFiles/VectorGraphicsEditor.dir/src/colorstrip.cpp.i
+.PHONY : src/colorstrip.cpp.i
+
+src/colorstrip.s: src/colorstrip.cpp.s
+.PHONY : src/colorstrip.s
+
+# target to generate assembly for a file
+src/colorstrip.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VectorGraphicsEditor.dir\build.make CMakeFiles/VectorGraphicsEditor.dir/src/colorstrip.cpp.s
+.PHONY : src/colorstrip.cpp.s
+
+src/colorwheel.obj: src/colorwheel.cpp.obj
+.PHONY : src/colorwheel.obj
+
+# target to build an object file
+src/colorwheel.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VectorGraphicsEditor.dir\build.make CMakeFiles/VectorGraphicsEditor.dir/src/colorwheel.cpp.obj
+.PHONY : src/colorwheel.cpp.obj
+
+src/colorwheel.i: src/colorwheel.cpp.i
+.PHONY : src/colorwheel.i
+
+# target to preprocess a source file
+src/colorwheel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VectorGraphicsEditor.dir\build.make CMakeFiles/VectorGraphicsEditor.dir/src/colorwheel.cpp.i
+.PHONY : src/colorwheel.cpp.i
+
+src/colorwheel.s: src/colorwheel.cpp.s
+.PHONY : src/colorwheel.s
+
+# target to generate assembly for a file
+src/colorwheel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VectorGraphicsEditor.dir\build.make CMakeFiles/VectorGraphicsEditor.dir/src/colorwheel.cpp.s
+.PHONY : src/colorwheel.cpp.s
+
 src/document.obj: src/document.cpp.obj
 .PHONY : src/document.obj
 
@@ -463,6 +535,30 @@ src/svg_parser.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VectorGraphicsEditor.dir\build.make CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.s
 .PHONY : src/svg_parser.cpp.s
 
+src/text.obj: src/text.cpp.obj
+.PHONY : src/text.obj
+
+# target to build an object file
+src/text.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VectorGraphicsEditor.dir\build.make CMakeFiles/VectorGraphicsEditor.dir/src/text.cpp.obj
+.PHONY : src/text.cpp.obj
+
+src/text.i: src/text.cpp.i
+.PHONY : src/text.i
+
+# target to preprocess a source file
+src/text.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VectorGraphicsEditor.dir\build.make CMakeFiles/VectorGraphicsEditor.dir/src/text.cpp.i
+.PHONY : src/text.cpp.i
+
+src/text.s: src/text.cpp.s
+.PHONY : src/text.s
+
+# target to generate assembly for a file
+src/text.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\VectorGraphicsEditor.dir\build.make CMakeFiles/VectorGraphicsEditor.dir/src/text.cpp.s
+.PHONY : src/text.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -487,6 +583,15 @@ help:
 	@echo ... src/canvas.obj
 	@echo ... src/canvas.i
 	@echo ... src/canvas.s
+	@echo ... src/colorpicker.obj
+	@echo ... src/colorpicker.i
+	@echo ... src/colorpicker.s
+	@echo ... src/colorstrip.obj
+	@echo ... src/colorstrip.i
+	@echo ... src/colorstrip.s
+	@echo ... src/colorwheel.obj
+	@echo ... src/colorwheel.i
+	@echo ... src/colorwheel.s
 	@echo ... src/document.obj
 	@echo ... src/document.i
 	@echo ... src/document.s
@@ -511,6 +616,9 @@ help:
 	@echo ... src/svg_parser.obj
 	@echo ... src/svg_parser.i
 	@echo ... src/svg_parser.s
+	@echo ... src/text.obj
+	@echo ... src/text.i
+	@echo ... src/text.s
 .PHONY : help
 
 

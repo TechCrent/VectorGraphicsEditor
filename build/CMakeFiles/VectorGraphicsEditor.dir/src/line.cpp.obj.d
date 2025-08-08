@@ -362,9 +362,5 @@ CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.obj: \
  C:/Qt/6.9.1/mingw_64/include/QtCore/qendian.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qfontvariableaxis.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qfontmetrics.h \
- C:/msys64/mingw64/include/cairo/cairo.h \
- C:/msys64/mingw64/include/cairo/cairo-version.h \
- C:/msys64/mingw64/include/cairo/cairo-features.h \
- C:/msys64/mingw64/include/cairo/cairo-deprecated.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/QLineF \
  C:/Qt/6.9.1/mingw_64/include/QtCore/qline.h

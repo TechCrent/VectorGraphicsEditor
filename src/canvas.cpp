@@ -5,12 +5,15 @@
 #include "ellipse.h"
 #include "line.h"
 #include "bezier.h"
+#include "svg_parser.h"
+#include "text.h"
 
 #include <QPainterPath>
 #include <QMouseEvent>
 #include <QKeyEvent>
 #include <QPainter>
 #include <QWheelEvent>
+#include <QInputDialog>
 #include <QResizeEvent>
 #include <QClipboard>
 #include <QApplication>
@@ -28,8 +31,10 @@ Canvas::Canvas(QWidget *parent)
     , m_isSelecting(false)
     , m_isDrawing(false)
     , m_currentShape(nullptr)
+#ifdef ENABLE_CAIRO
     , m_cairoSurface(nullptr)
     , m_cairoContext(nullptr)
+#endif
     , m_showGrid(true)
     , m_gridSize(20)
     , m_snapToGrid(false)
@@ -42,13 +47,17 @@ Canvas::Canvas(QWidget *parent)
     pal.setColor(QPalette::Window, Qt::white);
     setPalette(pal);
 
+#ifdef ENABLE_CAIRO
     createCairoSurface();
+#endif
 }
 
 Canvas::~Canvas()
 {
+#ifdef ENABLE_CAIRO
     if (m_cairoContext) cairo_destroy(m_cairoContext);
     if (m_cairoSurface) cairo_surface_destroy(m_cairoSurface);
+#endif
 }
 
 void Canvas::setDocument(Document *document)
@@ -118,7 +127,30 @@ void Canvas::paintEvent(QPaintEvent *event)
 
     drawBackground(painter);
     if (m_showGrid) drawGrid(painter);
+
+	#ifdef ENABLE_CAIRO
     drawWithCairo(painter);
+	#else
+    if (m_document) {
+        painter.save();
+        painter.translate(m_panOffset * m_zoom);
+        painter.scale(m_zoom, m_zoom);
+        const QList<Shape*> shapes = m_document->getShapes();
+        for (Shape *shape : shapes) {
+            if (shape) shape->draw(painter);
+        }
+        painter.restore();
+    }
+#endif
+
+    // Draw current shape during drawing
+    if (m_isDrawing && m_currentShape) {
+        painter.save();
+        painter.translate(m_panOffset * m_zoom);
+        painter.scale(m_zoom, m_zoom);
+        m_currentShape->draw(painter);
+        painter.restore();
+    }
 
     if (m_selectedShape) drawSelectionHandles(painter);
 
@@ -152,6 +184,9 @@ void Canvas::mousePressEvent(QMouseEvent *event)
         case Tool_Ellipse:   handleEllipseTool(event); break;
         case Tool_Line:      handleLineTool(event); break;
         case Tool_Bezier:    handleBezierTool(event); break;
+		case Tool_Pen: handlePenTool(event); break;
+		case Tool_Text: handleTextTool(event); break;
+        default: break; // Ignore unimplemented tools (Tool_Pen, Tool_Text)
     }
 
     update();
@@ -178,7 +213,12 @@ void Canvas::mouseMoveEvent(QMouseEvent *event)
                 line->setEndPoint(m_drawCurrent);
             }
         }
-        update();
+		else if (m_currentTool == Tool_Pen) {
+    		if (auto bezier = dynamic_cast<Bezier*>(m_currentShape)) {
+        	bezier->addPoint(screenToWorld(event->pos()));
+    		}
+		}
+		update();
     }
 }
 
@@ -267,6 +307,7 @@ void Canvas::drawGrid(QPainter &painter)
     }
 }
 
+#ifdef ENABLE_CAIRO
 void Canvas::drawWithCairo(QPainter &painter)
 {
     if (!m_document) return;
@@ -291,6 +332,7 @@ void Canvas::drawWithCairo(QPainter &painter)
                  QImage::Format_ARGB32_Premultiplied);
     painter.drawImage(0, 0, image);
 }
+#endif
 
 void Canvas::drawSelectionHandles(QPainter &painter)
 {
@@ -326,6 +368,8 @@ void Canvas::handleRectangleTool(QMouseEvent *event)
         m_currentShape = new Rectangle();
         m_currentShape->setPosition(m_drawStart);
         m_currentShape->setSize(QSizeF(0, 0));
+        m_currentShape->setPen(QPen(Qt::black, 2));
+        m_currentShape->setBrush(Qt::NoBrush);
     }
 }
 
@@ -337,6 +381,8 @@ void Canvas::handleEllipseTool(QMouseEvent *event)
         m_currentShape = new Ellipse();
         m_currentShape->setPosition(m_drawStart);
         m_currentShape->setSize(QSizeF(0, 0));
+        m_currentShape->setPen(QPen(Qt::black, 2));
+        m_currentShape->setBrush(Qt::NoBrush);
     }
 }
 
@@ -348,6 +394,7 @@ void Canvas::handleLineTool(QMouseEvent *event)
         auto *line = new Line();
         line->setStartPoint(m_drawStart);
         line->setEndPoint(m_drawStart);
+        line->setPen(QPen(Qt::black, 2));
         m_currentShape = line;
     }
 }
@@ -358,6 +405,51 @@ void Canvas::handleBezierTool(QMouseEvent *event)
         m_bezierPoints.append(screenToWorld(event->pos()));
     }
 }
+
+void Canvas::handlePenTool(QMouseEvent *event)
+{
+    if (event->button() == Qt::LeftButton) {
+        m_isDrawing = true;
+        m_drawStart = screenToWorld(event->pos());
+
+        auto* bezier = new Bezier();  // Reuse Bezier for now
+        bezier->addPoint(m_drawStart);
+        bezier->setPen(m_strokePen);   // ✅ Use selected stroke pen
+        bezier->setBrush(m_fillBrush); // ✅ Use selected fill brush
+        m_currentShape = bezier;
+    }
+}
+
+void Canvas::handleTextTool(QMouseEvent *event)
+{
+    if (event->button() == Qt::LeftButton) {
+        // 🔹 Get world position for where to place the text
+        QPointF position = screenToWorld(event->pos());
+
+        // 🔹 Show text input dialog
+        bool ok;
+        QString userText = QInputDialog::getText(this, tr("Enter Text"),
+                                                 tr("Text:"), QLineEdit::Normal,
+                                                 "", &ok);
+
+        // 🔹 If user confirms and input is not empty
+        if (ok && !userText.isEmpty()) {
+            auto* text = new Text();
+            text->setPosition(position);
+            text->setPen(m_strokePen);   // ✅ Use current stroke color
+            text->setBrush(m_fillBrush); // ✅ Use current fill color
+            text->setText(userText);     // ✅ Use custom user input
+
+            if (m_document) {
+                m_document->addShape(text);
+                emit shapeCreated(text);
+            } else {
+                delete text;
+            }
+        }
+    }
+}
+
 
 void Canvas::selectShapeAt(const QPointF &point)
 {
@@ -390,10 +482,13 @@ QPointF Canvas::snapToGrid(const QPointF &point) const
 void Canvas::resizeEvent(QResizeEvent *event)
 {
     QWidget::resizeEvent(event);
+#ifdef ENABLE_CAIRO
     createCairoSurface();
-	update();
+#endif
+    update();
 }
 
+#ifdef ENABLE_CAIRO
 cairo_surface_t* Canvas::createCairoSurface()
 {
     if (m_cairoSurface) cairo_surface_destroy(m_cairoSurface);
@@ -403,34 +498,33 @@ cairo_surface_t* Canvas::createCairoSurface()
     m_cairoContext = cairo_create(m_cairoSurface);
     return m_cairoSurface;
 }
+#endif
 
 void Canvas::loadSVG(const QString &filename)
 {
-    qDebug() << "Loading SVG from" << filename;
-    // TODO: Implement SVG loading
-}
-
-void Canvas::saveSVG(const QString &filename)
-{
-    qDebug() << "Saving SVG to" << filename;
-    QSvgGenerator generator;
-    generator.setFileName(filename);
-    generator.setSize(size());
-    generator.setViewBox(rect());
-    generator.setTitle("Vector Drawing");
-    generator.setDescription("Generated by Vector Graphics Editor");
-
-    QPainter painter;
-    painter.begin(&generator);
-    drawWithCairo(painter);
-    painter.end();
+    if (!m_document) return;
+    SVGParser parser;
+    parser.importFromFile(filename, m_document);
+    update();
+    emit canvasChanged();
 }
 
 void Canvas::importSVG(const QString &filename)
 {
-    qDebug() << "Importing SVG from" << filename;
-    // TODO: Parse SVG into shapes
+    if (!m_document) return;
+    SVGParser parser;
+    parser.importFromFile(filename, m_document);
+    update();
+    emit canvasChanged();
 }
+
+void Canvas::saveSVG(const QString &filename)
+{
+	if (!m_document) return;
+	SVGParser parser;
+	parser.exportToFile(filename, m_document);
+}
+
 
 void Canvas::cutSelection()
 {
@@ -478,7 +572,7 @@ void Canvas::setStrokeColor(const QColor &color)
     if (m_selectedShape) {
         QPen pen = m_selectedShape->getPen();
         pen.setColor(color);
-        m_selectedShape->setPen(pen);
+        m_selectedShape->setPen(pen); // ✅ This line must be here!
     }
     update();
 }

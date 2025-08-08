@@ -2,7 +2,11 @@
 #include <QRectF>
 #include <QPainter>
 #include <cmath>
+
+#ifdef ENABLE_CAIRO
 #include <cairo.h>
+#endif
+
 
 Rectangle::Rectangle(const QPointF &pos, const QSizeF &size)
     : Shape()
@@ -40,6 +44,7 @@ void Rectangle::draw(QPainter &painter)
 // =========================
 // Cairo Drawing
 // =========================
+#ifdef ENABLE_CAIRO
 void Rectangle::draw(cairo_t *cr)
 {
     if (!isVisible() || !cr) return;
@@ -100,6 +105,7 @@ void Rectangle::draw(cairo_t *cr)
         cairo_restore(cr);
     }
 }
+#endif
 
 // =========================
 // Other Methods

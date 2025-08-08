@@ -8,7 +8,11 @@
 #include <QBrush>
 #include <QRectF>
 #include <QPainter>
+
+#ifdef ENABLE_CAIRO
 #include <cairo.h>
+#endif
+
 
 class Shape
 {
@@ -17,7 +21,8 @@ public:
         Rectangle,
         Ellipse,
         Line,
-        Bezier
+        Bezier,
+		Text
     };
 
     Shape();
@@ -26,8 +31,11 @@ public:
     // ========================
     // Pure virtual methods
     // ========================
+	#ifdef ENABLE_CAIRO
     virtual void draw(cairo_t *cr) = 0;          // Cairo-based drawing
-    virtual void draw(QPainter &painter) = 0;    // QPainter-based drawing
+    #endif
+
+	virtual void draw(QPainter &painter) = 0;    // QPainter-based drawing
     virtual bool contains(const QPointF &point) const = 0;
     virtual Type getType() const = 0;
     virtual Shape* clone() const = 0;

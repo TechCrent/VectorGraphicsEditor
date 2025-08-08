@@ -524,18 +524,14 @@ CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.obj: \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qpainter.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qtextoption.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qpen.h \
- C:/msys64/mingw64/include/cairo/cairo.h \
- C:/msys64/mingw64/include/cairo/cairo-version.h \
- C:/msys64/mingw64/include/cairo/cairo-features.h \
- C:/msys64/mingw64/include/cairo/cairo-deprecated.h \
- C:/Projects/VectorGraphicsEditor/include/document.h \
- C:/Qt/6.9.1/mingw_64/include/QtCore/QObject \
- C:/Qt/6.9.1/mingw_64/include/QtCore/QList \
- C:/Qt/6.9.1/mingw_64/include/QtCore/QString \
- C:/Qt/6.9.1/mingw_64/include/QtCore/qstring.h \
- C:/Qt/6.9.1/mingw_64/include/QtCore/QSizeF \
  C:/Qt/6.9.1/mingw_64/include/QtGui/QColor \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qcolor.h \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QString \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/qstring.h \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QList \
+ C:/Projects/VectorGraphicsEditor/include/document.h \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QObject \
+ C:/Qt/6.9.1/mingw_64/include/QtCore/QSizeF \
  C:/Projects/VectorGraphicsEditor/include/shape.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/QPointF \
  C:/Qt/6.9.1/mingw_64/include/QtCore/qpoint.h \

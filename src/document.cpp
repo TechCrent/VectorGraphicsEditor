@@ -79,8 +79,9 @@ void Document::removeLayer(Layer *layer) {
         if (m_activeLayer == layer) {
             m_activeLayer = m_layers.isEmpty() ? nullptr : m_layers.last();
         }
-        delete layer;
-        emit layerRemoved(layer);
+			emit layerRemoved(layer);
+			delete layer;
+
     }
 }
 
@@ -155,9 +156,10 @@ QList<Shape*> Document::getShapes() const {
 QList<Shape*> Document::getAllShapes() const {
     QList<Shape*> allShapes;
     for (auto layer : m_layers) {
-        if (layer->isVisible()) {
-            allShapes.append(layer->getShapes());
-        }
+			if (layer->isVisible() && !layer->isLocked()) {
+			    allShapes.append(layer->getShapes());
+			}
+
     }
     return allShapes;
 }

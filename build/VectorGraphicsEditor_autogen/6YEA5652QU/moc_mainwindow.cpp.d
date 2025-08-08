@@ -444,10 +444,6 @@ C:/Projects/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/6YEA5652QU/m
   C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/msys64/mingw64/include/cairo/cairo-deprecated.h \
-  C:/msys64/mingw64/include/cairo/cairo-features.h \
-  C:/msys64/mingw64/include/cairo/cairo-version.h \
-  C:/msys64/mingw64/include/cairo/cairo.h \
   C:/msys64/mingw64/include/corecrt.h \
   C:/msys64/mingw64/include/corecrt_startup.h \
   C:/msys64/mingw64/include/corecrt_stdio_config.h \

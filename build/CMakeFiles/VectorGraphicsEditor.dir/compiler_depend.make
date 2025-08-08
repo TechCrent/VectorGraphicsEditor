@@ -9,6 +9,9 @@ VectorGraphicsEditor_autogen/timestamp: C:/Projects/VectorGraphicsEditor/CMakeLi
   VectorGraphicsEditor_autogen/moc_predefs.h \
   C:/Projects/VectorGraphicsEditor/include/bezier.h \
   C:/Projects/VectorGraphicsEditor/include/canvas.h \
+  C:/Projects/VectorGraphicsEditor/include/colorpicker.h \
+  C:/Projects/VectorGraphicsEditor/include/colorstrip.h \
+  C:/Projects/VectorGraphicsEditor/include/colorwheel.h \
   C:/Projects/VectorGraphicsEditor/include/document.h \
   C:/Projects/VectorGraphicsEditor/include/ellipse.h \
   C:/Projects/VectorGraphicsEditor/include/line.h \
@@ -16,8 +19,12 @@ VectorGraphicsEditor_autogen/timestamp: C:/Projects/VectorGraphicsEditor/CMakeLi
   C:/Projects/VectorGraphicsEditor/include/rectangle.h \
   C:/Projects/VectorGraphicsEditor/include/shape.h \
   C:/Projects/VectorGraphicsEditor/include/svg_parser.h \
+  C:/Projects/VectorGraphicsEditor/include/text.h \
   C:/Projects/VectorGraphicsEditor/src/bezier.cpp \
   C:/Projects/VectorGraphicsEditor/src/canvas.cpp \
+  C:/Projects/VectorGraphicsEditor/src/colorpicker.cpp \
+  C:/Projects/VectorGraphicsEditor/src/colorstrip.cpp \
+  C:/Projects/VectorGraphicsEditor/src/colorwheel.cpp \
   C:/Projects/VectorGraphicsEditor/src/document.cpp \
   C:/Projects/VectorGraphicsEditor/src/ellipse.cpp \
   C:/Projects/VectorGraphicsEditor/src/line.cpp \
@@ -26,9 +33,11 @@ VectorGraphicsEditor_autogen/timestamp: C:/Projects/VectorGraphicsEditor/CMakeLi
   C:/Projects/VectorGraphicsEditor/src/rectangle.cpp \
   C:/Projects/VectorGraphicsEditor/src/shape.cpp \
   C:/Projects/VectorGraphicsEditor/src/svg_parser.cpp \
+  C:/Projects/VectorGraphicsEditor/src/text.cpp \
   C:/Projects/VectorGraphicsEditor/ui/mainwindow.ui \
   C:/Qt/6.9.1/mingw_64/include/QtCore/QList \
   C:/Qt/6.9.1/mingw_64/include/QtCore/QObject \
+  C:/Qt/6.9.1/mingw_64/include/QtCore/QPoint \
   C:/Qt/6.9.1/mingw_64/include/QtCore/QPointF \
   C:/Qt/6.9.1/mingw_64/include/QtCore/QRect \
   C:/Qt/6.9.1/mingw_64/include/QtCore/QRectF \
@@ -190,6 +199,7 @@ VectorGraphicsEditor_autogen/timestamp: C:/Projects/VectorGraphicsEditor/CMakeLi
   C:/Qt/6.9.1/mingw_64/include/QtGui/QMouseEvent \
   C:/Qt/6.9.1/mingw_64/include/QtGui/QPainter \
   C:/Qt/6.9.1/mingw_64/include/QtGui/QPen \
+  C:/Qt/6.9.1/mingw_64/include/QtGui/QPixmap \
   C:/Qt/6.9.1/mingw_64/include/QtGui/QTransform \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qactiongroup.h \
@@ -224,7 +234,9 @@ VectorGraphicsEditor_autogen/timestamp: C:/Projects/VectorGraphicsEditor/CMakeLi
   C:/Qt/6.9.1/mingw_64/include/QtGui/qrgba64.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qscreen.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qscreen_platform.h \
+  C:/Qt/6.9.1/mingw_64/include/QtGui/qtextcursor.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qtextdocument.h \
+  C:/Qt/6.9.1/mingw_64/include/QtGui/qtextformat.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qtextoption.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.9.1/mingw_64/include/QtGui/qtguiexports.h \
@@ -241,11 +253,13 @@ VectorGraphicsEditor_autogen/timestamp: C:/Projects/VectorGraphicsEditor/CMakeLi
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/QGroupBox \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/QHBoxLayout \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/QLabel \
+  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QLineEdit \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/QListWidget \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/QMainWindow \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/QMenuBar \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/QMessageBox \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/QPushButton \
+  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QSlider \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/QSpinBox \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/QStatusBar \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/QToolBar \
@@ -269,6 +283,7 @@ VectorGraphicsEditor_autogen/timestamp: C:/Projects/VectorGraphicsEditor/CMakeLi
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/qlabel.h \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/qlayout.h \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/qlayoutitem.h \
+  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qlineedit.h \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/qlistview.h \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/qlistwidget.h \
   C:/Qt/6.9.1/mingw_64/include/QtWidgets/qmainwindow.h \
@@ -793,10 +808,6 @@ VectorGraphicsEditor_autogen/timestamp: C:/Projects/VectorGraphicsEditor/CMakeLi
   C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/msys64/mingw64/include/cairo/cairo-deprecated.h \
-  C:/msys64/mingw64/include/cairo/cairo-features.h \
-  C:/msys64/mingw64/include/cairo/cairo-version.h \
-  C:/msys64/mingw64/include/cairo/cairo.h \
   C:/msys64/mingw64/include/corecrt.h \
   C:/msys64/mingw64/include/corecrt_startup.h \
   C:/msys64/mingw64/include/corecrt_stdio_config.h \
@@ -922,6 +933,34 @@ C:/Projects/VectorGraphicsEditor/include/bezier.h:
 
 VectorGraphicsEditor_autogen/moc_predefs.h:
 
+C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6CorePrivate/Qt6CorePrivateConfig.cmake:
+
+C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake:
+
+C:/Qt/6.9.1/mingw_64/include/QtCore/qatomic_cxx11.h:
+
+C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6/QtPublicSbomDepHelpers.cmake:
+
+C:/msys64/mingw64/include/c++/15.1.0/bits/node_handle.h:
+
+C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:
+
+C:/Projects/VectorGraphicsEditor/include/colorpicker.h:
+
+C:/Qt/6.9.1/mingw_64/include/QtCore/qmargins.h:
+
+C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake:
+
+C:/Projects/VectorGraphicsEditor/include/colorstrip.h:
+
+C:/Projects/VectorGraphicsEditor/include/colorwheel.h:
+
+C:/Qt/6.9.1/mingw_64/include/QtCore/qforeach.h:
+
+C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginConfig.cmake:
+
+C:/Qt/6.9.1/mingw_64/include/QtGui/qscreen.h:
+
 C:/Qt/6.9.1/mingw_64/include/QtCore/qarraydata.h:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Test/Qt6TestTargets.cmake:
@@ -934,6 +973,8 @@ C:/msys64/mingw64/include/c++/15.1.0/cmath:
 
 C:/Projects/VectorGraphicsEditor/include/line.h:
 
+C:/Qt/6.9.1/mingw_64/include/QtWidgets/qlineedit.h:
+
 C:/Projects/VectorGraphicsEditor/ui/mainwindow.ui:
 
 C:/msys64/mingw64/include/sec_api/sys/timeb_s.h:
@@ -941,10 +982,6 @@ C:/msys64/mingw64/include/sec_api/sys/timeb_s.h:
 C:/Projects/VectorGraphicsEditor/include/mainwindow.h:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake:
-
-C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsIntegrationPluginConfig.cmake:
-
-C:/Qt/6.9.1/mingw_64/include/QtCore/qcompare.h:
 
 C:/Projects/VectorGraphicsEditor/include/rectangle.h:
 
@@ -958,15 +995,45 @@ C:/Projects/VectorGraphicsEditor/include/shape.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/qalgorithms.h:
 
+C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake:
+
 C:/Qt/6.9.1/mingw_64/include/QtGui/qtextdocument.h:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake:
-
 C:/Projects/VectorGraphicsEditor/include/svg_parser.h:
 
+C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake:
+
+C:/Qt/6.9.1/mingw_64/include/QtCore/q20memory.h:
+
+C:/msys64/mingw64/include/c++/15.1.0/bits/functexcept.h:
+
+C:/Projects/VectorGraphicsEditor/include/text.h:
+
 C:/Projects/VectorGraphicsEditor/src/bezier.cpp:
+
+C:/Qt/6.9.1/mingw_64/include/QtCore/qstringliteral.h:
+
+C:/Qt/6.9.1/mingw_64/include/QtWidgets/QLineEdit:
+
+C:/Qt/6.9.1/mingw_64/include/QtCore/QPoint:
+
+C:/Qt/6.9.1/mingw_64/include/QtCore/qoverload.h:
+
+C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestCompilerCommon.cmake:
+
+C:/Projects/VectorGraphicsEditor/src/colorpicker.cpp:
+
+C:/Projects/VectorGraphicsEditor/src/colorstrip.cpp:
+
+C:/Qt/6.9.1/mingw_64/include/QtCore/qxptype_traits.h:
+
+C:/Qt/6.9.1/mingw_64/include/QtCore/qarraydataops.h:
+
+C:/Qt/6.9.1/mingw_64/include/QtCore/q17memory.h:
+
+C:/Projects/VectorGraphicsEditor/src/colorwheel.cpp:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/qanystringview.h:
 
@@ -1030,9 +1097,9 @@ C:/msys64/mingw64/include/c++/15.1.0/bits/shared_ptr_atomic.h:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginAdditionalTargetInfo.cmake:
 
-C:/Qt/6.9.1/mingw_64/include/QtCore/qcompilerdetection.h:
-
 C:/Projects/VectorGraphicsEditor/src/shape.cpp:
+
+C:/Qt/6.9.1/mingw_64/include/QtCore/qcompilerdetection.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtWidgets/QFileDialog:
 
@@ -1044,12 +1111,6 @@ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qstyle.h:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateConfigVersionImpl.cmake:
 
-C:/msys64/mingw64/include/c++/15.1.0/bits/std_function.h:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/XL-C-DetermineCompiler.cmake:
-
-C:/Qt/6.9.1/mingw_64/include/QtCore/QList:
-
 C:/Qt/6.9.1/mingw_64/include/QtCore/qarraydatapointer.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtWidgets/qtabbar.h:
@@ -1059,6 +1120,14 @@ C:/msys64/mingw64/include/c++/15.1.0/bits/version.h:
 C:/Qt/6.9.1/mingw_64/include/QtCore/QPointF:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Svg/Qt6SvgVersionlessAliasTargets.cmake:
+
+C:/Projects/VectorGraphicsEditor/src/text.cpp:
+
+C:/msys64/mingw64/include/c++/15.1.0/bits/std_function.h:
+
+C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/XL-C-DetermineCompiler.cmake:
+
+C:/Qt/6.9.1/mingw_64/include/QtCore/QList:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Gui/Qt6QGifPluginTargets.cmake:
 
@@ -1076,33 +1145,17 @@ C:/Qt/6.9.1/mingw_64/include/QtGui/QMouseEvent:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/QString:
 
-C:/Qt/6.9.1/mingw_64/include/QtCore/qarraydataops.h:
-
-C:/Qt/6.9.1/mingw_64/include/QtCore/q17memory.h:
-
 C:/msys64/mingw64/include/sys/timeb.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/q20iterator.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtWidgets/QGroupBox:
 
-C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake:
-
-C:/Qt/6.9.1/mingw_64/include/QtCore/q20memory.h:
-
-C:/Qt/6.9.1/mingw_64/include/QtCore/qbytearrayview.h:
-
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Test/Qt6TestTargets-relwithdebinfo.cmake:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/q20utility.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/qabstractitemmodel.h:
-
-C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6CorePrivate/Qt6CorePrivateConfig.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake:
-
-C:/Qt/6.9.1/mingw_64/include/QtCore/qatomic_cxx11.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/qbasicatomic.h:
 
@@ -1112,6 +1165,8 @@ C:/Qt/6.9.1/mingw_64/include/QtCore/qbytearray.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/qbytearrayalgorithms.h:
 
+C:/Qt/6.9.1/mingw_64/include/QtCore/qbytearrayview.h:
+
 C:/msys64/mingw64/include/c++/15.1.0/tr1/special_function_util.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/qcalendar.h:
@@ -1119,6 +1174,10 @@ C:/Qt/6.9.1/mingw_64/include/QtCore/qcalendar.h:
 C:/Qt/6.9.1/mingw_64/include/QtCore/qconfig.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/qchar.h:
+
+C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Gui/Qt6QWindowsIntegrationPluginConfig.cmake:
+
+C:/Qt/6.9.1/mingw_64/include/QtCore/qcompare.h:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6/QtPublicSbomPythonHelpers.cmake:
 
@@ -1228,12 +1287,6 @@ C:/msys64/mingw64/include/c++/15.1.0/bits/alloc_traits.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/qfloat16.h:
 
-C:/Qt/6.9.1/mingw_64/include/QtCore/qforeach.h:
-
-C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Gui/Qt6QTuioTouchPluginConfig.cmake:
-
-C:/Qt/6.9.1/mingw_64/include/QtGui/qscreen.h:
-
 C:/Qt/6.9.1/mingw_64/include/QtCore/qfunctionaltools_impl.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/qfunctionpointer.h:
@@ -1308,8 +1361,6 @@ C:/Qt/6.9.1/mingw_64/include/QtCore/qmalloc.h:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake:
 
-C:/Qt/6.9.1/mingw_64/include/QtCore/qmargins.h:
-
 C:/Qt/6.9.1/mingw_64/include/QtCore/qmath.h:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets-relwithdebinfo.cmake:
@@ -1350,8 +1401,6 @@ C:/Qt/6.9.1/mingw_64/include/QtCore/qobjectdefs.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/qobjectdefs_impl.h:
 
-C:/Qt/6.9.1/mingw_64/include/QtCore/qoverload.h:
-
 C:/Qt/6.9.1/mingw_64/include/QtGui/qfontmetrics.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/qpair.h:
@@ -1364,9 +1413,9 @@ C:/Qt/6.9.1/mingw_64/include/QtGui/qtguiexports.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/qprocessordetection.h:
 
-C:/Qt/6.9.1/mingw_64/include/QtCore/qrect.h:
-
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:
+
+C:/Qt/6.9.1/mingw_64/include/QtCore/qrect.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/qrefcount.h:
 
@@ -1374,13 +1423,13 @@ C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestRCCompiler.cmake:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/qregularexpression.h:
 
-C:/Qt/6.9.1/mingw_64/include/QtCore/qscopedpointer.h:
-
-C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:
+C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:
 
-C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake:
+C:/Qt/6.9.1/mingw_64/include/QtCore/qscopedpointer.h:
+
+C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/qscopeguard.h:
 
@@ -1416,13 +1465,11 @@ C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows.cmake:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/qstringbuilder.h:
 
-C:/Qt/6.9.1/mingw_64/include/QtCore/qstringconverter.h:
+C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginConfig.cmake:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake:
 
-C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Gui/Qt6QOffscreenIntegrationPluginConfig.cmake:
-
-C:/Qt/6.9.1/mingw_64/include/QtCore/qstringliteral.h:
+C:/Qt/6.9.1/mingw_64/include/QtCore/qstringconverter.h:
 
 C:/msys64/mingw64/include/c++/15.1.0/bits/postypes.h:
 
@@ -1512,8 +1559,6 @@ C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6/QtPublicSbomSystemDepHelpers.cmake:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Gui/Qt6QGifPluginConfig.cmake:
 
-C:/msys64/mingw64/include/cairo/cairo-deprecated.h:
-
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake:
 
 C:/msys64/mingw64/include/c++/15.1.0/cstdint:
@@ -1532,8 +1577,6 @@ C:/Qt/6.9.1/mingw_64/include/QtWidgets/QHBoxLayout:
 
 C:/Qt/6.9.1/mingw_64/include/QtCore/qversiontagging.h:
 
-C:/Qt/6.9.1/mingw_64/include/QtCore/qxptype_traits.h:
-
 C:/Qt/6.9.1/mingw_64/include/QtCore/qyieldcpu.h:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake:
@@ -1541,8 +1584,6 @@ C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake:
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake:
 
 C:/Qt/6.9.1/mingw_64/include/QtGui/QActionGroup:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake:
 
 C:/Qt/6.9.1/mingw_64/include/QtGui/QColor:
 
@@ -1553,6 +1594,14 @@ C:/Qt/6.9.1/mingw_64/include/QtGui/QKeyEvent:
 C:/Qt/6.9.1/mingw_64/include/QtGui/QPen:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6WidgetsPrivate/Qt6WidgetsPrivateConfigVersion.cmake:
+
+C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stddef.h:
+
+C:/Qt/6.9.1/mingw_64/include/QtGui/QPixmap:
+
+C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake:
+
+C:/Qt/6.9.1/mingw_64/include/QtGui/qimage.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtGui/QTransform:
 
@@ -1592,9 +1641,9 @@ C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake:
 
 C:/Qt/6.9.1/mingw_64/include/QtGui/qguiapplication.h:
 
-C:/Qt/6.9.1/mingw_64/include/QtWidgets/qmenu.h:
-
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCompilerIdDetection.cmake:
+
+C:/Qt/6.9.1/mingw_64/include/QtWidgets/qmenu.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtGui/qguiapplication_platform.h:
 
@@ -1606,17 +1655,11 @@ C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6TestPrivate/Qt6TestPrivateAdditionalTargetInfo
 
 C:/Qt/6.9.1/mingw_64/include/QtGui/qicon.h:
 
-C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/include/stddef.h:
-
-C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake:
-
-C:/Qt/6.9.1/mingw_64/include/QtGui/qimage.h:
-
 C:/msys64/mingw64/include/c++/15.1.0/cassert:
 
-C:/Qt/6.9.1/mingw_64/include/QtGui/qinputdevice.h:
-
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:
+
+C:/Qt/6.9.1/mingw_64/include/QtGui/qinputdevice.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtGui/qkeysequence.h:
 
@@ -1627,6 +1670,8 @@ C:/Qt/6.9.1/mingw_64/include/QtGui/qpainter.h:
 C:/msys64/mingw64/include/c++/15.1.0/bits/stl_algo.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtGui/qpen.h:
+
+C:/Qt/6.9.1/mingw_64/include/QtWidgets/QSlider:
 
 C:/Qt/6.9.1/mingw_64/include/QtGui/qpicture.h:
 
@@ -1639,6 +1684,22 @@ C:/Qt/6.9.1/mingw_64/include/QtGui/qpointingdevice.h:
 C:/Qt/6.9.1/mingw_64/include/QtGui/qrgb.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtGui/qrgba64.h:
+
+C:/msys64/mingw64/include/c++/15.1.0/bits/vector.tcc:
+
+C:/Qt/6.9.1/mingw_64/include/QtGui/qtextcursor.h:
+
+C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6GuiPrivate/Qt6GuiPrivateConfig.cmake:
+
+C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake:
+
+C:/Qt/6.9.1/mingw_64/include/QtWidgets/qmenubar.h:
+
+C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake:
+
+C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Fujitsu-DetermineCompiler.cmake:
+
+C:/Qt/6.9.1/mingw_64/include/QtGui/qtextformat.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtGui/qtextoption.h:
 
@@ -1726,11 +1787,11 @@ C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake:
 
 C:/Qt/6.9.1/mingw_64/include/QtWidgets/qfiledialog.h:
 
+C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:
+
 C:/Qt/6.9.1/mingw_64/include/QtWidgets/qframe.h:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Svg/Qt6SvgConfig.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:
 
 C:/Qt/6.9.1/mingw_64/include/QtWidgets/qgridlayout.h:
 
@@ -1747,8 +1808,6 @@ C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6/QtPublicSbomLicenseHelpers.cmake:
 C:/Qt/6.9.1/mingw_64/include/QtWidgets/qmainwindow.h:
 
 C:/Qt/6.9.1/mingw_64/include/QtWidgets/qrubberband.h:
-
-C:/Qt/6.9.1/mingw_64/include/QtWidgets/qmenubar.h:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake:
 
@@ -1777,8 +1836,6 @@ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h:
 C:/Qt/6.9.1/mingw_64/include/QtWidgets/qwidget.h:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineRCCompiler.cmake:
 
 C:/msys64/mingw64/include/c++/15.1.0/tr1/ell_integral.tcc:
 
@@ -1845,8 +1902,6 @@ C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake:
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Test/QtTestProperties.cmake:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6/QtPublicPluginHelpers_v2.cmake:
-
-C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6/QtPublicSbomDepHelpers.cmake:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6/QtPublicSbomFileHelpers.cmake:
 
@@ -1982,12 +2037,6 @@ C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Svg/Qt6SvgConfigVersion.cmake:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6GuiPrivate/Qt6GuiPrivateAdditionalTargetInfo.cmake:
 
-C:/msys64/mingw64/include/c++/15.1.0/bits/vector.tcc:
-
-C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6GuiPrivate/Qt6GuiPrivateConfig.cmake:
-
-C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake:
-
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6GuiPrivate/Qt6GuiPrivateDependencies.cmake:
 
 C:/Qt/6.9.1/mingw_64/lib/cmake/Qt6GuiPrivate/Qt6GuiPrivateTargets.cmake:
@@ -2082,6 +2131,8 @@ C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake:
 
+C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake:
+
 C:/msys64/mingw64/include/c++/15.1.0/bits/exception.h:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake:
@@ -2089,6 +2140,8 @@ C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake:
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:
+
+C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineRCCompiler.cmake:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake:
 
@@ -2111,8 +2164,6 @@ C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake:
 C:/msys64/mingw64/include/c++/15.1.0/cstddef:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestCompilerCommon.cmake:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:
 
@@ -2148,10 +2199,6 @@ C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CrayClang-DetermineCompil
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Embarcadero-DetermineCompiler.cmake:
 
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Fujitsu-DetermineCompiler.cmake:
-
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-C-DetermineCompiler.cmake:
@@ -2169,8 +2216,6 @@ C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/error_constants.h:
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IAR-DetermineCompiler.cmake:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Intel-DetermineCompiler.cmake:
 
@@ -2223,10 +2268,6 @@ C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindVulkan.cmake:
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake:
 
 C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GoogleTest.cmake:
-
-C:/msys64/mingw64/include/c++/15.1.0/bits/node_handle.h:
-
-C:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:
 
 C:/msys64/mingw64/include/corecrt_stdio_config.h:
 
@@ -2282,8 +2323,6 @@ C:/msys64/mingw64/include/c++/15.1.0/bits/atomic_base.h:
 
 C:/msys64/mingw64/include/c++/15.1.0/bits/atomic_lockfree_defines.h:
 
-C:/msys64/mingw64/include/cairo/cairo-features.h:
-
 C:/msys64/mingw64/include/c++/15.1.0/bits/basic_string.h:
 
 C:/msys64/mingw64/include/c++/15.1.0/bits/basic_string.tcc:
@@ -2301,8 +2340,6 @@ C:/msys64/mingw64/include/c++/15.1.0/bits/cxxabi_forced.h:
 C:/msys64/mingw64/include/c++/15.1.0/bits/cxxabi_init_exception.h:
 
 C:/msys64/mingw64/include/c++/15.1.0/bits/exception_defines.h:
-
-C:/msys64/mingw64/include/c++/15.1.0/bits/functexcept.h:
 
 C:/msys64/mingw64/include/c++/15.1.0/bits/hash_bytes.h:
 
@@ -2333,8 +2370,6 @@ C:/msys64/mingw64/include/c++/15.1.0/bits/ptr_traits.h:
 C:/msys64/mingw64/include/c++/15.1.0/bits/refwrap.h:
 
 C:/msys64/mingw64/include/c++/15.1.0/bits/requires_hosted.h:
-
-C:/msys64/mingw64/include/cairo/cairo.h:
 
 C:/msys64/mingw64/include/c++/15.1.0/bits/shared_ptr.h:
 
@@ -2461,8 +2496,6 @@ C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/cpu_defines.h:
 C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/gthr-default.h:
 
 C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/os_defines.h:
-
-C:/msys64/mingw64/include/cairo/cairo-version.h:
 
 C:/msys64/mingw64/include/corecrt.h:
 

@@ -56,6 +56,8 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         "ellipseTool",
         "lineTool",
         "bezierTool",
+        "penTool",
+        "textTool",
         "updateToolActions",
         "zoomIn",
         "zoomOut",
@@ -108,44 +110,48 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
         QtMocHelpers::SlotData<void()>(15, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'bezierTool'
         QtMocHelpers::SlotData<void()>(16, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'updateToolActions'
+        // Slot 'penTool'
         QtMocHelpers::SlotData<void()>(17, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'zoomIn'
+        // Slot 'textTool'
         QtMocHelpers::SlotData<void()>(18, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'zoomOut'
+        // Slot 'updateToolActions'
         QtMocHelpers::SlotData<void()>(19, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'fitToView'
+        // Slot 'zoomIn'
         QtMocHelpers::SlotData<void()>(20, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'showGrid'
+        // Slot 'zoomOut'
         QtMocHelpers::SlotData<void()>(21, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'snapToGrid'
+        // Slot 'fitToView'
         QtMocHelpers::SlotData<void()>(22, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'addLayer'
+        // Slot 'showGrid'
         QtMocHelpers::SlotData<void()>(23, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'removeLayer'
+        // Slot 'snapToGrid'
         QtMocHelpers::SlotData<void()>(24, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'updateLayersList'
+        // Slot 'addLayer'
         QtMocHelpers::SlotData<void()>(25, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'chooseFillColor'
+        // Slot 'removeLayer'
         QtMocHelpers::SlotData<void()>(26, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'chooseStrokeColor'
+        // Slot 'updateLayersList'
         QtMocHelpers::SlotData<void()>(27, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'chooseFillColor'
+        QtMocHelpers::SlotData<void()>(28, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'chooseStrokeColor'
+        QtMocHelpers::SlotData<void()>(29, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'strokeWidthChanged'
-        QtMocHelpers::SlotData<void(int)>(28, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::Int, 29 },
+        QtMocHelpers::SlotData<void(int)>(30, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 31 },
         }}),
         // Slot 'shapeSelected'
-        QtMocHelpers::SlotData<void(Shape *)>(30, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { 0x80000000 | 31, 32 },
+        QtMocHelpers::SlotData<void(Shape *)>(32, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 33, 34 },
         }}),
         // Slot 'shapeCreated'
-        QtMocHelpers::SlotData<void(Shape *)>(33, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { 0x80000000 | 31, 32 },
+        QtMocHelpers::SlotData<void(Shape *)>(35, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 33, 34 },
         }}),
         // Slot 'canvasChanged'
-        QtMocHelpers::SlotData<void()>(34, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(36, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'showAbout'
-        QtMocHelpers::SlotData<void()>(35, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(37, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -184,22 +190,24 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 12: _t->ellipseTool(); break;
         case 13: _t->lineTool(); break;
         case 14: _t->bezierTool(); break;
-        case 15: _t->updateToolActions(); break;
-        case 16: _t->zoomIn(); break;
-        case 17: _t->zoomOut(); break;
-        case 18: _t->fitToView(); break;
-        case 19: _t->showGrid(); break;
-        case 20: _t->snapToGrid(); break;
-        case 21: _t->addLayer(); break;
-        case 22: _t->removeLayer(); break;
-        case 23: _t->updateLayersList(); break;
-        case 24: _t->chooseFillColor(); break;
-        case 25: _t->chooseStrokeColor(); break;
-        case 26: _t->strokeWidthChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 27: _t->shapeSelected((*reinterpret_cast< std::add_pointer_t<Shape*>>(_a[1]))); break;
-        case 28: _t->shapeCreated((*reinterpret_cast< std::add_pointer_t<Shape*>>(_a[1]))); break;
-        case 29: _t->canvasChanged(); break;
-        case 30: _t->showAbout(); break;
+        case 15: _t->penTool(); break;
+        case 16: _t->textTool(); break;
+        case 17: _t->updateToolActions(); break;
+        case 18: _t->zoomIn(); break;
+        case 19: _t->zoomOut(); break;
+        case 20: _t->fitToView(); break;
+        case 21: _t->showGrid(); break;
+        case 22: _t->snapToGrid(); break;
+        case 23: _t->addLayer(); break;
+        case 24: _t->removeLayer(); break;
+        case 25: _t->updateLayersList(); break;
+        case 26: _t->chooseFillColor(); break;
+        case 27: _t->chooseStrokeColor(); break;
+        case 28: _t->strokeWidthChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 29: _t->shapeSelected((*reinterpret_cast< std::add_pointer_t<Shape*>>(_a[1]))); break;
+        case 30: _t->shapeCreated((*reinterpret_cast< std::add_pointer_t<Shape*>>(_a[1]))); break;
+        case 31: _t->canvasChanged(); break;
+        case 32: _t->showAbout(); break;
         default: ;
         }
     }
@@ -224,14 +232,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 31)
+        if (_id < 33)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 31;
+        _id -= 33;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 31)
+        if (_id < 33)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 31;
+        _id -= 33;
     }
     return _id;
 }

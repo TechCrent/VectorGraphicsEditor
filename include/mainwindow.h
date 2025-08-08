@@ -56,6 +56,8 @@ private slots:
     void ellipseTool();
     void lineTool();
     void bezierTool();
+    void penTool();
+    void textTool();
     void updateToolActions();
 
     // View

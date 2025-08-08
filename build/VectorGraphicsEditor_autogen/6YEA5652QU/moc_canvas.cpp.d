@@ -5,6 +5,7 @@ C:/Projects/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/6YEA5652QU/m
   C:/Qt/6.9.1/mingw_64/include/QtCore/QRect \
   C:/Qt/6.9.1/mingw_64/include/QtCore/QSize \
   C:/Qt/6.9.1/mingw_64/include/QtCore/QSizeF \
+  C:/Qt/6.9.1/mingw_64/include/QtCore/QString \
   C:/Qt/6.9.1/mingw_64/include/QtCore/q17memory.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/q20iterator.h \
@@ -142,6 +143,7 @@ C:/Projects/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/6YEA5652QU/m
   C:/Qt/6.9.1/mingw_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.9.1/mingw_64/include/QtCore/qyieldcpu.h \
+  C:/Qt/6.9.1/mingw_64/include/QtGui/QColor \
   C:/Qt/6.9.1/mingw_64/include/QtGui/QKeyEvent \
   C:/Qt/6.9.1/mingw_64/include/QtGui/QMouseEvent \
   C:/Qt/6.9.1/mingw_64/include/QtGui/QPainter \
@@ -369,10 +371,6 @@ C:/Projects/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/6YEA5652QU/m
   C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/msys64/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/msys64/mingw64/include/cairo/cairo-deprecated.h \
-  C:/msys64/mingw64/include/cairo/cairo-features.h \
-  C:/msys64/mingw64/include/cairo/cairo-version.h \
-  C:/msys64/mingw64/include/cairo/cairo.h \
   C:/msys64/mingw64/include/corecrt.h \
   C:/msys64/mingw64/include/corecrt_startup.h \
   C:/msys64/mingw64/include/corecrt_stdio_config.h \

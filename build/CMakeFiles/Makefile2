@@ -79,16 +79,16 @@ clean: CMakeFiles/VectorGraphicsEditor_autogen.dir/clean
 # Target rules for target CMakeFiles/VectorGraphicsEditor.dir
 
 # All Build rule for target.
-CMakeFiles/VectorGraphicsEditor.dir/all: CMakeFiles/VectorGraphicsEditor_autogen_timestamp_deps.dir/all
 CMakeFiles/VectorGraphicsEditor.dir/all: CMakeFiles/VectorGraphicsEditor_autogen.dir/all
+CMakeFiles/VectorGraphicsEditor.dir/all: CMakeFiles/VectorGraphicsEditor_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VectorGraphicsEditor.dir\build.make CMakeFiles/VectorGraphicsEditor.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VectorGraphicsEditor.dir\build.make CMakeFiles/VectorGraphicsEditor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Projects\VectorGraphicsEditor\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target VectorGraphicsEditor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Projects\VectorGraphicsEditor\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17 "Built target VectorGraphicsEditor"
 .PHONY : CMakeFiles/VectorGraphicsEditor.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/VectorGraphicsEditor.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Projects\VectorGraphicsEditor\build\CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Projects\VectorGraphicsEditor\build\CMakeFiles 18
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/VectorGraphicsEditor.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Projects\VectorGraphicsEditor\build\CMakeFiles 0
 .PHONY : CMakeFiles/VectorGraphicsEditor.dir/rule
@@ -135,7 +135,7 @@ CMakeFiles/VectorGraphicsEditor_autogen_timestamp_deps.dir/clean:
 CMakeFiles/VectorGraphicsEditor_autogen.dir/all: CMakeFiles/VectorGraphicsEditor_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VectorGraphicsEditor_autogen.dir\build.make CMakeFiles/VectorGraphicsEditor_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\VectorGraphicsEditor_autogen.dir\build.make CMakeFiles/VectorGraphicsEditor_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Projects\VectorGraphicsEditor\build\CMakeFiles --progress-num=14 "Built target VectorGraphicsEditor_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Projects\VectorGraphicsEditor\build\CMakeFiles --progress-num=18 "Built target VectorGraphicsEditor_autogen"
 .PHONY : CMakeFiles/VectorGraphicsEditor_autogen.dir/all
 
 # Build rule for subdir invocation for target.

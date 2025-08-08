@@ -3,7 +3,11 @@
 
 #include "shape.h"
 #include <QPointF>
+
+#ifdef ENABLE_CAIRO
 #include <cairo.h>
+#endif
+
 
 class Line : public Shape
 {
@@ -13,7 +17,10 @@ public:
 
     // Hybrid draw methods
     void draw(QPainter &painter) override;
+
+#ifdef ENABLE_CAIRO
     void draw(cairo_t *cr) override;
+#endif
 
     // Shape logic
     bool contains(const QPointF &point) const override;

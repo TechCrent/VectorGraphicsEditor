@@ -1,68 +1,92 @@
 [
 {
   "directory": "C:/Projects/VectorGraphicsEditor/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_DEBUG -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\VectorGraphicsEditor_autogen\\mocs_compilation.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\build\\VectorGraphicsEditor_autogen\\mocs_compilation.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\VectorGraphicsEditor_autogen\\mocs_compilation.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\build\\VectorGraphicsEditor_autogen\\mocs_compilation.cpp",
   "file": "C:/Projects/VectorGraphicsEditor/build/VectorGraphicsEditor_autogen/mocs_compilation.cpp",
   "output": "CMakeFiles/VectorGraphicsEditor.dir/VectorGraphicsEditor_autogen/mocs_compilation.cpp.obj"
 },
 {
   "directory": "C:/Projects/VectorGraphicsEditor/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_DEBUG -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\main.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\main.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\main.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\main.cpp",
   "file": "C:/Projects/VectorGraphicsEditor/src/main.cpp",
   "output": "CMakeFiles/VectorGraphicsEditor.dir/src/main.cpp.obj"
 },
 {
   "directory": "C:/Projects/VectorGraphicsEditor/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_DEBUG -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\mainwindow.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\mainwindow.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\mainwindow.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\mainwindow.cpp",
   "file": "C:/Projects/VectorGraphicsEditor/src/mainwindow.cpp",
   "output": "CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.obj"
 },
 {
   "directory": "C:/Projects/VectorGraphicsEditor/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_DEBUG -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\canvas.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\canvas.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\canvas.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\canvas.cpp",
   "file": "C:/Projects/VectorGraphicsEditor/src/canvas.cpp",
   "output": "CMakeFiles/VectorGraphicsEditor.dir/src/canvas.cpp.obj"
 },
 {
   "directory": "C:/Projects/VectorGraphicsEditor/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_DEBUG -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\document.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\document.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\document.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\document.cpp",
   "file": "C:/Projects/VectorGraphicsEditor/src/document.cpp",
   "output": "CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.obj"
 },
 {
   "directory": "C:/Projects/VectorGraphicsEditor/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_DEBUG -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\svg_parser.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\svg_parser.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\svg_parser.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\svg_parser.cpp",
   "file": "C:/Projects/VectorGraphicsEditor/src/svg_parser.cpp",
   "output": "CMakeFiles/VectorGraphicsEditor.dir/src/svg_parser.cpp.obj"
 },
 {
   "directory": "C:/Projects/VectorGraphicsEditor/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_DEBUG -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\shape.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\shape.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\shape.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\shape.cpp",
   "file": "C:/Projects/VectorGraphicsEditor/src/shape.cpp",
   "output": "CMakeFiles/VectorGraphicsEditor.dir/src/shape.cpp.obj"
 },
 {
   "directory": "C:/Projects/VectorGraphicsEditor/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_DEBUG -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\rectangle.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\rectangle.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\rectangle.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\rectangle.cpp",
   "file": "C:/Projects/VectorGraphicsEditor/src/rectangle.cpp",
   "output": "CMakeFiles/VectorGraphicsEditor.dir/src/rectangle.cpp.obj"
 },
 {
   "directory": "C:/Projects/VectorGraphicsEditor/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_DEBUG -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\ellipse.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\ellipse.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\ellipse.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\ellipse.cpp",
   "file": "C:/Projects/VectorGraphicsEditor/src/ellipse.cpp",
   "output": "CMakeFiles/VectorGraphicsEditor.dir/src/ellipse.cpp.obj"
 },
 {
   "directory": "C:/Projects/VectorGraphicsEditor/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_DEBUG -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\line.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\line.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\line.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\line.cpp",
   "file": "C:/Projects/VectorGraphicsEditor/src/line.cpp",
   "output": "CMakeFiles/VectorGraphicsEditor.dir/src/line.cpp.obj"
 },
 {
   "directory": "C:/Projects/VectorGraphicsEditor/build",
-  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_DEBUG -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -g -g -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\bezier.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\bezier.cpp",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\bezier.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\bezier.cpp",
   "file": "C:/Projects/VectorGraphicsEditor/src/bezier.cpp",
   "output": "CMakeFiles/VectorGraphicsEditor.dir/src/bezier.cpp.obj"
+},
+{
+  "directory": "C:/Projects/VectorGraphicsEditor/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\text.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\text.cpp",
+  "file": "C:/Projects/VectorGraphicsEditor/src/text.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditor.dir/src/text.cpp.obj"
+},
+{
+  "directory": "C:/Projects/VectorGraphicsEditor/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\colorpicker.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\colorpicker.cpp",
+  "file": "C:/Projects/VectorGraphicsEditor/src/colorpicker.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditor.dir/src/colorpicker.cpp.obj"
+},
+{
+  "directory": "C:/Projects/VectorGraphicsEditor/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\colorwheel.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\colorwheel.cpp",
+  "file": "C:/Projects/VectorGraphicsEditor/src/colorwheel.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditor.dir/src/colorwheel.cpp.obj"
+},
+{
+  "directory": "C:/Projects/VectorGraphicsEditor/build",
+  "command": "C:\\msys64\\mingw64\\bin\\c++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_USE_MATH_DEFINES -D_WIN64 @CMakeFiles/VectorGraphicsEditor.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\VectorGraphicsEditor.dir\\src\\colorstrip.cpp.obj -c C:\\Projects\\VectorGraphicsEditor\\src\\colorstrip.cpp",
+  "file": "C:/Projects/VectorGraphicsEditor/src/colorstrip.cpp",
+  "output": "CMakeFiles/VectorGraphicsEditor.dir/src/colorstrip.cpp.obj"
 }
 ]

@@ -4,7 +4,11 @@
 #include "shape.h"
 #include <QPointF>
 #include <QSizeF>
+
+#ifdef ENABLE_CAIRO
 #include <cairo.h>
+#endif
+
 
 class Ellipse : public Shape
 {
@@ -14,7 +18,9 @@ public:
 
     // Drawing
     void draw(QPainter &painter) override;   // Qt drawing
+	#ifdef ENABLE_CAIRO
     void draw(cairo_t *cr) override;        // Cairo drawing
+	#endif
 
     // Logic
     bool contains(const QPointF &point) const override;

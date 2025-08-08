@@ -11,7 +11,14 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 option(ENABLE_TESTS "Enable unit tests with GoogleTest" ON)
 option(ENABLE_CAIRO "Enable Cairo rendering" ON)
 option(ENABLE_LIBXML2 "Enable LibXml2 for SVG parsing" ON)
-option(ENABLE_QT_DEPLOY "Automatically run windeployqt after build" ON) # Auto deploy ON
+option(ENABLE_QT_DEPLOY "Automatically run windeployqt after build" ON)
+
+# --------------------
+# Global Qt Auto Setup
+# --------------------
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
 
 # --------------------
 # Windows-specific settings
@@ -31,9 +38,9 @@ add_definitions(-D_USE_MATH_DEFINES)
 # --------------------
 # Qt detection (Debug/Release aware)
 # --------------------
-find_package(Qt6 COMPONENTS Core Widgets Svg Test QUIET)
+find_package(Qt6 COMPONENTS Core Gui Widgets Svg Test QUIET)
 if(NOT Qt6_FOUND)
-    find_package(Qt5 COMPONENTS Core Widgets Svg Test REQUIRED)
+    find_package(Qt5 COMPONENTS Core Gui Widgets Svg Test REQUIRED)
     message(STATUS "Using Qt5 instead of Qt6")
     set(QT_VERSION_MAJOR 5)
 else()
@@ -41,7 +48,6 @@ else()
     set(QT_VERSION_MAJOR 6)
 endif()
 
-# Ensure correct Qt DLLs (debug vs release)
 if(QT_VERSION_MAJOR EQUAL 6)
     if(CMAKE_BUILD_TYPE STREQUAL "Debug")
         add_definitions(-DQT_DEBUG)
@@ -62,12 +68,8 @@ if(ENABLE_CAIRO)
     endif()
 
     if(NOT CAIRO_FOUND)
-        find_path(CAIRO_INCLUDE_DIR cairo.h
-                PATHS C:/msys64/mingw64/include ${CMAKE_SOURCE_DIR}/include
-        )
-        find_library(CAIRO_LIBRARY NAMES cairo
-                PATHS C:/msys64/mingw64/lib
-        )
+        find_path(CAIRO_INCLUDE_DIR cairo.h PATHS C:/msys64/mingw64/include ${CMAKE_SOURCE_DIR}/include)
+        find_library(CAIRO_LIBRARY NAMES cairo PATHS C:/msys64/mingw64/lib)
         if(CAIRO_INCLUDE_DIR AND CAIRO_LIBRARY)
             set(CAIRO_FOUND TRUE)
             set(CAIRO_INCLUDE_DIRS ${CAIRO_INCLUDE_DIR})
@@ -92,12 +94,8 @@ if(ENABLE_LIBXML2)
     endif()
 
     if(NOT LIBXML2_FOUND)
-        find_path(LIBXML2_INCLUDE_DIR libxml/parser.h
-                PATHS C:/msys64/mingw64/include/libxml2
-        )
-        find_library(LIBXML2_LIBRARY NAMES xml2 libxml2
-                PATHS C:/msys64/mingw64/lib
-        )
+        find_path(LIBXML2_INCLUDE_DIR libxml/parser.h PATHS C:/msys64/mingw64/include/libxml2)
+        find_library(LIBXML2_LIBRARY NAMES xml2 libxml2 PATHS C:/msys64/mingw64/lib)
         if(LIBXML2_INCLUDE_DIR AND LIBXML2_LIBRARY)
             set(LIBXML2_FOUND TRUE)
             set(LIBXML2_INCLUDE_DIRS ${LIBXML2_INCLUDE_DIR})
@@ -127,6 +125,10 @@ set(SOURCES
         src/ellipse.cpp
         src/line.cpp
         src/bezier.cpp
+        src/text.cpp
+        src/colorpicker.cpp
+        src/colorwheel.cpp
+        src/colorstrip.cpp
 )
 
 set(HEADERS
@@ -139,6 +141,10 @@ set(HEADERS
         include/ellipse.h
         include/line.h
         include/bezier.h
+        include/text.h
+        include/colorpicker.h
+        include/colorwheel.h
+        include/colorstrip.h
 )
 
 set(UI_FILES ui/mainwindow.ui)
@@ -151,39 +157,29 @@ add_executable(VectorGraphicsEditor
         ${HEADERS}
         ${UI_FILES}
 )
-
+# Tell Qt UIC where to search for .ui files
 set_target_properties(VectorGraphicsEditor PROPERTIES
         AUTOUIC_SEARCH_PATHS "${CMAKE_SOURCE_DIR}/ui"
-        AUTOMOC ON
-        AUTOUIC ON
-        AUTORCC ON
-        OUTPUT_NAME "VectorGraphicsEditor"
 )
 
-# Include directories
 target_include_directories(VectorGraphicsEditor PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
+# Optional dependencies
 if(ENABLE_CAIRO)
     target_include_directories(VectorGraphicsEditor PRIVATE ${CAIRO_INCLUDE_DIRS})
-endif()
-
-if(ENABLE_LIBXML2)
-    target_include_directories(VectorGraphicsEditor PRIVATE ${LIBXML2_INCLUDE_DIRS})
-endif()
-
-# Link libraries
-if(QT_VERSION_MAJOR EQUAL 6)
-    target_link_libraries(VectorGraphicsEditor PRIVATE Qt6::Core Qt6::Widgets Qt6::Svg)
-else()
-    target_link_libraries(VectorGraphicsEditor PRIVATE Qt5::Core Qt5::Widgets Qt5::Svg)
-endif()
-
-if(ENABLE_CAIRO)
     target_link_libraries(VectorGraphicsEditor PRIVATE ${CAIRO_LIBRARIES})
 endif()
 
 if(ENABLE_LIBXML2)
+    target_include_directories(VectorGraphicsEditor PRIVATE ${LIBXML2_INCLUDE_DIRS})
     target_link_libraries(VectorGraphicsEditor PRIVATE ${LIBXML2_LIBRARIES})
+endif()
+
+# Link Qt
+if(QT_VERSION_MAJOR EQUAL 6)
+    target_link_libraries(VectorGraphicsEditor PRIVATE Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Svg)
+else()
+    target_link_libraries(VectorGraphicsEditor PRIVATE Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Svg)
 endif()
 
 # --------------------
@@ -200,7 +196,7 @@ if(RESOURCE_FILES)
 endif()
 
 # --------------------
-# Qt Auto-deployment (Improved)
+# Qt Auto-deployment
 # --------------------
 if(WIN32 AND QT_VERSION_MAJOR EQUAL 6 AND ENABLE_QT_DEPLOY)
     find_program(WINDEPLOYQT_EXECUTABLE windeployqt HINTS "${CMAKE_PREFIX_PATH}/bin")
@@ -208,7 +204,6 @@ if(WIN32 AND QT_VERSION_MAJOR EQUAL 6 AND ENABLE_QT_DEPLOY)
         add_custom_command(TARGET VectorGraphicsEditor POST_BUILD
                 COMMAND ${CMAKE_COMMAND} -E echo "Deploying Qt runtime..."
                 COMMAND ${WINDEPLOYQT_EXECUTABLE} --no-opengl-sw $<TARGET_FILE:VectorGraphicsEditor>
-
         )
     else()
         message(WARNING "windeployqt not found. You must deploy Qt manually.")
@@ -225,7 +220,7 @@ install(TARGETS VectorGraphicsEditor
 )
 
 # --------------------
-# GoogleTest (optional)
+# GoogleTest (Optional)
 # --------------------
 if(ENABLE_TESTS)
     find_package(GTest QUIET)
@@ -247,9 +242,11 @@ if(ENABLE_TESTS)
         target_include_directories(VectorGraphicsEditorTests PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
         if(QT_VERSION_MAJOR EQUAL 6)
-            target_link_libraries(VectorGraphicsEditorTests PRIVATE Qt6::Core Qt6::Widgets Qt6::Test Qt6::Svg GTest::gtest GTest::gtest_main)
+            target_link_libraries(VectorGraphicsEditorTests PRIVATE
+                    Qt6::Core Qt6::Widgets Qt6::Test Qt6::Svg GTest::gtest GTest::gtest_main)
         else()
-            target_link_libraries(VectorGraphicsEditorTests PRIVATE Qt5::Core Qt5::Widgets Qt5::Test Qt5::Svg GTest::gtest GTest::gtest_main)
+            target_link_libraries(VectorGraphicsEditorTests PRIVATE
+                    Qt5::Core Qt5::Widgets Qt5::Test Qt5::Svg GTest::gtest GTest::gtest_main)
         endif()
 
         if(ENABLE_CAIRO)

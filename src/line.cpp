@@ -2,7 +2,11 @@
 #include <QLineF>
 #include <QPainter>
 #include <cmath>
+
+#ifdef ENABLE_CAIRO
 #include <cairo.h>
+#endif
+
 
 Line::Line(const QPointF &start, const QPointF &end)
     : Shape()
@@ -36,6 +40,7 @@ void Line::draw(QPainter &painter)
 // ====================
 // Cairo Drawing
 // ====================
+#ifdef ENABLE_CAIRO
 void Line::draw(cairo_t *cr)
 {
     if (!isVisible() || !cr) return;
@@ -55,6 +60,7 @@ void Line::draw(cairo_t *cr)
         cairo_restore(cr);
     }
 }
+#endif
 
 // ====================
 // Hit Testing
