@@ -36,6 +36,14 @@ public:
     ~MainWindow();
 
 private slots:
+    void onAddLayerClicked();
+    void onRemoveLayerClicked();
+    void onLayerDoubleClicked(QListWidgetItem* item);
+    void onLayerItemChanged(QListWidgetItem* item);
+    void onLayerItemClicked(QListWidgetItem* item);
+    void onLayerItemDoubleClicked(QListWidgetItem* item);
+
+
     // Document Management
     void newDocument();
     void openDocument();
@@ -94,6 +102,7 @@ private:
     void connectSignals();
     void updateFillColorButton(const QColor &color);
     void updateStrokeColorButton(const QColor &color);
+
 
 private:
     Ui::MainWindow *ui;

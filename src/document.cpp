@@ -1,4 +1,5 @@
 #include "document.h"
+#include "layer.h"
 
 Layer::Layer(const QString &name)
     : QObject(), m_name(name), m_visible(true), m_locked(false) {}

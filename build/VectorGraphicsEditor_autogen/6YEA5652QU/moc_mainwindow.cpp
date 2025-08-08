@@ -40,8 +40,16 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "MainWindow",
-        "newDocument",
+        "onAddLayerClicked",
         "",
+        "onRemoveLayerClicked",
+        "onLayerDoubleClicked",
+        "QListWidgetItem*",
+        "item",
+        "onLayerItemChanged",
+        "onLayerItemClicked",
+        "onLayerItemDoubleClicked",
+        "newDocument",
         "openDocument",
         "saveDocument",
         "exportSVG",
@@ -80,78 +88,98 @@ template <> constexpr inline auto MainWindow::qt_create_metaobjectdata<qt_meta_t
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Slot 'newDocument'
+        // Slot 'onAddLayerClicked'
         QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'openDocument'
+        // Slot 'onRemoveLayerClicked'
         QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'saveDocument'
-        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'exportSVG'
-        QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'importSVG'
-        QtMocHelpers::SlotData<void()>(6, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'undo'
-        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'redo'
-        QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'cut'
-        QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'copy'
+        // Slot 'onLayerDoubleClicked'
+        QtMocHelpers::SlotData<void(QListWidgetItem *)>(4, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 5, 6 },
+        }}),
+        // Slot 'onLayerItemChanged'
+        QtMocHelpers::SlotData<void(QListWidgetItem *)>(7, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 5, 6 },
+        }}),
+        // Slot 'onLayerItemClicked'
+        QtMocHelpers::SlotData<void(QListWidgetItem *)>(8, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 5, 6 },
+        }}),
+        // Slot 'onLayerItemDoubleClicked'
+        QtMocHelpers::SlotData<void(QListWidgetItem *)>(9, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 5, 6 },
+        }}),
+        // Slot 'newDocument'
         QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'paste'
+        // Slot 'openDocument'
         QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'selectTool'
+        // Slot 'saveDocument'
         QtMocHelpers::SlotData<void()>(12, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'rectangleTool'
+        // Slot 'exportSVG'
         QtMocHelpers::SlotData<void()>(13, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'ellipseTool'
+        // Slot 'importSVG'
         QtMocHelpers::SlotData<void()>(14, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'lineTool'
+        // Slot 'undo'
         QtMocHelpers::SlotData<void()>(15, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'bezierTool'
+        // Slot 'redo'
         QtMocHelpers::SlotData<void()>(16, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'penTool'
+        // Slot 'cut'
         QtMocHelpers::SlotData<void()>(17, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'textTool'
+        // Slot 'copy'
         QtMocHelpers::SlotData<void()>(18, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'updateToolActions'
+        // Slot 'paste'
         QtMocHelpers::SlotData<void()>(19, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'zoomIn'
+        // Slot 'selectTool'
         QtMocHelpers::SlotData<void()>(20, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'zoomOut'
+        // Slot 'rectangleTool'
         QtMocHelpers::SlotData<void()>(21, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'fitToView'
+        // Slot 'ellipseTool'
         QtMocHelpers::SlotData<void()>(22, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'showGrid'
+        // Slot 'lineTool'
         QtMocHelpers::SlotData<void()>(23, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'snapToGrid'
+        // Slot 'bezierTool'
         QtMocHelpers::SlotData<void()>(24, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'addLayer'
+        // Slot 'penTool'
         QtMocHelpers::SlotData<void()>(25, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'removeLayer'
+        // Slot 'textTool'
         QtMocHelpers::SlotData<void()>(26, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'updateLayersList'
+        // Slot 'updateToolActions'
         QtMocHelpers::SlotData<void()>(27, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'chooseFillColor'
+        // Slot 'zoomIn'
         QtMocHelpers::SlotData<void()>(28, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'chooseStrokeColor'
+        // Slot 'zoomOut'
         QtMocHelpers::SlotData<void()>(29, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'fitToView'
+        QtMocHelpers::SlotData<void()>(30, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'showGrid'
+        QtMocHelpers::SlotData<void()>(31, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'snapToGrid'
+        QtMocHelpers::SlotData<void()>(32, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'addLayer'
+        QtMocHelpers::SlotData<void()>(33, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'removeLayer'
+        QtMocHelpers::SlotData<void()>(34, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'updateLayersList'
+        QtMocHelpers::SlotData<void()>(35, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'chooseFillColor'
+        QtMocHelpers::SlotData<void()>(36, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'chooseStrokeColor'
+        QtMocHelpers::SlotData<void()>(37, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'strokeWidthChanged'
-        QtMocHelpers::SlotData<void(int)>(30, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::Int, 31 },
+        QtMocHelpers::SlotData<void(int)>(38, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 39 },
         }}),
         // Slot 'shapeSelected'
-        QtMocHelpers::SlotData<void(Shape *)>(32, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { 0x80000000 | 33, 34 },
+        QtMocHelpers::SlotData<void(Shape *)>(40, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 41, 42 },
         }}),
         // Slot 'shapeCreated'
-        QtMocHelpers::SlotData<void(Shape *)>(35, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { 0x80000000 | 33, 34 },
+        QtMocHelpers::SlotData<void(Shape *)>(43, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 41, 42 },
         }}),
         // Slot 'canvasChanged'
-        QtMocHelpers::SlotData<void()>(36, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(44, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'showAbout'
-        QtMocHelpers::SlotData<void()>(37, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(45, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -175,39 +203,45 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     auto *_t = static_cast<MainWindow *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->newDocument(); break;
-        case 1: _t->openDocument(); break;
-        case 2: _t->saveDocument(); break;
-        case 3: _t->exportSVG(); break;
-        case 4: _t->importSVG(); break;
-        case 5: _t->undo(); break;
-        case 6: _t->redo(); break;
-        case 7: _t->cut(); break;
-        case 8: _t->copy(); break;
-        case 9: _t->paste(); break;
-        case 10: _t->selectTool(); break;
-        case 11: _t->rectangleTool(); break;
-        case 12: _t->ellipseTool(); break;
-        case 13: _t->lineTool(); break;
-        case 14: _t->bezierTool(); break;
-        case 15: _t->penTool(); break;
-        case 16: _t->textTool(); break;
-        case 17: _t->updateToolActions(); break;
-        case 18: _t->zoomIn(); break;
-        case 19: _t->zoomOut(); break;
-        case 20: _t->fitToView(); break;
-        case 21: _t->showGrid(); break;
-        case 22: _t->snapToGrid(); break;
-        case 23: _t->addLayer(); break;
-        case 24: _t->removeLayer(); break;
-        case 25: _t->updateLayersList(); break;
-        case 26: _t->chooseFillColor(); break;
-        case 27: _t->chooseStrokeColor(); break;
-        case 28: _t->strokeWidthChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
-        case 29: _t->shapeSelected((*reinterpret_cast< std::add_pointer_t<Shape*>>(_a[1]))); break;
-        case 30: _t->shapeCreated((*reinterpret_cast< std::add_pointer_t<Shape*>>(_a[1]))); break;
-        case 31: _t->canvasChanged(); break;
-        case 32: _t->showAbout(); break;
+        case 0: _t->onAddLayerClicked(); break;
+        case 1: _t->onRemoveLayerClicked(); break;
+        case 2: _t->onLayerDoubleClicked((*reinterpret_cast< std::add_pointer_t<QListWidgetItem*>>(_a[1]))); break;
+        case 3: _t->onLayerItemChanged((*reinterpret_cast< std::add_pointer_t<QListWidgetItem*>>(_a[1]))); break;
+        case 4: _t->onLayerItemClicked((*reinterpret_cast< std::add_pointer_t<QListWidgetItem*>>(_a[1]))); break;
+        case 5: _t->onLayerItemDoubleClicked((*reinterpret_cast< std::add_pointer_t<QListWidgetItem*>>(_a[1]))); break;
+        case 6: _t->newDocument(); break;
+        case 7: _t->openDocument(); break;
+        case 8: _t->saveDocument(); break;
+        case 9: _t->exportSVG(); break;
+        case 10: _t->importSVG(); break;
+        case 11: _t->undo(); break;
+        case 12: _t->redo(); break;
+        case 13: _t->cut(); break;
+        case 14: _t->copy(); break;
+        case 15: _t->paste(); break;
+        case 16: _t->selectTool(); break;
+        case 17: _t->rectangleTool(); break;
+        case 18: _t->ellipseTool(); break;
+        case 19: _t->lineTool(); break;
+        case 20: _t->bezierTool(); break;
+        case 21: _t->penTool(); break;
+        case 22: _t->textTool(); break;
+        case 23: _t->updateToolActions(); break;
+        case 24: _t->zoomIn(); break;
+        case 25: _t->zoomOut(); break;
+        case 26: _t->fitToView(); break;
+        case 27: _t->showGrid(); break;
+        case 28: _t->snapToGrid(); break;
+        case 29: _t->addLayer(); break;
+        case 30: _t->removeLayer(); break;
+        case 31: _t->updateLayersList(); break;
+        case 32: _t->chooseFillColor(); break;
+        case 33: _t->chooseStrokeColor(); break;
+        case 34: _t->strokeWidthChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 35: _t->shapeSelected((*reinterpret_cast< std::add_pointer_t<Shape*>>(_a[1]))); break;
+        case 36: _t->shapeCreated((*reinterpret_cast< std::add_pointer_t<Shape*>>(_a[1]))); break;
+        case 37: _t->canvasChanged(); break;
+        case 38: _t->showAbout(); break;
         default: ;
         }
     }
@@ -232,14 +266,14 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 33)
+        if (_id < 39)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 33;
+        _id -= 39;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 33)
+        if (_id < 39)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 33;
+        _id -= 39;
     }
     return _id;
 }

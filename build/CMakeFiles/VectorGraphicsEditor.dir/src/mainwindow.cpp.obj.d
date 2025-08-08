@@ -565,6 +565,11 @@ CMakeFiles/VectorGraphicsEditor.dir/src/mainwindow.cpp.obj: \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QVBoxLayout \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QWidget \
  C:/Projects/VectorGraphicsEditor/include/canvas.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/QInputDialog \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qinputdialog.h \
+ C:/Qt/6.9.1/mingw_64/include/QtWidgets/qlineedit.h \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/qtextcursor.h \
+ C:/Qt/6.9.1/mingw_64/include/QtGui/qtextformat.h \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QApplication \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/QStyleFactory \
  C:/Qt/6.9.1/mingw_64/include/QtWidgets/qstylefactory.h \

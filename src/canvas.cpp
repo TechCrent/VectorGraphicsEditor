@@ -38,7 +38,11 @@ Canvas::Canvas(QWidget *parent)
     , m_showGrid(true)
     , m_gridSize(20)
     , m_snapToGrid(false)
+
 {
+	m_strokePen = QPen(Qt::black, 2);   // Default stroke color and width
+	m_fillBrush = Qt::NoBrush;          // Default fill color (transparent)
+
     setFocusPolicy(Qt::StrongFocus);
     setMouseTracking(true);
     setAutoFillBackground(true);
@@ -264,8 +268,9 @@ void Canvas::keyPressEvent(QKeyEvent *event)
                 for (const QPointF &point : m_bezierPoints) {
                     bezier->addPoint(point);
                 }
-                bezier->setPen(QPen(Qt::black, 2));
-                bezier->setBrush(Qt::white);
+				bezier->setPen(m_strokePen);   // ✅
+				bezier->setBrush(m_fillBrush); // ✅
+
                 if (m_document) {
                     m_document->addShape(bezier);
                     emit shapeCreated(bezier);
@@ -365,11 +370,12 @@ void Canvas::handleRectangleTool(QMouseEvent *event)
     if (event->button() == Qt::LeftButton) {
         m_isDrawing = true;
         m_drawStart = screenToWorld(event->pos());
-        m_currentShape = new Rectangle();
-        m_currentShape->setPosition(m_drawStart);
-        m_currentShape->setSize(QSizeF(0, 0));
-        m_currentShape->setPen(QPen(Qt::black, 2));
-        m_currentShape->setBrush(Qt::NoBrush);
+		m_currentShape = new Rectangle();
+		m_currentShape->setPosition(m_drawStart);
+		m_currentShape->setSize(QSizeF(0, 0));
+		m_currentShape->setPen(m_strokePen);   // ✅ Use selected stroke
+		m_currentShape->setBrush(m_fillBrush); // ✅ Use selected fill
+
     }
 }
 
@@ -378,11 +384,12 @@ void Canvas::handleEllipseTool(QMouseEvent *event)
     if (event->button() == Qt::LeftButton) {
         m_isDrawing = true;
         m_drawStart = screenToWorld(event->pos());
-        m_currentShape = new Ellipse();
-        m_currentShape->setPosition(m_drawStart);
-        m_currentShape->setSize(QSizeF(0, 0));
-        m_currentShape->setPen(QPen(Qt::black, 2));
-        m_currentShape->setBrush(Qt::NoBrush);
+		m_currentShape = new Ellipse();
+		m_currentShape->setPosition(m_drawStart);
+		m_currentShape->setSize(QSizeF(0, 0));
+		m_currentShape->setPen(m_strokePen);   // ✅ Use selected stroke
+		m_currentShape->setBrush(m_fillBrush); // ✅ Use selected fill
+
     }
 }
 
@@ -391,11 +398,12 @@ void Canvas::handleLineTool(QMouseEvent *event)
     if (event->button() == Qt::LeftButton) {
         m_isDrawing = true;
         m_drawStart = screenToWorld(event->pos());
-        auto *line = new Line();
-        line->setStartPoint(m_drawStart);
-        line->setEndPoint(m_drawStart);
-        line->setPen(QPen(Qt::black, 2));
-        m_currentShape = line;
+		auto *line = new Line();
+		line->setStartPoint(m_drawStart);
+		line->setEndPoint(m_drawStart);
+		line->setPen(m_strokePen);             // ✅ Use selected stroke
+		// Fill color not used for line
+		m_currentShape = line;
     }
 }
 
@@ -563,16 +571,22 @@ void Canvas::toggleSnapToGrid()
 
 void Canvas::setFillColor(const QColor &color)
 {
-    if (m_selectedShape) m_selectedShape->setBrush(QBrush(color));
+    m_fillBrush = QBrush(color); // ✅ Save for new shapes
+
+    if (m_selectedShape) {
+        m_selectedShape->setBrush(m_fillBrush);
+    }
     update();
 }
 
 void Canvas::setStrokeColor(const QColor &color)
 {
+    m_strokePen.setColor(color); // ✅ Save for new shapes
+
     if (m_selectedShape) {
         QPen pen = m_selectedShape->getPen();
         pen.setColor(color);
-        m_selectedShape->setPen(pen); // ✅ This line must be here!
+        m_selectedShape->setPen(pen);
     }
     update();
 }

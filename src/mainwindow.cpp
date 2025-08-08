@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QInputDialog>
 #include <QApplication>
 #include <QStyleFactory>
 #include <QMessageBox>
@@ -50,7 +51,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     setupUI();
     setupActions();
-    setupMenusAndToolbars();
     setupStatusBar();
     connectSignals();
 
@@ -231,8 +231,11 @@ void MainWindow::connectSignals()
     connect(m_strokeWidthSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, &MainWindow::strokeWidthChanged);
 
     // Layers
-    connect(ui->addLayerBtn, &QPushButton::clicked, this, &MainWindow::addLayer);
-    connect(ui->removeLayerBtn, &QPushButton::clicked, this, &MainWindow::removeLayer);
+	connect(ui->addLayerBtn, &QPushButton::clicked, this, &MainWindow::addLayer);
+	connect(ui->removeLayerBtn, &QPushButton::clicked, this, &MainWindow::removeLayer);
+	connect(ui->layersList, &QListWidget::itemClicked, this, &MainWindow::onLayerItemClicked);
+	connect(ui->layersList, &QListWidget::itemDoubleClicked, this, &MainWindow::onLayerItemDoubleClicked);
+
 
     // Tools
     connect(ui->actionSelect, &QAction::triggered, this, &MainWindow::selectTool);
@@ -498,6 +501,31 @@ void MainWindow::updateLayersList()
         m_layersList->addItem(item);
     }
 }
+
+void MainWindow::onAddLayerClicked() {
+    // TODO: Add a new layer
+}
+
+void MainWindow::onRemoveLayerClicked() {
+    // TODO: Remove selected layer
+}
+
+void MainWindow::onLayerDoubleClicked(QListWidgetItem* item) {
+    // TODO: Rename layer
+}
+
+void MainWindow::onLayerItemChanged(QListWidgetItem* item) {
+    // TODO: Toggle visibility or locked status
+}
+
+void MainWindow::onLayerItemClicked(QListWidgetItem* item) {
+    // TODO: Handle selection of a layer
+}
+
+void MainWindow::onLayerItemDoubleClicked(QListWidgetItem* item) {
+    // TODO: Same as onLayerDoubleClicked
+}
+
 
 void MainWindow::chooseFillColor()
 {

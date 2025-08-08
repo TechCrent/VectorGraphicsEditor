@@ -8,6 +8,7 @@
 #include <QColor>
 #include "shape.h"
 
+// === LAYER CLASS ===
 class Layer : public QObject
 {
     Q_OBJECT
@@ -15,13 +16,11 @@ public:
     explicit Layer(const QString &name = "Layer");
     ~Layer();
 
-    // Shape management
     void addShape(Shape *shape);
     void removeShape(Shape *shape);
     void clear();
-    QList<Shape*> getShapes() const;   // ✅ Required for canvas.cpp
+    QList<Shape*> getShapes() const;
 
-    // Layer properties
     QString getName() const;
     void setName(const QString &name);
     bool isVisible() const;
@@ -36,6 +35,7 @@ private:
     bool m_locked;
 };
 
+// === DOCUMENT CLASS ===
 class Document : public QObject
 {
     Q_OBJECT
@@ -44,19 +44,27 @@ public:
     ~Document();
 
     // Layer management
-    void addLayer(Layer *layer);
-    void removeLayer(Layer *layer);
-    void clear();
-    QList<Layer*> getLayers() const;
-    Layer* getActiveLayer() const;
     void setActiveLayer(Layer *layer);
+    void setActiveLayer(const QString &id);         // 🔄 Optional overload for setting by name
+    Layer* getActiveLayer() const;                  // ✅ Already implemented
+    void addLayer(const QString& name = "Layer");
+	void addLayer(Layer* layer);
+    void removeLayer(int index);
+	void removeLayer(Layer* layer);
+    void moveLayerUp(int index);
+    void moveLayerDown(int index);
+    void setCurrentLayer(int index);
+    int currentLayerIndex() const;
+    Layer* currentLayer() const;
+    QList<Layer*> getLayers() const;
+    void renameLayer(const QString& oldId, const QString& newName); // 🔄 Optional
 
     // Shape management
     void addShape(Shape *shape);
     void removeShape(Shape *shape);
     Shape* getShapeAt(const QPointF &point) const;
-    QList<Shape*> getShapes() const;        // ✅ Added: Needed for canvas.cpp
-    QList<Shape*> getAllShapes() const;     // ✅ Already present, but retained for global access
+    QList<Shape*> getShapes() const;
+    QList<Shape*> getAllShapes() const;
 
     // Document properties
     void setSize(const QSizeF &size);
@@ -75,6 +83,8 @@ public:
     void undo();
     void redo();
 
+    void clear(); // 🔄 Moved into class, not outside
+
 signals:
     void documentChanged();
     void layerAdded(Layer *layer);
@@ -84,6 +94,7 @@ signals:
 
 private:
     QList<Layer*> m_layers;
+    int m_currentLayerIndex;
     Layer *m_activeLayer;
     QSizeF m_size;
     QColor m_backgroundColor;

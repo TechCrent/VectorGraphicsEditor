@@ -373,4 +373,5 @@ CMakeFiles/VectorGraphicsEditor.dir/src/document.cpp.obj: \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qfont.h \
  C:/Qt/6.9.1/mingw_64/include/QtCore/qendian.h \
  C:/Qt/6.9.1/mingw_64/include/QtGui/qfontvariableaxis.h \
- C:/Qt/6.9.1/mingw_64/include/QtGui/qfontmetrics.h
+ C:/Qt/6.9.1/mingw_64/include/QtGui/qfontmetrics.h \
+ C:/Projects/VectorGraphicsEditor/include/layer.h
