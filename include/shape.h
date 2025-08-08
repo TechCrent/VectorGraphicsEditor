@@ -64,6 +64,8 @@ public:
     // ========================
     // Transformations
     // ========================
+	double getRotation() const { return m_rotation; }
+
     virtual void move(const QPointF &offset);
     virtual void scale(double factor);
     virtual void rotate(double angle);

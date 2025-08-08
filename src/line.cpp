@@ -28,14 +28,21 @@ void Line::draw(QPainter &painter)
 {
     if (!isVisible()) return;
 
-    QPen pen = getPen();
-    if (pen.style() != Qt::NoPen) {
-        painter.save();
-        painter.setPen(pen);
-        painter.drawLine(m_startPoint, m_endPoint);
-        painter.restore();
-    }
-}
+    	QPointF start = getStartPoint();
+    	QPointF end = getEndPoint();
+    	QPointF center = (start + end) / 2.0; // midpoint
+
+    	painter.save();
+    	painter.translate(center.x(), center.y());
+    	painter.rotate(getRotation());
+    	painter.translate(-center.x(), -center.y());
+
+    	painter.setPen(getPen());
+    	painter.drawLine(start, end);
+
+    	painter.restore();
+	}
+
 
 // ====================
 // Cairo Drawing

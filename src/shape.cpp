@@ -75,18 +75,30 @@ bool Shape::isSelected() const
     return m_selected;
 }
 
-// ========================
-// Transformations
-// ========================
 void Shape::move(const QPointF &offset)
 {
     m_position += offset;
 }
 
+
+// ========================
+// Transformations
+// ========================
 void Shape::scale(double factor)
 {
+    // Store the center before scaling
+    QPointF center = getBoundingRect().center();
+
+    // Scale the size
     m_size *= factor;
+
+    // Compute the new top-left so the center stays the same
+    QPointF newTopLeft(center.x() - m_size.width() / 2.0,
+                       center.y() - m_size.height() / 2.0);
+
+    setPosition(newTopLeft);
 }
+
 
 void Shape::rotate(double angle)
 {

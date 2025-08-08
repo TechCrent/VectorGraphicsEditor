@@ -24,12 +24,15 @@ void Ellipse::draw(QPainter &painter)
 {
     if (!isVisible()) return;
 
-    QPointF pos = getPosition();
-    QSizeF size = getSize();
-
-    QRectF rect(pos, size);
+    QRectF rect(getPosition(), getSize());
+    qreal centerX = rect.center().x();
+    qreal centerY = rect.center().y();
 
     painter.save();
+    painter.translate(centerX, centerY);
+    painter.rotate(getRotation());
+    painter.translate(-centerX, -centerY);
+
     painter.setPen(getPen());
     painter.setBrush(getBrush());
 
@@ -41,11 +44,14 @@ void Ellipse::draw(QPainter &painter)
     }
     else {
         // Partial arc (convert to Qt's 16th degree format)
-        painter.drawArc(rect, static_cast<int>(-m_startAngle * 16), static_cast<int>(-spanAngle * 16));
+        painter.drawArc(rect,
+                        static_cast<int>(-m_startAngle * 16),
+                        static_cast<int>(-spanAngle * 16));
     }
 
     painter.restore();
 }
+
 
 // =========================
 // Cairo Drawing

@@ -26,11 +26,17 @@ void Rectangle::draw(QPainter &painter)
     QPointF pos = getPosition();
     QSizeF size = getSize();
 
+	QRectF rect(pos, size);
+    qreal centerX = rect.center().x();
+    qreal centerY = rect.center().y();
+
     painter.save();
+	painter.translate(centerX, centerY);
+	painter.rotate(m_rotation);
+	painter.translate(-centerX, -centerY);
+
     painter.setPen(getPen());
     painter.setBrush(getBrush());
-
-    QRectF rect(pos, size);
 
     if (m_cornerRadius > 0.0) {
         painter.drawRoundedRect(rect, m_cornerRadius, m_cornerRadius);

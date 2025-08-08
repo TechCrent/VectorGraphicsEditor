@@ -41,13 +41,23 @@ void Bezier::draw(QPainter &painter)
         path.closeSubpath();
     }
 
-    painter.save();
+    // ✅ Calculate rotation center
+    QRectF bounds = path.boundingRect();
+    qreal centerX = bounds.center().x();
+    qreal centerY = bounds.center().y();
 
+    painter.save();
+    painter.translate(centerX, centerY);
+    painter.rotate(getRotation()); // from Shape
+    painter.translate(-centerX, -centerY);
+
+    // ✅ Fill first if applicable
     if (brush.style() != Qt::NoBrush && m_closed) {
         painter.setBrush(brush);
         painter.fillPath(path, brush);
     }
 
+    // ✅ Draw stroke
     if (pen.style() != Qt::NoPen) {
         painter.setPen(pen);
         painter.drawPath(path);
@@ -55,6 +65,7 @@ void Bezier::draw(QPainter &painter)
 
     painter.restore();
 }
+
 
 // ====================
 // Cairo Drawing

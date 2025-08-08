@@ -148,6 +148,15 @@ private:
     QPen m_strokePen { Qt::black, 2 };     // Default black pen, width 2
     QBrush m_fillBrush { Qt::NoBrush };    // Default no fill
 
+	bool m_isDragging = false;
+	QPointF m_lastMousePos;
+
+	bool m_isRotating = false;
+	QPointF m_rotationStart;
+	double m_lastRotationAngle = 0.0;
+
+
+
 signals:
     void shapeSelected(Shape *shape);
     void shapeCreated(Shape *shape);

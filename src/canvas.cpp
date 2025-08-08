@@ -182,6 +182,27 @@ void Canvas::mousePressEvent(QMouseEvent *event)
     QPointF worldPos = screenToWorld(event->pos());
     if (m_snapToGrid) worldPos = snapToGrid(worldPos);
 
+	if (m_selectedShape) {
+    	m_rotationStart = screenToWorld(event->pos());
+    	QPointF center = m_selectedShape->getBoundingRect().center();
+    	QPointF delta = m_rotationStart - center;
+    	m_lastRotationAngle = std::atan2(delta.y(), delta.x()) * 180.0 / M_PI;
+	}
+
+
+	if (event->modifiers() & Qt::AltModifier && m_selectedShape) {
+    	m_isRotating = true;
+    	m_rotationStart = screenToWorld(event->pos());
+
+    	// Calculate initial angle from center to mouse
+    	QPointF center = m_selectedShape->getBoundingRect().center();
+    	QPointF delta = m_rotationStart - center;
+    	m_lastRotationAngle = std::atan2(delta.y(), delta.x()) * 180.0 / M_PI;
+
+    	return;
+	}
+
+
     switch (m_currentTool) {
         case Tool_Select:    handleSelectTool(event); break;
         case Tool_Rectangle: handleRectangleTool(event); break;
@@ -200,6 +221,52 @@ void Canvas::mouseMoveEvent(QMouseEvent *event)
 {
     QPointF worldPos = screenToWorld(event->pos());
     if (m_snapToGrid) worldPos = snapToGrid(worldPos);
+
+	if (m_isRotating && m_selectedShape) {
+    	QPointF current = screenToWorld(event->pos());
+
+    	// Calculate angle from center to current mouse position
+    	QPointF center = m_selectedShape->getBoundingRect().center();
+    	QPointF delta = current - center;
+    	double currentAngle = std::atan2(delta.y(), delta.x()) * 180.0 / M_PI;
+
+    	// Compute rotation delta and apply it
+    	double deltaAngle = currentAngle - m_lastRotationAngle;
+    	m_selectedShape->rotate(deltaAngle);
+
+    	// Update for next frame
+    	m_lastRotationAngle = currentAngle;
+    	update();
+    	return;
+	}
+
+	if (m_selectedShape && !m_isDrawing && !m_isDragging) {
+    	QPointF current = screenToWorld(event->pos());
+    	QPointF center = m_selectedShape->getBoundingRect().center();
+
+    double currentAngle = std::atan2(current.y() - center.y(),
+                                     current.x() - center.x()) * 180.0 / M_PI;
+
+    double deltaAngle = currentAngle - m_lastRotationAngle;
+
+    if (std::abs(deltaAngle) > 2.0) { // ignore tiny movement
+        m_selectedShape->rotate(deltaAngle);
+        m_lastRotationAngle = currentAngle;
+        update();
+        return;
+    	}
+	}
+
+
+
+	// ✅ Move selected shape if dragging
+	if (m_isDragging && m_selectedShape) {
+    	QPointF offset = worldPos - m_lastMousePos;
+    	m_selectedShape->move(offset);
+    	m_lastMousePos = worldPos;
+    	update();
+    	return;
+	}
 
     if (m_isDrawing && m_currentShape) {
         m_drawCurrent = worldPos;
@@ -228,6 +295,16 @@ void Canvas::mouseMoveEvent(QMouseEvent *event)
 
 void Canvas::mouseReleaseEvent(QMouseEvent *event)
 {
+	if (m_isRotating) {
+    	m_isRotating = false;
+    	return;
+	}
+
+	if (m_isDragging) {
+    	m_isDragging = false;
+    	return;
+	}
+
     Q_UNUSED(event)
     if (m_isDrawing && m_currentShape) {
         m_isDrawing = false;
@@ -289,12 +366,36 @@ void Canvas::wheelEvent(QWheelEvent *event)
     if (event->modifiers() & Qt::ControlModifier) {
         double zoomFactor = event->angleDelta().y() > 0 ? 1.1 : 0.9;
         setZoom(m_zoom * zoomFactor);
-    } else {
+    }
+    else if (event->modifiers() & Qt::ShiftModifier) {
+        if (m_selectedShape) {
+            double scaleFactor = event->angleDelta().y() > 0 ? 1.1 : 0.9;
+            qDebug() << "Scaling shape: " << m_selectedShape;
+            m_selectedShape->scale(scaleFactor);
+            update();
+        } else {
+            qDebug() << "No shape selected for scaling.";
+        }
+    }
+    else if (event->modifiers() & Qt::AltModifier) {
+        if (m_selectedShape) {
+            double angleDelta = event->angleDelta().y() > 0 ? 5.0 : -5.0;
+            qDebug() << "Rotating shape: " << m_selectedShape;
+            m_selectedShape->rotate(angleDelta);
+            update();
+        } else {
+            qDebug() << "No shape selected for rotation.";
+        }
+    }
+    else {
         QPointF delta = event->angleDelta() / 120.0;
         m_panOffset += delta * 10.0;
         update();
     }
 }
+
+
+
 
 void Canvas::drawBackground(QPainter &painter)
 {
@@ -344,8 +445,17 @@ void Canvas::drawSelectionHandles(QPainter &painter)
     if (!m_selectedShape) return;
 
     QRectF bounds = m_selectedShape->getBoundingRect();
+    QPointF center = bounds.center();
+
+    painter.save();
+    painter.translate(center);
+    painter.rotate(m_selectedShape->getRotation());
+    painter.translate(-center);
+
     painter.setPen(QPen(Qt::blue, 1, Qt::DashLine));
     painter.drawRect(bounds);
+
+    painter.restore();
 }
 
 QPointF Canvas::screenToWorld(const QPoint &screenPos) const
@@ -360,9 +470,14 @@ QPointF Canvas::worldToScreen(const QPointF &worldPos) const
 
 void Canvas::handleSelectTool(QMouseEvent *event)
 {
-    if (event->button() == Qt::LeftButton) {
-        selectShapeAt(screenToWorld(event->pos()));
-    }
+	if (event->button() == Qt::LeftButton) {
+    	QPointF pos = screenToWorld(event->pos());
+    	selectShapeAt(pos);
+    	if (m_selectedShape) {
+        	m_isDragging = true;
+        	m_lastMousePos = pos;
+    	}
+	}
 }
 
 void Canvas::handleRectangleTool(QMouseEvent *event)
@@ -466,14 +581,18 @@ void Canvas::selectShapeAt(const QPointF &point)
     const QList<Shape*> shapes = m_document->getShapes();
     for (int i = shapes.size() - 1; i >= 0; --i) {
         Shape* shape = shapes[i];
-        if (shape->contains((point - m_panOffset) / m_zoom)){
+        if (shape->contains((point - m_panOffset) / m_zoom)) {
             m_selectedShape = shape;
             emit shapeSelected(m_selectedShape);
+            qDebug() << "Selected shape: " << m_selectedShape;
             return;
         }
     }
+
     m_selectedShape = nullptr;
+    qDebug() << "No shape selected.";
 }
+
 
 void Canvas::clearSelection()
 {
